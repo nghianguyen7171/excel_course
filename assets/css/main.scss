@@ -370,17 +370,28 @@ a {
 }
 
 .content-wrapper {
-    max-width: 100%;
-    overflow-x: hidden; // Prevent horizontal overflow
+    max-width: 100% !important;
+    width: 100%;
+    overflow-x: hidden !important; // Prevent horizontal overflow
+    box-sizing: border-box;
     
     // Style sections within content
     > section {
         margin-bottom: $spacing-2xl;
-        overflow-x: hidden; // Prevent section overflow
+        overflow-x: hidden !important; // Prevent section overflow
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
         
         &:last-child {
             margin-bottom: 0;
         }
+    }
+    
+    // Ensure table wrappers in sections don't overflow
+    section .table-wrapper {
+        max-width: 100% !important;
+        width: 100% !important;
     }
     
     // Override h2 styling for sections
@@ -445,23 +456,33 @@ table {
 
 // Table wrapper for wide tables with horizontal scroll
 .table-wrapper {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: auto;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: auto !important;
     overflow-y: visible;
     margin: $spacing-lg 0;
     -webkit-overflow-scrolling: touch;
     box-shadow: $shadow-md;
     border-radius: $radius-md;
     display: block;
+    position: relative;
+    box-sizing: border-box;
+    
+    // Ensure wrapper doesn't exceed parent width
+    @media (max-width: $breakpoint-lg) {
+        width: calc(100% - 0px) !important;
+        max-width: 100% !important;
+    }
     
     table {
-        margin: 0;
+        margin: 0 !important;
         width: 100%;
         min-width: 1000px;
         box-shadow: none;
         border-radius: 0;
         display: table;
+        table-layout: auto;
+        box-sizing: border-box;
         
         @media (min-width: $breakpoint-lg) {
             min-width: auto;
@@ -469,13 +490,26 @@ table {
         }
         
         @media (max-width: $breakpoint-lg) {
-            min-width: 1000px;
+            min-width: 1000px !important;
+            width: auto !important;
+        }
+        
+        th, td {
+            white-space: normal;
+            word-wrap: break-word;
+            max-width: 200px;
+            
+            @media (max-width: $breakpoint-md) {
+                max-width: 150px;
+                font-size: 0.8rem;
+                padding: $spacing-xs $spacing-sm;
+            }
         }
     }
     
     // Custom scrollbar styling
     &::-webkit-scrollbar {
-        height: 10px;
+        height: 12px;
     }
     
     &::-webkit-scrollbar-track {
