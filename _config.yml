@@ -7,12 +7,14 @@ url: "https://nghianguyen7171.github.io"
 # Build settings
 markdown: kramdown
 highlighter: rouge
+
+# Jekyll plugins for GitHub Pages
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-relative-links
 
-# Theme settings
-theme: minima
+# No theme - using custom layout
 
 # Exclude from processing
 exclude:
