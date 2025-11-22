@@ -306,13 +306,15 @@ a {
     background: rgba(255, 255, 255, 0.98);
     box-shadow: $shadow-xl;
     border-radius: $radius-lg;
-    overflow: hidden;
+    overflow-x: hidden; // Prevent horizontal overflow
+    overflow-y: visible;
     margin-top: $spacing-lg;
     margin-bottom: $spacing-xl;
     
     @media (max-width: $breakpoint-md) {
         margin: $spacing-md;
         border-radius: $radius-md;
+        overflow-x: hidden;
     }
 }
 
@@ -359,18 +361,22 @@ a {
 // Main Content
 .main-content {
     padding: $spacing-xl $spacing-lg;
+    overflow-x: hidden; // Prevent horizontal overflow
     
     @media (max-width: $breakpoint-md) {
         padding: $spacing-lg $spacing-md;
+        overflow-x: hidden;
     }
 }
 
 .content-wrapper {
     max-width: 100%;
+    overflow-x: hidden; // Prevent horizontal overflow
     
     // Style sections within content
     > section {
         margin-bottom: $spacing-2xl;
+        overflow-x: hidden; // Prevent section overflow
         
         &:last-child {
             margin-bottom: 0;
@@ -440,26 +446,36 @@ table {
 // Table wrapper for wide tables with horizontal scroll
 .table-wrapper {
     width: 100%;
+    max-width: 100%;
     overflow-x: auto;
+    overflow-y: visible;
     margin: $spacing-lg 0;
     -webkit-overflow-scrolling: touch;
     box-shadow: $shadow-md;
     border-radius: $radius-md;
+    display: block;
     
     table {
         margin: 0;
-        min-width: 800px;
+        width: 100%;
+        min-width: 1000px;
         box-shadow: none;
         border-radius: 0;
+        display: table;
         
         @media (min-width: $breakpoint-lg) {
             min-width: auto;
+            width: 100%;
+        }
+        
+        @media (max-width: $breakpoint-lg) {
+            min-width: 1000px;
         }
     }
     
     // Custom scrollbar styling
     &::-webkit-scrollbar {
-        height: 8px;
+        height: 10px;
     }
     
     &::-webkit-scrollbar-track {
