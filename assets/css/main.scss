@@ -362,11 +362,11 @@ a {
 
 // Main Content
 .main-content {
-    padding: $spacing-xl $spacing-lg;
+    padding: 0;
     overflow-x: hidden; // Prevent horizontal overflow
     
     @media (max-width: $breakpoint-md) {
-        padding: $spacing-lg $spacing-md;
+        padding: 0;
         overflow-x: hidden;
     }
 }
@@ -377,16 +377,35 @@ a {
     overflow-x: hidden !important; // Prevent horizontal overflow
     box-sizing: border-box;
     
-    // Style sections within content
+    // Style sections within content with alternating backgrounds
     > section {
-        margin-bottom: $spacing-2xl;
+        margin-bottom: 0;
         overflow-x: hidden !important; // Prevent section overflow
         width: 100%;
         max-width: 100%;
         box-sizing: border-box;
+        padding: $spacing-xl $spacing-lg;
+        
+        // Alternate background colors
+        &:nth-child(odd) {
+            background: rgba(255, 255, 255, 0.5);
+        }
+        
+        &:nth-child(even) {
+            background: rgba(249, 250, 251, 0.7);
+        }
+        
+        &:first-child {
+            padding-top: $spacing-xl;
+        }
         
         &:last-child {
             margin-bottom: 0;
+            padding-bottom: $spacing-xl;
+        }
+        
+        @media (max-width: $breakpoint-md) {
+            padding: $spacing-lg $spacing-md;
         }
     }
     
@@ -408,10 +427,24 @@ a {
 
 // Section Styles
 .section {
-    margin-bottom: $spacing-2xl;
+    margin-bottom: 0;
+    padding: $spacing-xl $spacing-lg;
+    
+    // Alternate background colors
+    &:nth-child(odd) {
+        background: rgba(255, 255, 255, 0.5);
+    }
+    
+    &:nth-child(even) {
+        background: rgba(249, 250, 251, 0.7);
+    }
     
     &:last-child {
         margin-bottom: 0;
+    }
+    
+    @media (max-width: $breakpoint-md) {
+        padding: $spacing-lg $spacing-md;
     }
 }
 
