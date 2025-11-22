@@ -299,14 +299,14 @@ a {
     padding: $spacing-xl $spacing-lg;
     background: rgba(255, 255, 255, 0.98);
     box-shadow: $shadow-xl;
-    margin-top: $spacing-lg;
+    margin-top: 0;
     margin-bottom: $spacing-xl;
-    border-radius: $radius-lg;
+    border-radius: 0 0 $radius-lg $radius-lg;
     
     @media (max-width: $breakpoint-md) {
         padding: $spacing-lg $spacing-md;
-        margin: $spacing-md;
-        border-radius: $radius-md;
+        margin: 0;
+        border-radius: 0;
     }
 }
 
@@ -314,14 +314,13 @@ a {
 .hero-section {
     text-align: center;
     padding: $spacing-2xl 0;
-    margin-bottom: $spacing-xl;
+    margin-bottom: 0;
     background: linear-gradient(135deg, $primary-blue 0%, $secondary-blue 100%);
     color: white;
-    border-radius: $radius-lg;
-    margin: -$spacing-xl -$spacing-lg $spacing-xl;
+    width: 100%;
+    box-shadow: $shadow-lg;
     
     @media (max-width: $breakpoint-md) {
-        margin: -$spacing-lg -$spacing-md $spacing-lg;
         padding: $spacing-xl 0;
     }
     
@@ -329,6 +328,11 @@ a {
         color: white;
         border: none;
         margin-bottom: $spacing-md;
+        font-size: 2.5rem;
+        
+        @media (max-width: $breakpoint-md) {
+            font-size: 2rem;
+        }
     }
     
     p {
@@ -336,6 +340,7 @@ a {
         font-size: 1.125rem;
         max-width: 800px;
         margin: 0 auto;
+        padding: 0 $spacing-lg;
     }
 }
 
