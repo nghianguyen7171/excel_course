@@ -136,12 +136,12 @@ Publisher: O'Reilly Media, Inc. | Year: 2023
 
 <div class="table-wrapper">
 
-| Week | Phase | Main Topic | Key Content | Readings | CLOs | Activities | Assessment |
-| :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
-| 1 | FOUNDATION | Course Introduction & Excel Basics | Course overview, analytics workflow, Excel interface, basic formulas (SUM, AVERAGE, COUNT, IF) | [1] Ch. 1 | CLO 1 | Lecture/demo, Q&A session | Participation |
-| 2 | FOUNDATION | Data Import & Preparation Basics | Import from CSV/Excel/web, data structure, handling missing values, removing duplicates | [1] Ch. 1-2; [2] Ch. 6 | CLO 1 | Import lab, hands-on practice | Homework 1 |
-| 3 | FOUNDATION | Power Query Fundamentals | Query editor, filter/sort/transform, consolidate multiple sources, refresh strategies | [1] Ch. 2-3 | CLO 1 | Power Query lab, build queries | Homework 2 |
-| 4 | FOUNDATION | Exploratory Data Analysis I | Descriptive statistics (mean, median, quartiles, std dev), summary tables, segmentation | [1] Ch. 4; [2] Ch. 8 | CLO 2 | Stats lab, interpret summaries | Homework 3 |
+| Week | Main Topic | Key Content | Readings | CLOs | Activities | Assessment |
+| :--: | :--: | :--: | :--: | :--: | :--: | :--: |
+| 1 | Course Introduction & Excel Basics | Course overview, analytics workflow, Excel interface, basic formulas (SUM, AVERAGE, COUNT, IF) | [1] Ch. 1 | CLO 1 | Lecture/demo, Q&A session | Participation |
+| 2 | Data Import & Preparation Basics | Import from CSV/Excel/web, data structure, handling missing values, removing duplicates | [1] Ch. 1-2; [2] Ch. 6 | CLO 1 | Import lab, hands-on practice | Homework 1 |
+| 3 | Power Query Fundamentals | Query editor, filter/sort/transform, consolidate multiple sources, refresh strategies | [1] Ch. 2-3 | CLO 1 | Power Query lab, build queries | Homework 2 |
+| 4 | Exploratory Data Analysis I | Descriptive statistics (mean, median, quartiles, std dev), summary tables, segmentation | [1] Ch. 4; [2] Ch. 8 | CLO 2 | Stats lab, interpret summaries | Homework 3 |
 
 </div>
 
@@ -155,15 +155,15 @@ Publisher: O'Reilly Media, Inc. | Year: 2023
 
 <div class="table-wrapper">
 
-| Week | Phase | Main Topic | Key Content | Readings | CLOs | Activities | Assessment |
-| :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
-| 5 | ANALYSIS | Data Visualization Basics | Chart types, design principles, preattentive attributes, color use, accessibility | [1] Ch. 9 | CLO 4 | Create multiple charts, redesign | Homework 4 |
-| 6 | ANALYSIS | Dashboard Fundamentals | Dashboard layout, interactive controls (slicers, timelines), KPI indicators, storytelling | [1] Ch. 28-29 | CLO 4,5 | Build interactive dashboard, case study | Homework 5 |
-| 7 | ANALYSIS | Statistical Analysis & Hypothesis Testing | Probability distributions, hypothesis testing, t-tests, ANOVA, interpreting p-values, confidence intervals | [2] Ch. 2-4 | CLO 3 | Hypothesis testing lab, case examples | Homework 6 |
-| 8 | ANALYSIS | Midterm Exam | Review sessions, exam preparation, computer-based test | Review materials | CLO 1-3 | Midterm exam (90 min) | Midterm Exam |
-| 9 | ANALYSIS | Regression Analysis | Simple & multiple regression, interpretation, assumptions, diagnostics | [2] Ch. 5-6 | CLO 3 | Regression lab, model building | Homework 7 |
-| 10 | ANALYSIS | Time Series & Forecasting | Time series decomposition, trend analysis, forecasting methods | [1] Ch. 10-11 | CLO 2,3 | Time series decomposition, forecasting | Lab work |
-| 11 | ANALYSIS | Power Pivot & Data Modeling | Power Pivot basics, create relationships, DAX fundamentals, advanced dashboards | [1] Ch. 5-7 | CLO 1,4 | Build data model, DAX measures | Lab work |
+| Week | Main Topic | Key Content | Readings | CLOs | Activities | Assessment |
+| :--: | :--: | :--: | :--: | :--: | :--: | :--: |
+| 5 | Data Visualization Basics | Chart types, design principles, preattentive attributes, color use, accessibility | [1] Ch. 9 | CLO 4 | Create multiple charts, redesign | Homework 4 |
+| 6 | Dashboard Fundamentals | Dashboard layout, interactive controls (slicers, timelines), KPI indicators, storytelling | [1] Ch. 28-29 | CLO 4,5 | Build interactive dashboard, case study | Homework 5 |
+| 7 | Statistical Analysis & Hypothesis Testing | Probability distributions, hypothesis testing, t-tests, ANOVA, interpreting p-values, confidence intervals | [2] Ch. 2-4 | CLO 3 | Hypothesis testing lab, case examples | Homework 6 |
+| 8 | Midterm Exam | Review sessions, exam preparation, computer-based test | Review materials | CLO 1-3 | Midterm exam (90 min) | Midterm Exam |
+| 9 | Regression Analysis | Simple & multiple regression, interpretation, assumptions, diagnostics | [2] Ch. 5-6 | CLO 3 | Regression lab, model building | Homework 7 |
+| 10 | Time Series & Forecasting | Time series decomposition, trend analysis, forecasting methods | [1] Ch. 10-11 | CLO 2,3 | Time series decomposition, forecasting | Lab work |
+| 11 | Power Pivot & Data Modeling | Power Pivot basics, create relationships, DAX fundamentals, advanced dashboards | [1] Ch. 5-7 | CLO 1,4 | Build data model, DAX measures | Lab work |
 
 </div>
 
@@ -177,12 +177,12 @@ Publisher: O'Reilly Media, Inc. | Year: 2023
 
 <div class="table-wrapper">
 
-| Week | Phase | Main Topic | Key Content | Readings | CLOs | Activities | Assessment |
-| :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
-| 12 | INTEGRATION | Professional Communication & Reporting | Report structure, writing for audiences, presenting insights, ethical visualization, documentation | [1] Ch. 11; [3] Ch. 10 | CLO 5,6 | Write executive summary, practice presentation | Homework 8 |
-| 13 | INTEGRATION | Integrated Project Work I | Project planning, select dataset, data wrangling, initial exploration | Project guidelines | CLO 1-6 | Lab: Project setup, instructor consultation | Project checkpoint |
-| 14 | INTEGRATION | Integrated Project Work II | Complete analysis, build visualizations/dashboards, write findings, peer review | Project guidelines | CLO 1-6 | Lab: Report finalization, peer feedback | Project refinement |
-| 15 | INTEGRATION | Final Presentations & Course Wrap-up | Student presentations (15 min each), Q&A, course reflection, future learning paths | Review syllabus | CLO 5,6 | Presentations, evaluation, reflection | Final Presentation |
+| Week | Main Topic | Key Content | Readings | CLOs | Activities | Assessment |
+| :--: | :--: | :--: | :--: | :--: | :--: | :--: |
+| 12 | Professional Communication & Reporting | Report structure, writing for audiences, presenting insights, ethical visualization, documentation | [1] Ch. 11; [3] Ch. 10 | CLO 5,6 | Write executive summary, practice presentation | Homework 8 |
+| 13 | Integrated Project Work I | Project planning, select dataset, data wrangling, initial exploration | Project guidelines | CLO 1-6 | Lab: Project setup, instructor consultation | Project checkpoint |
+| 14 | Integrated Project Work II | Complete analysis, build visualizations/dashboards, write findings, peer review | Project guidelines | CLO 1-6 | Lab: Report finalization, peer feedback | Project refinement |
+| 15 | Final Presentations & Course Wrap-up | Student presentations (15 min each), Q&A, course reflection, future learning paths | Review syllabus | CLO 5,6 | Presentations, evaluation, reflection | Final Presentation |
 
 </div>
 
