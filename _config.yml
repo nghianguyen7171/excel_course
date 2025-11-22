@@ -14,6 +14,7 @@ kramdown:
   syntax_highlighter: rouge
   parse_block_html: true
   parse_span_html: true
+  enable_coderay: false
 
 # Jekyll plugins for GitHub Pages  
 plugins:
