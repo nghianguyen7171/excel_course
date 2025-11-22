@@ -1,0 +1,32 @@
+# Jekyll Configuration for GitHub Pages
+title: Data Analysis with Excel
+description: Course syllabus and information for Data Analysis with Excel at National Economics University
+baseurl: ""
+url: "https://nghianguyen7171.github.io/excel_course"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Theme settings
+theme: minima
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+# Site author
+author:
+  name: Dr. Trong-Nghia Nguyen
+  email: nghiant@neu.edu.vn
+  url: https://nghianguyen7171.github.io/
+
