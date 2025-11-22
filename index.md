@@ -4,12 +4,13 @@ title: Data Analysis with Excel
 description: Course syllabus and information for Data Analysis with Excel at National Economics University
 ---
 
-{::nomarkdown}
 <div class="hero-section">
+
 <h1>Data Analysis with Excel</h1>
+
 <p>A practical course designed to equip students with essential skills in data-driven decision making using Microsoft Excel</p>
+
 </div>
-{:/nomarkdown}
 
 <section id="general-information">
 
