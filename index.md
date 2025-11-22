@@ -32,12 +32,19 @@ description: Course syllabus and information for Data Analysis with Excel at Nat
 **Department:** Mathematical Economics / Data Science Program  
 **Office Address:** Suite 1105, Building A1, National Economics University
 
-### Course Instructor:
+### Course Instructor
 
-**Dr. Trong-Nghia Nguyen**  
-Email: [nghiant@neu.edu.vn](mailto:nghiant@neu.edu.vn)  
-Website: [https://nghianguyen7171.github.io/](https://nghianguyen7171.github.io/)  
-Office Hours: [To be determined]
+<div class="instructor-profile">
+    <div class="instructor-image">
+        <img src="{{ site.baseurl }}/assets/images/instructor_profile.png" alt="Dr. Trong-Nghia Nguyen" class="profile-picture">
+    </div>
+    <div class="instructor-details">
+        <h3>Dr. Trong-Nghia Nguyen</h3>
+        <p><strong>Email:</strong> <a href="mailto:nghiant@neu.edu.vn">nghiant@neu.edu.vn</a></p>
+        <p><strong>Website:</strong> <a href="https://nghianguyen7171.github.io/" target="_blank" rel="noopener noreferrer">https://nghianguyen7171.github.io/</a></p>
+        <p><strong>Office Hours:</strong> To be determined</p>
+    </div>
+</div>
 
 ---
 
@@ -57,19 +64,36 @@ Data Analysis with Excel is a practical course designed to equip students with e
 
 **Modern Data Analytics in Excel: Using Power Query, Power Pivot, and Dynamic Arrays**  
 Author: George Mount  
-Publisher: O'Reilly Media, Inc. | Year: 2023
+Publisher: O'Reilly Media, Inc. | Year: 2023  
+Available: [O'Reilly Learning Platform](https://www.oreilly.com/library/view/modern-data-analytics/9781098102878/) | [Amazon](https://www.amazon.com/Modern-Data-Analytics-Excel-Arrays/dp/1098102879)
 
 ### Supplementary Textbooks (Free/Open Access)
 
-- An Introduction to Statistics using Microsoft Excel (Remenyi, Onofrei, English) - Free
-- Business Analytics with Excel (H. Barreto) - PALNI Open Press
-- Data Analysis and Decision Making with Microsoft Excel (Winston & Albright) - Selected chapters
+- **An Introduction to Statistics using Microsoft Excel** (Remenyi, Onofrei, English)  
+  Access: [Free Download](https://bookboon.com/en/an-introduction-to-statistics-using-microsoft-excel-ebook)
+
+- **Business Analytics with Excel** (H. Barreto) - PALNI Open Press  
+  Access: [Open Access Textbook](https://pressbooks.palni.org/businessanalytics/) | [Direct Link](https://pressbooks.palni.org/businessanalytics/)
+
+- **Data Analysis and Decision Making with Microsoft Excel** (Winston & Albright) - Selected chapters  
+  Access: [Cengage Learning](https://www.cengage.com/) | Available through university library
 
 ### Reference Resources
 
-- Microsoft Excel Training Videos (Official)
-- GitHub - Stringfest Analytics: Free datasets and templates
-- Canvas/LMS: Assignment submission and resources
+- **Microsoft Excel Training Videos**  
+  Access: [Microsoft Excel Video Training](https://support.microsoft.com/en-us/office/excel-video-training-9bc05390-e94c-46af-a5b3-d7c22f6990bb)
+
+- **GitHub - Stringfest Analytics**  
+  Access: [Stringfest Analytics on GitHub](https://github.com/stringfestanalytics) - Free datasets and templates
+
+- **Canvas/LMS**  
+  Access: Course-specific link (provided in class) - Assignment submission and resources
+
+- **Kaggle Datasets**  
+  Access: [Kaggle Datasets](https://www.kaggle.com/datasets) - Practice datasets for data analysis
+
+- **World Bank Open Data**  
+  Access: [World Bank Data](https://data.worldbank.org/) - Global datasets for analysis projects
 
 ---
 
