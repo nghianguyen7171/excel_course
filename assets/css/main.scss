@@ -112,9 +112,16 @@ h2 {
     margin-bottom: $spacing-md;
     padding-bottom: $spacing-sm;
     border-bottom: 3px solid $secondary-blue;
+    clear: both;
     
     @media (max-width: $breakpoint-md) {
         font-size: 1.75rem;
+    }
+    
+    // Remove border for h2 inside hero section
+    .hero-section & {
+        border-bottom: none;
+        margin-top: 0;
     }
 }
 
@@ -333,6 +340,8 @@ a {
         margin-bottom: $spacing-md;
         font-size: 2.5rem;
         font-weight: 700;
+        margin-top: 0;
+        padding-bottom: 0;
         
         @media (max-width: $breakpoint-md) {
             font-size: 2rem;
@@ -358,6 +367,24 @@ a {
 
 .content-wrapper {
     max-width: 100%;
+    
+    // Style sections within content
+    > section {
+        margin-bottom: $spacing-2xl;
+        
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    
+    // Override h2 styling for sections
+    section h2 {
+        margin-top: $spacing-xl;
+        
+        &:first-child {
+            margin-top: 0;
+        }
+    }
 }
 
 // Section Styles
