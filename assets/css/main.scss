@@ -292,21 +292,20 @@ a {
     }
 }
 
-// Main Content
-.main-content {
+// Page Wrapper
+.page-wrapper {
     max-width: 1000px;
     margin: 0 auto;
-    padding: $spacing-xl $spacing-lg;
     background: rgba(255, 255, 255, 0.98);
     box-shadow: $shadow-xl;
-    margin-top: 0;
+    border-radius: $radius-lg;
+    overflow: hidden;
+    margin-top: $spacing-lg;
     margin-bottom: $spacing-xl;
-    border-radius: 0 0 $radius-lg $radius-lg;
     
     @media (max-width: $breakpoint-md) {
-        padding: $spacing-lg $spacing-md;
-        margin: 0;
-        border-radius: 0;
+        margin: $spacing-md;
+        border-radius: $radius-md;
     }
 }
 
@@ -314,14 +313,18 @@ a {
 .hero-section {
     text-align: center;
     padding: $spacing-2xl 0;
-    margin-bottom: 0;
     background: linear-gradient(135deg, $primary-blue 0%, $secondary-blue 100%);
     color: white;
     width: 100%;
-    box-shadow: $shadow-lg;
     
     @media (max-width: $breakpoint-md) {
         padding: $spacing-xl 0;
+    }
+    
+    .hero-content {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 $spacing-lg;
     }
     
     h1 {
@@ -329,6 +332,7 @@ a {
         border: none;
         margin-bottom: $spacing-md;
         font-size: 2.5rem;
+        font-weight: 700;
         
         @media (max-width: $breakpoint-md) {
             font-size: 2rem;
@@ -338,9 +342,17 @@ a {
     p {
         color: rgba(255, 255, 255, 0.9);
         font-size: 1.125rem;
-        max-width: 800px;
+        line-height: 1.6;
         margin: 0 auto;
-        padding: 0 $spacing-lg;
+    }
+}
+
+// Main Content
+.main-content {
+    padding: $spacing-xl $spacing-lg;
+    
+    @media (max-width: $breakpoint-md) {
+        padding: $spacing-lg $spacing-md;
     }
 }
 

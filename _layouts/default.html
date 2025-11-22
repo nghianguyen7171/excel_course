@@ -29,16 +29,20 @@
 <body>
     {% include header.html %}
     
-    <div class="hero-section">
-        <h1>{{ site.title }}</h1>
-        <p>A practical course designed to equip students with essential skills in data-driven decision making using Microsoft Excel</p>
-    </div>
-    
-    <main class="main-content">
-        <div class="content-wrapper">
-            {{ content }}
+    <div class="page-wrapper">
+        <div class="hero-section">
+            <div class="hero-content">
+                <h1>{{ site.title }}</h1>
+                <p>A practical course designed to equip students with essential skills in data-driven decision making using Microsoft Excel</p>
+            </div>
         </div>
-    </main>
+        
+        <main class="main-content">
+            <div class="content-wrapper">
+                {{ content }}
+            </div>
+        </main>
+    </div>
     
     {% include footer.html %}
     
