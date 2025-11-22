@@ -1,14 +1,12 @@
 # Jekyll Configuration for GitHub Pages
 title: Data Analysis with Excel
 description: Course syllabus and information for Data Analysis with Excel at National Economics University
-baseurl: ""
-url: "https://nghianguyen7171.github.io/excel_course"
+baseurl: "/excel_course"
+url: "https://nghianguyen7171.github.io"
 
 # Build settings
 markdown: kramdown
 highlighter: rouge
-sass:
-  sass_dir: _sass
 plugins:
   - jekyll-feed
   - jekyll-sitemap

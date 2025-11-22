@@ -8,7 +8,7 @@
     <meta name="description" content="{{ page.description | default: site.description }}">
     
     <!-- Styles -->
-    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
     <style>
         /* Inline critical CSS for faster loading */
         body { font-family: 'Inter', sans-serif; margin: 0; }
@@ -28,7 +28,7 @@
     
     {% include footer.html %}
     
-    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+    <script src="{{ site.baseurl }}/assets/js/main.js"></script>
 </body>
 </html>
 
