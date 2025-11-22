@@ -34,6 +34,7 @@ description: Course syllabus and information for Data Analysis with Excel at Nat
 
 ### Course Instructor
 
+{::nomarkdown}
 <div class="instructor-profile">
     <div class="instructor-image">
         <img src="{{ site.baseurl }}/assets/images/instructor_profile.png" alt="Dr. Trong-Nghia Nguyen" class="profile-picture">
@@ -45,6 +46,7 @@ description: Course syllabus and information for Data Analysis with Excel at Nat
         <p><strong>Office Hours:</strong> To be determined</p>
     </div>
 </div>
+{:/nomarkdown}
 
 ---
 
