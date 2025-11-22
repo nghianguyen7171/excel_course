@@ -409,6 +409,11 @@ table {
         padding: $spacing-sm $spacing-md;
         text-align: left;
         border-bottom: 1px solid $lighter-gray;
+        
+        @media (max-width: $breakpoint-md) {
+            padding: $spacing-xs $spacing-sm;
+            font-size: 0.875rem;
+        }
     }
     
     th {
@@ -416,6 +421,7 @@ table {
         color: white;
         font-weight: 600;
         font-family: $font-sans;
+        white-space: nowrap;
     }
     
     tr {
@@ -429,12 +435,44 @@ table {
             border-bottom: none;
         }
     }
+}
+
+// Table wrapper for wide tables with horizontal scroll
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    margin: $spacing-lg 0;
+    -webkit-overflow-scrolling: touch;
+    box-shadow: $shadow-md;
+    border-radius: $radius-md;
     
-    @media (max-width: $breakpoint-md) {
-        font-size: 0.875rem;
+    table {
+        margin: 0;
+        min-width: 800px;
+        box-shadow: none;
+        border-radius: 0;
         
-        th, td {
-            padding: $spacing-xs $spacing-sm;
+        @media (min-width: $breakpoint-lg) {
+            min-width: auto;
+        }
+    }
+    
+    // Custom scrollbar styling
+    &::-webkit-scrollbar {
+        height: 8px;
+    }
+    
+    &::-webkit-scrollbar-track {
+        background: $lighter-gray;
+        border-radius: $radius-sm;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background: $primary-blue;
+        border-radius: $radius-sm;
+        
+        &:hover {
+            background: $secondary-blue;
         }
     }
 }
