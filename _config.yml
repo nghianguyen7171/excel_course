@@ -7,10 +7,6 @@ url: "https://nghianguyen7171.github.io"
 # Build settings
 markdown: kramdown
 highlighter: rouge
-sass:
-  sass_dir: assets/css
-  style: compressed
-
 # Jekyll plugins for GitHub Pages
 plugins:
   - jekyll-feed
