@@ -378,34 +378,38 @@ a {
     box-sizing: border-box;
     
     // Style sections within content with alternating backgrounds
-    > section {
+    section {
         margin-bottom: 0;
         overflow-x: hidden !important; // Prevent section overflow
         width: 100%;
         max-width: 100%;
         box-sizing: border-box;
         padding: $spacing-xl $spacing-lg;
+        border-radius: $radius-sm;
+        margin: $spacing-md 0;
         
-        // Alternate background colors - light and dark
-        &:nth-child(odd) {
-            background: rgba(255, 255, 255, 0.6);
+        // Alternate background colors - light and dark (more visible)
+        &:nth-of-type(odd) {
+            background: rgba(255, 255, 255, 0.7) !important;
         }
         
-        &:nth-child(even) {
-            background: rgba(241, 245, 249, 0.8);
+        &:nth-of-type(even) {
+            background: rgba(229, 231, 235, 0.8) !important;
         }
         
-        &:first-child {
+        &:first-of-type {
+            margin-top: 0;
             padding-top: $spacing-xl;
         }
         
-        &:last-child {
+        &:last-of-type {
             margin-bottom: 0;
             padding-bottom: $spacing-xl;
         }
         
         @media (max-width: $breakpoint-md) {
             padding: $spacing-lg $spacing-md;
+            margin: $spacing-sm 0;
         }
     }
     
@@ -425,26 +429,33 @@ a {
     }
 }
 
-// Section Styles
-.section {
+// Section Styles (for any section element)
+section {
     margin-bottom: 0;
     padding: $spacing-xl $spacing-lg;
+    border-radius: $radius-sm;
+    margin: $spacing-md 0;
     
-    // Alternate background colors - light and dark
-    &:nth-child(odd) {
-        background: rgba(255, 255, 255, 0.6);
+    // Alternate background colors - light and dark (more visible)
+    &:nth-of-type(odd) {
+        background: rgba(255, 255, 255, 0.7) !important;
     }
     
-    &:nth-child(even) {
-        background: rgba(241, 245, 249, 0.8);
+    &:nth-of-type(even) {
+        background: rgba(229, 231, 235, 0.8) !important;
     }
     
-    &:last-child {
+    &:first-of-type {
+        margin-top: 0;
+    }
+    
+    &:last-of-type {
         margin-bottom: 0;
     }
     
     @media (max-width: $breakpoint-md) {
         padding: $spacing-lg $spacing-md;
+        margin: $spacing-sm 0;
     }
 }
 
