@@ -12,6 +12,8 @@ kramdown:
   auto_ids: true
   hard_wrap: false
   syntax_highlighter: rouge
+  parse_block_html: true
+  parse_span_html: true
 
 # Jekyll plugins for GitHub Pages
 plugins:
