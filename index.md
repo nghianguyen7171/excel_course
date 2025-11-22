@@ -36,15 +36,15 @@ description: Course syllabus and information for Data Analysis with Excel at Nat
 
 {::nomarkdown}
 <div class="instructor-profile">
-    <div class="instructor-image">
-        <img src="{{ site.baseurl }}/assets/images/instructor_profile.png" alt="Dr. Trong-Nghia Nguyen" class="profile-picture">
-    </div>
-    <div class="instructor-details">
-        <h3>Dr. Trong-Nghia Nguyen</h3>
-        <p><strong>Email:</strong> <a href="mailto:nghiant@neu.edu.vn">nghiant@neu.edu.vn</a></p>
-        <p><strong>Website:</strong> <a href="https://nghianguyen7171.github.io/" target="_blank" rel="noopener noreferrer">https://nghianguyen7171.github.io/</a></p>
-        <p><strong>Office Hours:</strong> To be determined</p>
-    </div>
+<div class="instructor-image">
+<img src="{{ site.baseurl }}/assets/images/instructor_profile.png" alt="Dr. Trong-Nghia Nguyen" class="profile-picture">
+</div>
+<div class="instructor-details">
+<h3>Dr. Trong-Nghia Nguyen</h3>
+<p><strong>Email:</strong> <a href="mailto:nghiant@neu.edu.vn">nghiant@neu.edu.vn</a></p>
+<p><strong>Website:</strong> <a href="https://nghianguyen7171.github.io/" target="_blank" rel="noopener noreferrer">https://nghianguyen7171.github.io/</a></p>
+<p><strong>Office Hours:</strong> To be determined</p>
+</div>
 </div>
 {:/nomarkdown}
 
