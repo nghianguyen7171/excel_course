@@ -65,26 +65,26 @@ Data Analysis with Excel is a practical course designed to equip students with e
 **Modern Data Analytics in Excel: Using Power Query, Power Pivot, and Dynamic Arrays**  
 Author: George Mount  
 Publisher: O'Reilly Media, Inc. | Year: 2023  
-Available: [O'Reilly Learning Platform](https://www.oreilly.com/library/view/modern-data-analytics/9781098102878/) | [Amazon](https://www.amazon.com/Modern-Data-Analytics-Excel-Arrays/dp/1098102879)
+Access: [O'Reilly Learning Platform](https://www.oreilly.com/library/view/modern-data-analytics/9781098148812/)
 
 ### Supplementary Textbooks (Free/Open Access)
 
 - **An Introduction to Statistics using Microsoft Excel** (Remenyi, Onofrei, English)  
-  Access: [Free Download](https://bookboon.com/en/an-introduction-to-statistics-using-microsoft-excel-ebook)
+  Access: [PDF Download](https://elearning.uniroma1.it/pluginfile.php/397226/mod_resource/content/2/An%20Introduction%20to%20statistic%20using%20Excel.pdf)
 
 - **Business Analytics with Excel** (H. Barreto) - PALNI Open Press  
-  Access: [Open Access Textbook](https://pressbooks.palni.org/businessanalytics/) | [Direct Link](https://pressbooks.palni.org/businessanalytics/)
+  Access: [Gateway to Business Analytics](https://pressbooks.palni.org/gatewaytobusinessanalytics/)
 
 - **Data Analysis and Decision Making with Microsoft Excel** (Winston & Albright) - Selected chapters  
-  Access: [Cengage Learning](https://www.cengage.com/) | Available through university library
+  Access: [PDF Download](https://theswissbay.ch/pdf/Gentoomen%20Library/Data%20Analysis/Data%20Analysis%20and%20Decision%20Making%204th%20Edition%20by%20Albright%2C%20Winston%20and%20Zappe.pdf)
 
 ### Reference Resources
 
 - **Microsoft Excel Training Videos**  
   Access: [Microsoft Excel Video Training](https://support.microsoft.com/en-us/office/excel-video-training-9bc05390-e94c-46af-a5b3-d7c22f6990bb)
 
-- **GitHub - Stringfest Analytics**  
-  Access: [Stringfest Analytics on GitHub](https://github.com/stringfestanalytics) - Free datasets and templates
+- **GitHub Excel Datasets for Data Analytics Beginners**  
+  Access: [Practice Datasets for Excel](https://github.com/rohanmistry231/Practice-Datasets-for-Excel)
 
 - **Canvas/LMS**  
   Access: Course-specific link (provided in class) - Assignment submission and resources
