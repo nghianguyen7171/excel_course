@@ -257,10 +257,16 @@ a {
     display: flex;
     list-style: none;
     gap: $spacing-lg;
+    flex-wrap: nowrap;
     
     @media (max-width: $breakpoint-md) {
         flex-direction: column;
         gap: $spacing-sm;
+        flex-wrap: wrap;
+    }
+    
+    li {
+        white-space: nowrap;
     }
 }
 
@@ -270,6 +276,8 @@ a {
     padding: $spacing-xs $spacing-sm;
     border-radius: $radius-sm;
     transition: all 0.2s ease;
+    white-space: nowrap;
+    display: inline-block;
     
     &:hover {
         background-color: $lighter-gray;
