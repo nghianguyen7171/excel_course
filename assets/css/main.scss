@@ -386,13 +386,13 @@ a {
         box-sizing: border-box;
         padding: $spacing-xl $spacing-lg;
         
-        // Alternate background colors
+        // Alternate background colors - light and dark
         &:nth-child(odd) {
-            background: rgba(255, 255, 255, 0.5);
+            background: rgba(255, 255, 255, 0.6);
         }
         
         &:nth-child(even) {
-            background: rgba(249, 250, 251, 0.7);
+            background: rgba(241, 245, 249, 0.8);
         }
         
         &:first-child {
@@ -430,13 +430,13 @@ a {
     margin-bottom: 0;
     padding: $spacing-xl $spacing-lg;
     
-    // Alternate background colors
+    // Alternate background colors - light and dark
     &:nth-child(odd) {
-        background: rgba(255, 255, 255, 0.5);
+        background: rgba(255, 255, 255, 0.6);
     }
     
     &:nth-child(even) {
-        background: rgba(249, 250, 251, 0.7);
+        background: rgba(241, 245, 249, 0.8);
     }
     
     &:last-child {
