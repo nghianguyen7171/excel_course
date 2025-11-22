@@ -29,8 +29,8 @@ description: Course syllabus and information for Data Analysis with Excel at Nat
 
 ## 2. DEPARTMENT AND INSTRUCTORS
 
-**Department:** Mathematical Economics / Data Science Program  
-**Office Address:** Suite 1105, Building A1, National Economics University
+**Department:** Faculty of Data Science and Artificial Intelligence, College of Technology, National Economics University  
+**Office Address:** Room 1613, Building A1, National Economics University
 
 ### Course Instructor
 
