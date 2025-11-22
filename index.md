@@ -348,7 +348,7 @@ Access: [O'Reilly Learning Platform](https://www.oreilly.com/library/view/modern
 **Name:** Dr. Trong-Nghia Nguyen  
 **Email:** [nghiant@neu.edu.vn](mailto:nghiant@neu.edu.vn)  
 **Website:** [https://nghianguyen7171.github.io/](https://nghianguyen7171.github.io/)  
-**Office:** Suite 1105, Building A1, National Economics University  
+**Office:** Room 1613, Building A1, National Economics University  
 **Office Hours:** [Days & Times - To be determined]
 
 ### Teaching Assistant:
