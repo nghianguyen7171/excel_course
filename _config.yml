@@ -15,15 +15,18 @@ kramdown:
   parse_block_html: true
   parse_span_html: true
 
-# Jekyll plugins for GitHub Pages
+# Jekyll plugins for GitHub Pages  
 plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-relative-links
   - jekyll-default-layout
   - jekyll-optional-front-matter
+  - jekyll-titles-from-headings
 
 # No theme - using custom layout
+include:
+  - _pages
 
 # Exclude from processing
 exclude:
