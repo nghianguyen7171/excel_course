@@ -134,12 +134,16 @@ Publisher: O'Reilly Media, Inc. | Year: 2023
 
 **Objective:** Master Excel basics, data import, and cleaning for robust data preparation
 
+<div class="table-wrapper">
+
 | Week | Phase | Main Topic | Key Content | Readings | CLOs | Activities | Assessment |
 | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
 | 1 | FOUNDATION | Course Introduction & Excel Basics | Course overview, analytics workflow, Excel interface, basic formulas (SUM, AVERAGE, COUNT, IF) | [1] Ch. 1 | CLO 1 | Lecture/demo, Q&A session | Participation |
 | 2 | FOUNDATION | Data Import & Preparation Basics | Import from CSV/Excel/web, data structure, handling missing values, removing duplicates | [1] Ch. 1-2; [2] Ch. 6 | CLO 1 | Import lab, hands-on practice | Homework 1 |
 | 3 | FOUNDATION | Power Query Fundamentals | Query editor, filter/sort/transform, consolidate multiple sources, refresh strategies | [1] Ch. 2-3 | CLO 1 | Power Query lab, build queries | Homework 2 |
 | 4 | FOUNDATION | Exploratory Data Analysis I | Descriptive statistics (mean, median, quartiles, std dev), summary tables, segmentation | [1] Ch. 4; [2] Ch. 8 | CLO 2 | Stats lab, interpret summaries | Homework 3 |
+
+</div>
 
 **Phase 1 Skills Checkpoint:** Students able to import data and perform basic EDA
 
@@ -148,6 +152,8 @@ Publisher: O'Reilly Media, Inc. | Year: 2023
 ### PHASE 2: ANALYSIS & VISUALIZATION (Weeks 5-11)
 
 **Objective:** Develop analytical and visualization skills; master statistical methods and modern Excel tools
+
+<div class="table-wrapper">
 
 | Week | Phase | Main Topic | Key Content | Readings | CLOs | Activities | Assessment |
 | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
@@ -159,6 +165,8 @@ Publisher: O'Reilly Media, Inc. | Year: 2023
 | 10 | ANALYSIS | Time Series & Forecasting | Time series decomposition, trend analysis, forecasting methods | [1] Ch. 10-11 | CLO 2,3 | Time series decomposition, forecasting | Lab work |
 | 11 | ANALYSIS | Power Pivot & Data Modeling | Power Pivot basics, create relationships, DAX fundamentals, advanced dashboards | [1] Ch. 5-7 | CLO 1,4 | Build data model, DAX measures | Lab work |
 
+</div>
+
 **Phase 2 Skills Checkpoint:** Students able to conduct complete analysis and create professional visualizations
 
 ---
@@ -167,12 +175,16 @@ Publisher: O'Reilly Media, Inc. | Year: 2023
 
 **Objective:** Apply all skills to real-world projects; communicate insights professionally; develop independence
 
+<div class="table-wrapper">
+
 | Week | Phase | Main Topic | Key Content | Readings | CLOs | Activities | Assessment |
 | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
 | 12 | INTEGRATION | Professional Communication & Reporting | Report structure, writing for audiences, presenting insights, ethical visualization, documentation | [1] Ch. 11; [3] Ch. 10 | CLO 5,6 | Write executive summary, practice presentation | Homework 8 |
 | 13 | INTEGRATION | Integrated Project Work I | Project planning, select dataset, data wrangling, initial exploration | Project guidelines | CLO 1-6 | Lab: Project setup, instructor consultation | Project checkpoint |
 | 14 | INTEGRATION | Integrated Project Work II | Complete analysis, build visualizations/dashboards, write findings, peer review | Project guidelines | CLO 1-6 | Lab: Report finalization, peer feedback | Project refinement |
 | 15 | INTEGRATION | Final Presentations & Course Wrap-up | Student presentations (15 min each), Q&A, course reflection, future learning paths | Review syllabus | CLO 5,6 | Presentations, evaluation, reflection | Final Presentation |
+
+</div>
 
 **Phase 3 Skills Checkpoint:** Students execute complete end-to-end data analysis projects independently
 
