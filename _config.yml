@@ -7,6 +7,12 @@ url: "https://nghianguyen7171.github.io"
 # Build settings
 markdown: kramdown
 highlighter: rouge
+kramdown:
+  input: GFM
+  auto_ids: true
+  hard_wrap: false
+  syntax_highlighter: rouge
+
 # Jekyll plugins for GitHub Pages
 plugins:
   - jekyll-feed
