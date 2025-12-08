@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Data Analysis with Excel
-description: Course syllabus and information for Data Analysis with Excel at National Economics University
+title: Data Analysis with Spreadsheet Program
+description: Course syllabus and information for Data Analysis with Spreadsheet Program at National Economics University
 ---
 
 <section id="general-information">
@@ -10,7 +10,7 @@ description: Course syllabus and information for Data Analysis with Excel at Nat
 
 | Item | Details |
 | :-- | :-- |
-| Course Title | Data Analysis with Excel |
+| Course Title | Data Analysis with Spreadsheet Program |
 | Course Number |  |
 | Course Type | Elective |
 | Credits | 3 |
@@ -54,7 +54,7 @@ description: Course syllabus and information for Data Analysis with Excel at Nat
 
 ## 3. COURSE DESCRIPTION
 
-Data Analysis with Excel is a practical course designed to equip students with essential skills in data-driven decision making using Microsoft Excel. The course covers the complete data analytics workflow: importing and cleaning data, exploratory data analysis, statistical analysis, visualization, and professional reporting of insights. Students develop proficiency in modern Excel tools including PivotTables, Power Query, and Power Pivot. Through hands-on labs and a capstone project, students learn to transform raw data into actionable business insights and communicate findings effectively to diverse audiences.
+Data Analysis with Spreadsheet Program is a practical course designed to equip students with essential skills in data-driven decision making using spreadsheet tools. The course covers the complete data analytics workflow: importing and cleaning data, exploratory data analysis, statistical analysis, visualization, and professional reporting of insights. Students develop proficiency in modern spreadsheet capabilities including PivotTables, Power Query, and Power Pivot. Through hands-on labs and a capstone project, students learn to transform raw data into actionable business insights and communicate findings effectively to diverse audiences.
 
 ---
 

@@ -1,10 +1,10 @@
-# Backup Context - Data Analysis with Excel Course Website
+# Backup Context - Data Analysis with Spreadsheet Program Course Website
 
-This file documents the current state, configuration, and important information about the Jekyll-based GitHub Pages website for the Data Analysis with Excel course.
+This file documents the current state, configuration, and important information about the Jekyll-based GitHub Pages website for the Data Analysis with Spreadsheet Program course.
 
 ## Project Overview
 
-**Course:** Data Analysis with Excel  
+**Course:** Data Analysis with Spreadsheet Program  
 **Institution:** National Economics University  
 **Faculty:** Faculty of Data Science and Artificial Intelligence, College of Technology  
 **Instructor:** Dr. Trong-Nghia Nguyen  

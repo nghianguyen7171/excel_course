@@ -1,6 +1,6 @@
-# Data Analysis with Excel - Course Website
+# Data Analysis with Spreadsheet Program - Course Website
 
-This is the GitHub Pages website for the **Data Analysis with Excel** course at National Economics University, Faculty of Data Science and Artificial Intelligence.
+This is the GitHub Pages website for the **Data Analysis with Spreadsheet Program** course at National Economics University, Faculty of Data Science and Artificial Intelligence.
 
 ## Overview
 
@@ -149,7 +149,7 @@ Or in HTML:
 
 ## Course Information
 
-- **Course:** Data Analysis with Excel
+- **Course:** Data Analysis with Spreadsheet Program
 - **Instructor:** Dr. Trong-Nghia Nguyen
 - **Email:** nghiant@neu.edu.vn
 - **Website:** https://nghianguyen7171.github.io/
