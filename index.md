@@ -14,11 +14,11 @@ description: Course syllabus and information for Data Analysis with Spreadsheet 
 | Course Number |  |
 | Course Type | Elective |
 | Credits | 3 |
-| Lecture Hours | 15 hours (1 hour/week) |
-| Tutorial/Lab Hours | 30 hours (2 hours/week) |
+| Lecture Hours | 12 hours (alternating weeks: 1, 3, 5, 7, 9, 12) |
+| Tutorial/Lab Hours | 16 hours (alternating weeks: 2, 4, 6, 8, 11, 13, 14, 15) |
 | Self-study Hours | 90 hours |
-| Total Contact Hours | 45 hours |
-| Duration | 15 weeks (1 week per topic) |
+| Total Contact Hours | 29.5 hours (including midterm exam) |
+| Duration | 15 weeks (alternating lecture/lab schedule) |
 | Prerequisite | Basic Computer Skills; Introduction to Statistics (recommended) |
 
 ---
@@ -132,8 +132,8 @@ Access: [O'Reilly Learning Platform](https://www.oreilly.com/library/view/modern
 
 | Assessment Type | Timing | Weight | Description |
 | :-- | :-- | :-- | :-- |
-| Participation & Homework | Weekly | 20% | Class engagement + 7 lab assignments |
-| Midterm Exam | Week 8 | 30% | Computer-based exam (90 min) |
+| Participation & Homework | Weekly | 20% | Class engagement + lab assignments |
+| Midterm Exam | Week 10 | 30% | Computer-based exam (90 min) |
 | Final Project | Weeks 13-15 | 50% | Complete analysis + report + presentation |
 
 ### Grading Scale
@@ -152,74 +152,48 @@ Access: [O'Reilly Learning Platform](https://www.oreilly.com/library/view/modern
 
 <section id="schedule">
 
-## 7. THREE-PHASE COURSE STRUCTURE & 15-WEEK SCHEDULE
+## 7. SIMPLIFIED 15-WEEK SCHEDULE (Alternating Lecture/Lab)
 
-### PHASE 1: FOUNDATIONS (Weeks 1-4)
-
-**Objective:** Master Excel basics, data import, and cleaning for robust data preparation
+**Schedule Pattern:** Lectures and Labs alternate during weeks 1-9, with Week 10 dedicated to the Midterm Exam. Weeks 11-15 continue with alternating pattern focusing on project work.
 
 <div class="table-wrapper">
 
-| Week | Main Topic | Key Content | Readings | CLOs | Activities | Assessment |
+| Week | Type | Main Topic | Key Content | Readings | CLOs | Assessment |
 | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
-| 1 | Course Introduction & Excel Basics | Course overview, analytics workflow, Excel interface, basic formulas (SUM, AVERAGE, COUNT, IF) | [1] Ch. 1 | CLO 1 | Lecture/demo, Q&A session | Participation |
-| 2 | Data Import & Preparation Basics | Import from CSV/Excel/web, data structure, handling missing values, removing duplicates | [1] Ch. 1-2; [2] Ch. 6 | CLO 1 | Import lab, hands-on practice | Homework 1 |
-| 3 | Power Query Fundamentals | Query editor, filter/sort/transform, consolidate multiple sources, refresh strategies | [1] Ch. 2-3 | CLO 1 | Power Query lab, build queries | Homework 2 |
-| 4 | Exploratory Data Analysis I | Descriptive statistics (mean, median, quartiles, std dev), summary tables, segmentation | [1] Ch. 4; [2] Ch. 8 | CLO 2 | Stats lab, interpret summaries | Homework 3 |
+| 1 | **Lecture** | Course Introduction & Excel Basics | Course overview, analytics workflow, Excel interface, essential formulas (SUM, AVERAGE, COUNT, IF, VLOOKUP) | [1] Ch. 1 | CLO 1 | Participation |
+| 2 | **Lab** | Excel Basics Practice | Hands-on practice with formulas, functions, and basic data manipulation | [1] Ch. 1 | CLO 1 | Lab Assignment 1 |
+| 3 | **Lecture** | Data Import & Power Query | Import from CSV/Excel/web, Power Query basics, data cleaning, handling missing values | [1] Ch. 2-3 | CLO 1 | - |
+| 4 | **Lab** | Data Import & Cleaning Practice | Import datasets, clean data, transform data using Power Query | [1] Ch. 2-3 | CLO 1 | Lab Assignment 2 |
+| 5 | **Lecture** | Exploratory Data Analysis | Descriptive statistics, summary tables, data segmentation, PivotTables | [1] Ch. 4; [2] Ch. 8 | CLO 2 | - |
+| 6 | **Lab** | EDA Practice | Perform descriptive analysis, create summary statistics and PivotTables | [1] Ch. 4 | CLO 2 | Lab Assignment 3 |
+| 7 | **Lecture** | Data Visualization & Dashboards | Chart types, design principles, effective visualizations, interactive dashboards with slicers | [1] Ch. 9, 28-29 | CLO 4 | - |
+| 8 | **Lab** | Visualization Practice | Create various charts, build interactive dashboards | [1] Ch. 9 | CLO 4 | Lab Assignment 4 |
+| 9 | **Lecture** | Statistical Analysis & Regression | Hypothesis testing basics, simple regression, interpreting results | [2] Ch. 2-6 | CLO 3 | - |
+| 10 | **Midterm** | Midterm Exam | Comprehensive exam covering weeks 1-9 (Excel basics, data import, EDA, visualization, statistics) | Review materials | CLO 1-4 | Midterm Exam (30%) |
+| 11 | **Lab** | Statistical Analysis Practice | Apply statistical tests and build regression models | [2] Ch. 5-6 | CLO 3 | Lab Assignment 5 |
+| 12 | **Lecture** | Professional Reporting & Communication | Report structure, writing for audiences, presenting insights effectively | [1] Ch. 11; [3] Ch. 10 | CLO 5 | - |
+| 13 | **Lab** | Final Project Work I | Project planning, dataset selection, data wrangling, initial exploration | Project guidelines | CLO 1-6 | Project Checkpoint |
+| 14 | **Lab** | Final Project Work II | Complete analysis, build visualizations/dashboards, write report | Project guidelines | CLO 1-6 | Project Refinement |
+| 15 | **Lab** | Final Presentations | Student presentations (15 min each), Q&A, course wrap-up | - | CLO 5,6 | Final Presentation (50%) |
 
 </div>
 
-**Phase 1 Skills Checkpoint:** Students able to import data and perform basic EDA
-
----
-
-### PHASE 2: ANALYSIS & VISUALIZATION (Weeks 5-11)
-
-**Objective:** Develop analytical and visualization skills; master statistical methods and modern Excel tools
-
-<div class="table-wrapper">
-
-| Week | Main Topic | Key Content | Readings | CLOs | Activities | Assessment |
-| :--: | :--: | :--: | :--: | :--: | :--: | :--: |
-| 5 | Data Visualization Basics | Chart types, design principles, preattentive attributes, color use, accessibility | [1] Ch. 9 | CLO 4 | Create multiple charts, redesign | Homework 4 |
-| 6 | Dashboard Fundamentals | Dashboard layout, interactive controls (slicers, timelines), KPI indicators, storytelling | [1] Ch. 28-29 | CLO 4,5 | Build interactive dashboard, case study | Homework 5 |
-| 7 | Statistical Analysis & Hypothesis Testing | Probability distributions, hypothesis testing, t-tests, ANOVA, interpreting p-values, confidence intervals | [2] Ch. 2-4 | CLO 3 | Hypothesis testing lab, case examples | Homework 6 |
-| 8 | Midterm Exam | Review sessions, exam preparation, computer-based test | Review materials | CLO 1-3 | Midterm exam (90 min) | Midterm Exam |
-| 9 | Regression Analysis | Simple & multiple regression, interpretation, assumptions, diagnostics | [2] Ch. 5-6 | CLO 3 | Regression lab, model building | Homework 7 |
-| 10 | Time Series & Forecasting | Time series decomposition, trend analysis, forecasting methods | [1] Ch. 10-11 | CLO 2,3 | Time series decomposition, forecasting | Lab work |
-| 11 | Power Pivot & Data Modeling | Power Pivot basics, create relationships, DAX fundamentals, advanced dashboards | [1] Ch. 5-7 | CLO 1,4 | Build data model, DAX measures | Lab work |
-
-</div>
-
-**Phase 2 Skills Checkpoint:** Students able to conduct complete analysis and create professional visualizations
-
----
-
-### PHASE 3: INTEGRATION & PROFESSIONAL COMMUNICATION (Weeks 12-15)
-
-**Objective:** Apply all skills to real-world projects; communicate insights professionally; develop independence
-
-<div class="table-wrapper">
-
-| Week | Main Topic | Key Content | Readings | CLOs | Activities | Assessment |
-| :--: | :--: | :--: | :--: | :--: | :--: | :--: |
-| 12 | Professional Communication & Reporting | Report structure, writing for audiences, presenting insights, ethical visualization, documentation | [1] Ch. 11; [3] Ch. 10 | CLO 5,6 | Write executive summary, practice presentation | Homework 8 |
-| 13 | Integrated Project Work I | Project planning, select dataset, data wrangling, initial exploration | Project guidelines | CLO 1-6 | Lab: Project setup, instructor consultation | Project checkpoint |
-| 14 | Integrated Project Work II | Complete analysis, build visualizations/dashboards, write findings, peer review | Project guidelines | CLO 1-6 | Lab: Report finalization, peer feedback | Project refinement |
-| 15 | Final Presentations & Course Wrap-up | Student presentations (15 min each), Q&A, course reflection, future learning paths | Review syllabus | CLO 5,6 | Presentations, evaluation, reflection | Final Presentation |
-
-</div>
-
-**Phase 3 Skills Checkpoint:** Students execute complete end-to-end data analysis projects independently
+**Schedule Notes:**
+- **Weeks 1, 3, 5, 7, 9, 12:** Lecture sessions (conceptual learning, demonstrations)
+- **Weeks 2, 4, 6, 8, 11, 13, 14, 15:** Lab sessions (hands-on practice and project work)
+- **Week 10:** Midterm Exam (90 minutes, computer-based)
 
 ---
 
 ## 8. WEEKLY SCHEDULE & CONTACT HOURS
 
-- **Lecture:** 1 hour/week (Time TBD)
-- **Lab/Tutorial:** 2 hours/week (Hands-on practice in computer lab)
-- **Self-Study:** 6 hours/week (Homework, reading, project work)
-- **Total:** 9 hours engagement per week × 15 weeks = 135 hours
+**Alternating Schedule:**
+- **Lecture Weeks (Weeks 1, 3, 5, 7, 9, 12):** 2 hours of lecture (Time TBD)
+- **Lab Weeks (Weeks 2, 4, 6, 8, 11, 13, 14, 15):** 2 hours of hands-on lab practice (Time TBD)
+- **Midterm Week (Week 10):** 90-minute exam
+- **Self-Study:** 4-6 hours/week (Homework, reading, project work)
+- **Total Contact Hours:** 6 lectures × 2 hours + 8 labs × 2 hours + 1.5 hours (midterm) = 29.5 hours
+- **Total Engagement:** ~135 hours (including self-study)
 
 ---
 
@@ -239,7 +213,7 @@ Access: [O'Reilly Learning Platform](https://www.oreilly.com/library/view/modern
 
 ### Midterm & Final Exams
 
-- Midterm (Week 8): 90-minute computer-based test
+- Midterm (Week 10): 90-minute computer-based test
 - Final: 15-minute presentation + written project report
 - No make-up exams without medical/emergency documentation
 
@@ -302,9 +276,9 @@ Access: [O'Reilly Learning Platform](https://www.oreilly.com/library/view/modern
 
 ### Timeline:
 
-- **Week 13:** Project planning and data wrangling (Phase 3 start)
-- **Week 14:** Analysis and report writing
-- **Week 15:** Final presentation and submission
+- **Week 13 (Lab):** Project planning and data wrangling
+- **Week 14 (Lab):** Analysis, visualization, and report writing
+- **Week 15 (Lab):** Final presentation and submission
 
 **Datasets:** Provided list or student-selected (instructor approval required)
 
