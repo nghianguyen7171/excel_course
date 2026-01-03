@@ -152,36 +152,37 @@ Access: [O'Reilly Learning Platform](https://www.oreilly.com/library/view/modern
 
 <section id="schedule">
 
-## 7. SIMPLIFIED 15-WEEK SCHEDULE (Alternating Lecture/Lab)
+## 7. SIMPLIFIED 15-WEEK SCHEDULE (Alternating Lecture/Lab with Group Project Focus)
 
-**Schedule Pattern:** Lectures and Labs alternate during weeks 1-9, with Week 10 dedicated to the Midterm Exam. Weeks 11-15 continue with alternating pattern focusing on project work.
+**Schedule Pattern:** Lectures and Labs alternate. Each lecture week introduces core concepts aligned with project topics. Lab weeks include hands-on practice and group progress reports on their chosen project topic.
 
 <div class="table-wrapper">
 
-| Week | Type | Main Topic | Key Content | Readings | CLOs | Assessment |
-| :--: | :--: | :--: | :--: | :--: | :--: | :--: |
-| 1 | **Lecture** | Course Introduction & Excel Basics | Course overview, analytics workflow, Excel interface, essential formulas (SUM, AVERAGE, COUNT, IF, VLOOKUP) | [1] Ch. 1 | CLO 1 | Participation |
-| 2 | **Lab** | Excel Basics Practice | Hands-on practice with formulas, functions, and basic data manipulation | [1] Ch. 1 | CLO 1 | Lab Assignment 1 |
-| 3 | **Lecture** | Data Import & Power Query | Import from CSV/Excel/web, Power Query basics, data cleaning, handling missing values | [1] Ch. 2-3 | CLO 1 | - |
-| 4 | **Lab** | Data Import & Cleaning Practice | Import datasets, clean data, transform data using Power Query | [1] Ch. 2-3 | CLO 1 | Lab Assignment 2 |
-| 5 | **Lecture** | Exploratory Data Analysis | Descriptive statistics, summary tables, data segmentation, PivotTables | [1] Ch. 4; [2] Ch. 8 | CLO 2 | - |
-| 6 | **Lab** | EDA Practice | Perform descriptive analysis, create summary statistics and PivotTables | [1] Ch. 4 | CLO 2 | Lab Assignment 3 |
-| 7 | **Lecture** | Data Visualization & Dashboards | Chart types, design principles, effective visualizations, interactive dashboards with slicers | [1] Ch. 9, 28-29 | CLO 4 | - |
-| 8 | **Lab** | Visualization Practice | Create various charts, build interactive dashboards | [1] Ch. 9 | CLO 4 | Lab Assignment 4 |
-| 9 | **Lecture** | Statistical Analysis & Regression | Hypothesis testing basics, simple regression, interpreting results | [2] Ch. 2-6 | CLO 3 | - |
-| 10 | **Midterm** | Midterm Exam | Comprehensive exam covering weeks 1-9 (Excel basics, data import, EDA, visualization, statistics) | Review materials | CLO 1-4 | Midterm Exam (30%) |
-| 11 | **Lab** | Statistical Analysis Practice | Apply statistical tests and build regression models | [2] Ch. 5-6 | CLO 3 | Lab Assignment 5 |
-| 12 | **Lecture** | Professional Reporting & Communication | Report structure, writing for audiences, presenting insights effectively | [1] Ch. 11; [3] Ch. 10 | CLO 5 | - |
-| 13 | **Lab** | Final Project Work I | Project planning, dataset selection, data wrangling, initial exploration | Project guidelines | CLO 1-6 | Project Checkpoint |
-| 14 | **Lab** | Final Project Work II | Complete analysis, build visualizations/dashboards, write report | Project guidelines | CLO 1-6 | Project Refinement |
-| 15 | **Lab** | Final Presentations | Student presentations (15 min each), Q&A, course wrap-up | - | CLO 5,6 | Final Presentation (50%) |
+| Week | Type | Main Topic | Key Content | Related Topic | Readings | CLOs | Assessment |
+| :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
+| 1 | **Lecture** | Course Introduction & Excel Basics | Course overview, analytics workflow, Excel interface, essential formulas (SUM, AVERAGE, COUNT, IF, VLOOKUP) | Topic 1: Excel Basics & Business Analytics | [1] Ch. 1 | CLO 1 | Participation |
+| 2 | **Lab** | Excel Basics Practice | Hands-on practice with formulas and functions; Group topic selection and initial planning | All Topics | [1] Ch. 1 | CLO 1 | Lab Assignment 1 + Group Progress Report 1 |
+| 3 | **Lecture** | Data Import & Cleaning | Import from CSV/Excel/web, Power Query basics, data cleaning, handling missing values | Topic 2: Data Cleaning & Preparation | [1] Ch. 2-3 | CLO 1 | - |
+| 4 | **Lab** | Data Import & Cleaning Practice | Import and clean datasets using Power Query; Groups report on data import progress | All Topics | [1] Ch. 2-3 | CLO 1 | Lab Assignment 2 + Group Progress Report 2 |
+| 5 | **Lecture** | Exploratory Data Analysis | Descriptive statistics, summary tables, data segmentation, PivotTables | Topic 3: Exploratory Data Analysis | [1] Ch. 4; [2] Ch. 8 | CLO 2 | - |
+| 6 | **Lab** | EDA Practice | Perform descriptive analysis and create PivotTables; Groups report on initial exploration findings | All Topics | [1] Ch. 4 | CLO 2 | Lab Assignment 3 + Group Progress Report 3 |
+| 7 | **Lecture** | Data Visualization & Dashboards | Chart types, design principles, effective visualizations, interactive dashboards | Topic 4: Data Visualization & Comparative Analysis | [1] Ch. 9, 28-29 | CLO 4 | - |
+| 8 | **Lab** | Visualization Practice | Create charts and build interactive dashboards; Groups present EDA findings and visualizations | All Topics | [1] Ch. 9 | CLO 4 | Lab Assignment 4 + Group Progress Report 4 |
+| 9 | **Lecture** | Statistical Analysis & Regression | Hypothesis testing basics, simple regression, interpreting results | Topics 5-7: Statistical Analysis, Time Series, Marketing Analytics | [2] Ch. 2-6 | CLO 3 | - |
+| 10 | **Midterm** | Midterm Exam | Comprehensive exam covering weeks 1-9 (Excel basics, data import, EDA, visualization, statistics) | - | Review materials | CLO 1-4 | Midterm Exam (30%) |
+| 11 | **Lab** | Statistical Analysis Practice | Apply statistical tests and build regression models; Groups report on statistical analysis progress | All Topics | [2] Ch. 5-6 | CLO 3 | Lab Assignment 5 + Group Progress Report 5 |
+| 12 | **Lecture** | Professional Reporting & Communication | Report structure, writing for audiences, presenting insights effectively | All Topics (Final Project Guidance) | [1] Ch. 11; [3] Ch. 10 | CLO 5 | - |
+| 13 | **Lab** | Final Project Work I | Complete analysis, build visualizations/dashboards, write report drafts; Group progress review | All Topics | Project guidelines | CLO 1-6 | Project Checkpoint |
+| 14 | **Lab** | Final Project Work II | Refine analysis, finalize dashboards, complete written reports; Peer review and feedback | All Topics | Project guidelines | CLO 1-6 | Project Refinement |
+| 15 | **Lab** | Final Presentations | Student group presentations (15 min each), Q&A, course wrap-up | All Topics | - | CLO 5,6 | Final Presentation (50%) |
 
 </div>
 
 **Schedule Notes:**
-- **Weeks 1, 3, 5, 7, 9, 12:** Lecture sessions (conceptual learning, demonstrations)
-- **Weeks 2, 4, 6, 8, 11, 13, 14, 15:** Lab sessions (hands-on practice and project work)
+- **Weeks 1, 3, 5, 7, 9, 12:** Lecture sessions (concise but comprehensive conceptual learning)
+- **Weeks 2, 4, 6, 8, 11, 13, 14, 15:** Lab sessions (hands-on practice + group project reporting)
 - **Week 10:** Midterm Exam (90 minutes, computer-based)
+- **Group Work:** Students form groups and select one of 7 available topics for their final project. Groups report progress during lab weeks, building toward final presentation in Week 15.
 
 ---
 
@@ -265,22 +266,31 @@ Access: [O'Reilly Learning Platform](https://www.oreilly.com/library/view/modern
 
 ## 12. FINAL PROJECT OVERVIEW
 
-**Objective:** Apply all course skills to a real dataset and communicate findings professionally
+**Objective:** Apply all course skills to a real dataset and communicate findings professionally through a complete data analysis project.
+
+### Project Structure:
+
+Students work in groups (3-4 members) and select **one of 7 available topics** for their final project. Each topic is aligned with specific course knowledge areas and includes a curated dataset with instructions. See the [Topics page]({{ site.baseurl }}/topics) for detailed information on all available topics.
 
 ### Components:
 
-- **Data Analysis (40%):** Clean, explore, analyze data using Excel tools
-- **Visualizations & Dashboard (30%):** Create effective charts and interactive dashboard
-- **Report (20%):** 2,000-2,500 words with findings, insights, recommendations
-- **Presentation (10%):** 15-minute talk + 5-minute Q&A
+- **Data Analysis (40%):** Clean, explore, analyze data using Excel tools (Power Query, PivotTables, formulas, statistical analysis)
+- **Visualizations & Dashboard (30%):** Create effective charts and interactive dashboard using Excel visualization tools
+- **Report (20%):** 2,000-2,500 words with findings, insights, recommendations, properly structured and cited
+- **Presentation (10%):** 15-minute group presentation + 5-minute Q&A
 
-### Timeline:
+### Timeline & Group Reporting:
 
-- **Week 13 (Lab):** Project planning and data wrangling
-- **Week 14 (Lab):** Analysis, visualization, and report writing
-- **Week 15 (Lab):** Final presentation and submission
+- **Week 2 (Lab):** Topic selection and initial project planning
+- **Week 4 (Lab):** Progress Report 1 - Data import and initial cleaning
+- **Week 6 (Lab):** Progress Report 2 - Data cleaning and initial exploration findings
+- **Week 8 (Lab):** Progress Report 3 - EDA findings and initial visualizations
+- **Week 11 (Lab):** Progress Report 4 - Statistical analysis progress
+- **Week 13 (Lab):** Project Checkpoint - Complete analysis, dashboards, report drafts
+- **Week 14 (Lab):** Project Refinement - Finalize reports, peer review, prepare presentations
+- **Week 15 (Lab):** Final Presentations - Group presentations and project submission
 
-**Datasets:** Provided list or student-selected (instructor approval required)
+**Available Topics:** 7 curated topics aligned with course curriculum (see Topics page for details). Groups select one topic that best fits their interests and career goals.
 
 ---
 
