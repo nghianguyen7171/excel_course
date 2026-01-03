@@ -8,9 +8,9 @@ description: Explore the 7 available project topics for the Data Analysis with S
 
 ## Course Project Topics
 
-This course offers **7 curated project topics**, each aligned with specific knowledge areas and learning objectives. Students work in groups to select one topic for their final project, applying all course skills from data import and cleaning to statistical analysis and professional reporting.
+This course offers **7 curated project topics** for group work. Students work in groups (3-4 members) to select **one topic** for their final project. Groups work on their chosen topic throughout the semester, applying all course skills learned in lectures—from data import and cleaning to statistical analysis and professional reporting.
 
-Each topic includes a curated dataset with detailed instructions, enabling students to practice and demonstrate their Excel data analysis skills through a complete analytical project.
+Each topic includes a curated dataset with detailed instructions. Groups report on their project progress during each lab week, building toward a comprehensive final presentation in Week 15.
 
 ---
 
@@ -242,22 +242,29 @@ Marketing campaign data from a Portuguese banking institution, including custome
 - Consider diverse skills and interests when forming groups
 
 **Selection Process:**
-- Review all 7 topics and their learning objectives
+- Review all 7 topics and their descriptions
 - Select a topic that aligns with your group's interests and career goals
 - Consider the complexity and scope appropriate for your skill level
 - Finalize topic selection during Week 2 lab session
+- Each group selects ONE topic to work on for the entire semester
+
+**Project Workflow:**
+- Groups work on their chosen topic throughout the semester
+- Apply concepts and techniques learned in lectures to your project
+- Report progress during each lab week (Weeks 2, 4, 6, 8, 11, 13, 14)
+- Build incrementally: data import → cleaning → exploration → analysis → visualization → reporting
 
 **Project Expectations:**
-- Apply all course skills learned throughout the semester
+- Apply all course skills learned throughout the semester to your chosen topic
 - Deliver a complete analysis from data cleaning to final reporting
 - Create professional visualizations and dashboards
 - Write a comprehensive report (2,000-2,500 words)
-- Present findings effectively (15-minute presentation)
+- Present findings effectively (15-minute group presentation in Week 15)
 
 **Support Resources:**
-- Dataset files and instructions available in each topic folder
+- Dataset files and instructions available in each topic folder (see Student Desk)
 - Instructor guidance during lab sessions and office hours
-- Peer review and feedback opportunities
+- Peer review and feedback opportunities during lab weeks
 - Access to course materials and reference texts
 
 ---
