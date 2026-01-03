@@ -20,18 +20,11 @@ Each topic includes a curated dataset with detailed instructions. Groups report 
 
 ### Topic 1: Superstore Sales <span class="difficulty-badge badge-easy">Easy</span>
 
-**Learning Objectives:**
-- Master essential Excel formulas and functions (SUM, AVERAGE, COUNT, IF, VLOOKUP)
-- Perform basic business calculations and metrics
-- Understand Excel interface and data structures
-- Apply formulas to real business data
+**Problem:**  
+A retail company needs to analyze its sales performance to identify opportunities for growth, understand customer behavior, and optimize product strategies. The company has collected comprehensive sales data but lacks insights to make data-driven business decisions.
 
-**Key Excel Skills:**
-- Formulas and functions
-- Basic calculations and aggregations
-- Conditional logic (IF statements)
-- Lookup functions (VLOOKUP)
-- Basic data manipulation
+**Task:**  
+Using the Superstore Sales dataset, conduct a comprehensive business analysis to: (1) identify top-performing products, categories, and regions; (2) analyze sales trends and patterns over time; (3) calculate key business metrics (profit margins, customer segment performance, discount effectiveness); (4) create an interactive dashboard that provides actionable insights for business decision-making; and (5) provide recommendations for improving sales and profitability.
 
 **Dataset Description:**  
 Sales data for a fictional retail company, including product information, orders, customers, and financial metrics. Ideal for practicing Excel fundamentals with real business context.
@@ -48,19 +41,11 @@ Sales data for a fictional retail company, including product information, orders
 
 ### Topic 2: Titanic <span class="difficulty-badge badge-easy">Easy</span>
 
-**Learning Objectives:**
-- Import data from various sources
-- Identify and handle missing values
-- Clean and transform data using Power Query
-- Validate data quality and structure
-- Prepare data for analysis
+**Problem:**  
+Historical passenger data from the Titanic contains inconsistencies, missing values, and data quality issues that prevent accurate analysis. The data needs to be cleaned, standardized, and validated before any meaningful insights can be extracted about passenger demographics, survival patterns, and factors affecting survival rates.
 
-**Key Excel Skills:**
-- Power Query basics
-- Data import (CSV, Excel, web)
-- Missing value handling
-- Data type conversion
-- Data validation techniques
+**Task:**  
+Using the Titanic dataset, perform comprehensive data cleaning and preparation to: (1) import and validate the data structure; (2) identify and handle missing values using appropriate strategies; (3) standardize data formats and fix inconsistencies; (4) create clean, analysis-ready datasets using Power Query; (5) document all data cleaning steps and decisions; and (6) perform initial exploratory analysis on the cleaned data to identify key patterns in passenger demographics and survival.
 
 **Dataset Description:**  
 Passenger information from the Titanic, including demographics, ticket class, and survival status. Contains missing values and various data types, perfect for practicing data cleaning techniques.
@@ -77,19 +62,11 @@ Passenger information from the Titanic, including demographics, ticket class, an
 
 ### Topic 3: Adult Census Income <span class="difficulty-badge badge-easy">Easy</span>
 
-**Learning Objectives:**
-- Perform comprehensive exploratory data analysis
-- Calculate descriptive statistics
-- Create summary tables using PivotTables
-- Segment and categorize data
-- Identify patterns and relationships
+**Problem:**  
+Understanding the relationship between demographic characteristics and income levels is crucial for policy makers, researchers, and social programs. The census data contains rich demographic information that can reveal patterns and relationships, but requires thorough exploration to uncover meaningful insights about income distribution across different population segments.
 
-**Key Excel Skills:**
-- Descriptive statistics
-- PivotTables and PivotCharts
-- Data segmentation
-- Summary tables
-- Pattern detection
+**Task:**  
+Using the Adult Census Income dataset, conduct comprehensive exploratory data analysis to: (1) summarize and describe the distribution of key demographic and economic variables; (2) identify relationships between demographic factors (age, education, occupation, marital status) and income levels; (3) segment the population into meaningful groups and compare income patterns across segments; (4) create summary tables and visualizations that highlight key findings; and (5) provide insights about factors that may influence income levels based on the exploratory analysis.
 
 **Dataset Description:**  
 Demographic, social, and economic attributes from the 1994 U.S. Census database. Rich in categorical and numerical variables, ideal for exploring relationships and patterns across demographic groups.
@@ -106,19 +83,11 @@ Demographic, social, and economic attributes from the 1994 U.S. Census database.
 
 ### Topic 4: World Happiness Report <span class="difficulty-badge badge-medium">Medium</span>
 
-**Learning Objectives:**
-- Create effective data visualizations
-- Design comparative visualizations across time periods
-- Build interactive dashboards
-- Apply visualization design principles
-- Communicate insights through charts
+**Problem:**  
+The World Happiness Report tracks happiness levels across countries over multiple years, but the data needs to be analyzed and visualized to understand trends, regional patterns, and factors contributing to national well-being. Stakeholders need clear, comparative visualizations to identify which countries have improved or declined in happiness and what factors drive these changes.
 
-**Key Excel Skills:**
-- Chart creation and customization
-- Comparative visualizations
-- Interactive dashboards with slicers
-- Multi-year trend analysis
-- Dashboard design principles
+**Task:**  
+Using the World Happiness Report dataset (2015-2019), create a comprehensive visualization and analysis to: (1) compare happiness levels across countries and regions over time; (2) identify trends and changes in happiness rankings; (3) analyze relationships between happiness scores and contributing factors (GDP, social support, life expectancy, etc.); (4) build an interactive dashboard with multiple visualizations that allow exploration of the data; (5) create comparative visualizations showing changes over the five-year period; and (6) provide insights about what factors are most strongly associated with high happiness levels.
 
 **Dataset Description:**  
 Happiness levels and related factors (economic, social, health) for over 150 countries across multiple years (2015-2019). Excellent for creating comparative visualizations and time-series analyses.
@@ -139,19 +108,11 @@ Happiness levels and related factors (economic, social, health) for over 150 cou
 
 ### Topic 5: Bank Marketing <span class="difficulty-badge badge-medium">Medium</span>
 
-**Learning Objectives:**
-- Analyze marketing campaign effectiveness
-- Perform customer segmentation
-- Extract business insights from data
-- Apply classification analysis
-- Support business decision-making
+**Problem:**  
+A bank needs to optimize its marketing campaigns by understanding which customer segments are most likely to subscribe to term deposits. The bank has collected data from previous marketing campaigns but needs analysis to identify patterns, segment customers effectively, and improve future campaign targeting and effectiveness.
 
-**Key Excel Skills:**
-- Segmentation analysis
-- Classification techniques
-- Marketing analytics
-- Business metrics calculation
-- Customer behavior analysis
+**Task:**  
+Using the Bank Marketing dataset, perform comprehensive marketing analytics to: (1) analyze campaign effectiveness and subscription rates; (2) segment customers based on demographic and behavioral characteristics; (3) identify factors that influence subscription decisions; (4) calculate key marketing metrics (conversion rates, segment performance, campaign ROI indicators); (5) create visualizations that highlight customer segments and campaign performance; and (6) provide actionable recommendations for improving marketing campaign targeting and effectiveness.
 
 **Dataset Description:**  
 Marketing campaign data from a Portuguese banking institution, including customer demographics, campaign details, and subscription outcomes. Perfect for analyzing marketing effectiveness and customer behavior patterns.
@@ -168,19 +129,11 @@ Marketing campaign data from a Portuguese banking institution, including custome
 
 ### Topic 6: Boston Housing <span class="difficulty-badge badge-hard">Hard</span>
 
-**Learning Objectives:**
-- Conduct statistical hypothesis testing
-- Perform regression analysis
-- Interpret statistical results
-- Analyze relationships between variables
-- Build predictive models
+**Problem:**  
+Understanding the factors that influence housing prices is essential for homebuyers, real estate professionals, and policy makers. The Boston Housing dataset contains information about various neighborhood characteristics, but requires statistical analysis to determine which factors significantly affect housing prices and to what extent.
 
-**Key Excel Skills:**
-- Regression analysis
-- Correlation analysis
-- Hypothesis testing
-- Statistical modeling
-- Result interpretation
+**Task:**  
+Using the Boston Housing dataset, conduct comprehensive statistical analysis to: (1) explore relationships between housing prices and neighborhood characteristics; (2) perform correlation analysis to identify strong associations; (3) build regression models to predict housing prices based on key factors; (4) test statistical hypotheses about relationships between variables; (5) interpret statistical results and assess model performance; and (6) provide insights about which neighborhood characteristics are most important in determining housing prices and their relative impact.
 
 **Dataset Description:**  
 Housing data from Boston, Massachusetts, including prices and various neighborhood characteristics. Designed for analyzing relationships between house prices and features, perfect for regression analysis.
@@ -197,19 +150,11 @@ Housing data from Boston, Massachusetts, including prices and various neighborho
 
 ### Topic 7: Stock Price <span class="difficulty-badge badge-hard">Hard</span>
 
-**Learning Objectives:**
-- Analyze temporal patterns in data
-- Create time series visualizations
-- Perform trend analysis
-- Apply time-based calculations
-- Understand forecasting basics
+**Problem:**  
+Investors and financial analysts need to understand stock price trends, volatility patterns, and relationships between different technology stocks to make informed investment decisions. The stock price data for major technology companies contains temporal patterns that require time series analysis to identify trends, compare performance, and understand market dynamics.
 
-**Key Excel Skills:**
-- Time series visualization
-- Trend analysis
-- Time-based calculations
-- Multi-company comparisons
-- Forecasting techniques
+**Task:**  
+Using the Stock Price dataset (Amazon, Apple, Facebook, Google, Netflix), perform comprehensive time series analysis to: (1) analyze price trends and patterns over time for each company; (2) compare performance across different technology stocks; (3) calculate and visualize key metrics (returns, volatility, trading volume patterns); (4) identify seasonal patterns, trends, and anomalies in the data; (5) create time series visualizations that effectively communicate stock performance; and (6) provide insights about stock performance patterns, volatility characteristics, and comparative analysis of the technology sector.
 
 **Dataset Description:**  
 Daily stock prices for major technology companies (Amazon, Apple, Facebook, Google, Netflix) including open, high, low, close prices and trading volume. Ideal for practicing time series analysis and trend identification.
