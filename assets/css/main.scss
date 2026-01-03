@@ -21,6 +21,11 @@ $excel-blue: #185abd;
 $data-purple: #6366f1;
 $chart-orange: #f59e0b;
 
+// Difficulty Level Colors
+$difficulty-easy: #10b981;      // Green
+$difficulty-medium: #f59e0b;    // Orange
+$difficulty-hard: #ef4444;      // Red
+
 // Typography
 $font-serif: 'Crimson Text', Georgia, serif;
 $font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -482,12 +487,58 @@ section {
         box-shadow: $shadow-lg;
     }
     
+    // Difficulty-based border colors
+    &.difficulty-easy {
+        border-left-color: $difficulty-easy;
+    }
+    
+    &.difficulty-medium {
+        border-left-color: $difficulty-medium;
+    }
+    
+    &.difficulty-hard {
+        border-left-color: $difficulty-hard;
+    }
+    
     h3 {
         color: $primary-blue;
         margin-bottom: $spacing-md;
         font-size: 1.5rem;
         border-bottom: 2px solid $lighter-gray;
         padding-bottom: $spacing-sm;
+        display: flex;
+        align-items: center;
+        gap: $spacing-sm;
+        flex-wrap: wrap;
+    }
+    
+    .difficulty-badge {
+        display: inline-block;
+        padding: 0.25rem 0.75rem;
+        border-radius: $radius-sm;
+        font-size: 0.875rem;
+        font-weight: 600;
+        font-family: $font-sans;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        
+        &.badge-easy {
+            background-color: rgba($difficulty-easy, 0.1);
+            color: darken($difficulty-easy, 10%);
+            border: 1px solid rgba($difficulty-easy, 0.3);
+        }
+        
+        &.badge-medium {
+            background-color: rgba($difficulty-medium, 0.1);
+            color: darken($difficulty-medium, 10%);
+            border: 1px solid rgba($difficulty-medium, 0.3);
+        }
+        
+        &.badge-hard {
+            background-color: rgba($difficulty-hard, 0.1);
+            color: darken($difficulty-hard, 10%);
+            border: 1px solid rgba($difficulty-hard, 0.3);
+        }
     }
     
     h4 {

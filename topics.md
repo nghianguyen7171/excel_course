@@ -16,10 +16,9 @@ Each topic includes a curated dataset with detailed instructions. Groups report 
 
 </section>
 
-<section id="topic-1" class="topic-card">
+<section id="topic-1" class="topic-card difficulty-easy">
 
-### Topic 1: Excel Basics & Business Analytics
-**Dataset:** Superstore Sales
+### Superstore Sales <span class="difficulty-badge badge-easy">Easy</span>
 
 **Learning Objectives:**
 - Master essential Excel formulas and functions (SUM, AVERAGE, COUNT, IF, VLOOKUP)
@@ -45,10 +44,9 @@ Sales data for a fictional retail company, including product information, orders
 
 </section>
 
-<section id="topic-2" class="topic-card">
+<section id="topic-2" class="topic-card difficulty-easy">
 
-### Topic 2: Data Cleaning & Preparation
-**Dataset:** Titanic Passenger Data
+### Titanic <span class="difficulty-badge badge-easy">Easy</span>
 
 **Learning Objectives:**
 - Import data from various sources
@@ -75,10 +73,9 @@ Passenger information from the Titanic, including demographics, ticket class, an
 
 </section>
 
-<section id="topic-3" class="topic-card">
+<section id="topic-3" class="topic-card difficulty-easy">
 
-### Topic 3: Exploratory Data Analysis
-**Dataset:** Adult Census Income
+### Adult Census Income <span class="difficulty-badge badge-easy">Easy</span>
 
 **Learning Objectives:**
 - Perform comprehensive exploratory data analysis
@@ -105,10 +102,9 @@ Demographic, social, and economic attributes from the 1994 U.S. Census database.
 
 </section>
 
-<section id="topic-4" class="topic-card">
+<section id="topic-4" class="topic-card difficulty-medium">
 
-### Topic 4: Data Visualization & Comparative Analysis
-**Dataset:** World Happiness Report
+### World Happiness Report <span class="difficulty-badge badge-medium">Medium</span>
 
 **Learning Objectives:**
 - Create effective data visualizations
@@ -139,10 +135,9 @@ Happiness levels and related factors (economic, social, health) for over 150 cou
 
 </section>
 
-<section id="topic-5" class="topic-card">
+<section id="topic-5" class="topic-card difficulty-hard">
 
-### Topic 5: Statistical Analysis & Regression
-**Dataset:** Boston Housing
+### Boston Housing <span class="difficulty-badge badge-hard">Hard</span>
 
 **Learning Objectives:**
 - Conduct statistical hypothesis testing
@@ -169,10 +164,9 @@ Housing data from Boston, Massachusetts, including prices and various neighborho
 
 </section>
 
-<section id="topic-6" class="topic-card">
+<section id="topic-6" class="topic-card difficulty-hard">
 
-### Topic 6: Time Series Analysis
-**Dataset:** Stock Price Data
+### Stock Price <span class="difficulty-badge badge-hard">Hard</span>
 
 **Learning Objectives:**
 - Analyze temporal patterns in data
@@ -203,10 +197,9 @@ Daily stock prices for major technology companies (Amazon, Apple, Facebook, Goog
 
 </section>
 
-<section id="topic-7" class="topic-card">
+<section id="topic-7" class="topic-card difficulty-medium">
 
-### Topic 7: Marketing & Business Intelligence
-**Dataset:** Bank Marketing
+### Bank Marketing <span class="difficulty-badge badge-medium">Medium</span>
 
 **Learning Objectives:**
 - Analyze marketing campaign effectiveness
