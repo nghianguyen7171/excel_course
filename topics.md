@@ -18,7 +18,7 @@ Each topic includes a curated dataset with detailed instructions. Groups report 
 
 <section id="topic-1" class="topic-card difficulty-easy">
 
-### Superstore Sales <span class="difficulty-badge badge-easy">Easy</span>
+### Topic 1: Superstore Sales <span class="difficulty-badge badge-easy">Easy</span>
 
 **Learning Objectives:**
 - Master essential Excel formulas and functions (SUM, AVERAGE, COUNT, IF, VLOOKUP)
@@ -46,7 +46,7 @@ Sales data for a fictional retail company, including product information, orders
 
 <section id="topic-2" class="topic-card difficulty-easy">
 
-### Titanic <span class="difficulty-badge badge-easy">Easy</span>
+### Topic 2: Titanic <span class="difficulty-badge badge-easy">Easy</span>
 
 **Learning Objectives:**
 - Import data from various sources
@@ -75,7 +75,7 @@ Passenger information from the Titanic, including demographics, ticket class, an
 
 <section id="topic-3" class="topic-card difficulty-easy">
 
-### Adult Census Income <span class="difficulty-badge badge-easy">Easy</span>
+### Topic 3: Adult Census Income <span class="difficulty-badge badge-easy">Easy</span>
 
 **Learning Objectives:**
 - Perform comprehensive exploratory data analysis
@@ -104,7 +104,7 @@ Demographic, social, and economic attributes from the 1994 U.S. Census database.
 
 <section id="topic-4" class="topic-card difficulty-medium">
 
-### World Happiness Report <span class="difficulty-badge badge-medium">Medium</span>
+### Topic 4: World Happiness Report <span class="difficulty-badge badge-medium">Medium</span>
 
 **Learning Objectives:**
 - Create effective data visualizations
@@ -135,9 +135,38 @@ Happiness levels and related factors (economic, social, health) for over 150 cou
 
 </section>
 
-<section id="topic-5" class="topic-card difficulty-hard">
+<section id="topic-5" class="topic-card difficulty-medium">
 
-### Boston Housing <span class="difficulty-badge badge-hard">Hard</span>
+### Topic 5: Bank Marketing <span class="difficulty-badge badge-medium">Medium</span>
+
+**Learning Objectives:**
+- Analyze marketing campaign effectiveness
+- Perform customer segmentation
+- Extract business insights from data
+- Apply classification analysis
+- Support business decision-making
+
+**Key Excel Skills:**
+- Segmentation analysis
+- Classification techniques
+- Marketing analytics
+- Business metrics calculation
+- Customer behavior analysis
+
+**Dataset Description:**  
+Marketing campaign data from a Portuguese banking institution, including customer demographics, campaign details, and subscription outcomes. Perfect for analyzing marketing effectiveness and customer behavior patterns.
+
+**Dataset Files:**
+- [bank-additional-full.xlsx](../student%20desk/Topic/07-Marketing-Business-Intelligence/bank-additional-full.xlsx)
+- [Dataset Instructions](../student%20desk/Topic/07-Marketing-Business-Intelligence/Dataset_Details.docx)
+
+---
+
+</section>
+
+<section id="topic-6" class="topic-card difficulty-hard">
+
+### Topic 6: Boston Housing <span class="difficulty-badge badge-hard">Hard</span>
 
 **Learning Objectives:**
 - Conduct statistical hypothesis testing
@@ -164,9 +193,9 @@ Housing data from Boston, Massachusetts, including prices and various neighborho
 
 </section>
 
-<section id="topic-6" class="topic-card difficulty-hard">
+<section id="topic-7" class="topic-card difficulty-hard">
 
-### Stock Price <span class="difficulty-badge badge-hard">Hard</span>
+### Topic 7: Stock Price <span class="difficulty-badge badge-hard">Hard</span>
 
 **Learning Objectives:**
 - Analyze temporal patterns in data
@@ -192,35 +221,6 @@ Daily stock prices for major technology companies (Amazon, Apple, Facebook, Goog
 - [Google.xlsx](../student%20desk/Topic/06-Time-Series-Analysis/Google.xlsx)
 - [Netflix.xlsx](../student%20desk/Topic/06-Time-Series-Analysis/Netflix.xlsx)
 - [Dataset Instructions](../student%20desk/Topic/06-Time-Series-Analysis/Dataset_Details.docx)
-
----
-
-</section>
-
-<section id="topic-7" class="topic-card difficulty-medium">
-
-### Bank Marketing <span class="difficulty-badge badge-medium">Medium</span>
-
-**Learning Objectives:**
-- Analyze marketing campaign effectiveness
-- Perform customer segmentation
-- Extract business insights from data
-- Apply classification analysis
-- Support business decision-making
-
-**Key Excel Skills:**
-- Segmentation analysis
-- Classification techniques
-- Marketing analytics
-- Business metrics calculation
-- Customer behavior analysis
-
-**Dataset Description:**  
-Marketing campaign data from a Portuguese banking institution, including customer demographics, campaign details, and subscription outcomes. Perfect for analyzing marketing effectiveness and customer behavior patterns.
-
-**Dataset Files:**
-- [bank-additional-full.xlsx](../student%20desk/Topic/07-Marketing-Business-Intelligence/bank-additional-full.xlsx)
-- [Dataset Instructions](../student%20desk/Topic/07-Marketing-Business-Intelligence/Dataset_Details.docx)
 
 ---
 
