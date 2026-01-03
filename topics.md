@@ -24,7 +24,12 @@ Each topic includes a curated dataset with detailed instructions. Groups report 
 A retail company needs to analyze its sales performance to identify opportunities for growth, understand customer behavior, and optimize product strategies. The company has collected comprehensive sales data but lacks insights to make data-driven business decisions.
 
 **Task:**  
-Using the Superstore Sales dataset, conduct a comprehensive business analysis to: (1) identify top-performing products, categories, and regions; (2) analyze sales trends and patterns over time; (3) calculate key business metrics (profit margins, customer segment performance, discount effectiveness); (4) create an interactive dashboard that provides actionable insights for business decision-making; and (5) provide recommendations for improving sales and profitability.
+Using the Superstore Sales dataset, conduct a comprehensive business analysis to:
+- Identify top-performing products, categories, and regions
+- Analyze sales trends and patterns over time
+- Calculate key business metrics (profit margins, customer segment performance, discount effectiveness)
+- Create an interactive dashboard that provides actionable insights for business decision-making
+- Provide recommendations for improving sales and profitability
 
 **Dataset Description:**  
 Sales data for a fictional retail company, including product information, orders, customers, and financial metrics. Ideal for practicing Excel fundamentals with real business context.
@@ -45,7 +50,13 @@ Sales data for a fictional retail company, including product information, orders
 Historical passenger data from the Titanic contains inconsistencies, missing values, and data quality issues that prevent accurate analysis. The data needs to be cleaned, standardized, and validated before any meaningful insights can be extracted about passenger demographics, survival patterns, and factors affecting survival rates.
 
 **Task:**  
-Using the Titanic dataset, perform comprehensive data cleaning and preparation to: (1) import and validate the data structure; (2) identify and handle missing values using appropriate strategies; (3) standardize data formats and fix inconsistencies; (4) create clean, analysis-ready datasets using Power Query; (5) document all data cleaning steps and decisions; and (6) perform initial exploratory analysis on the cleaned data to identify key patterns in passenger demographics and survival.
+Using the Titanic dataset, perform comprehensive data cleaning and preparation to:
+- Import and validate the data structure
+- Identify and handle missing values using appropriate strategies
+- Standardize data formats and fix inconsistencies
+- Create clean, analysis-ready datasets using Power Query
+- Document all data cleaning steps and decisions
+- Perform initial exploratory analysis on the cleaned data to identify key patterns in passenger demographics and survival
 
 **Dataset Description:**  
 Passenger information from the Titanic, including demographics, ticket class, and survival status. Contains missing values and various data types, perfect for practicing data cleaning techniques.
@@ -66,7 +77,12 @@ Passenger information from the Titanic, including demographics, ticket class, an
 Understanding the relationship between demographic characteristics and income levels is crucial for policy makers, researchers, and social programs. The census data contains rich demographic information that can reveal patterns and relationships, but requires thorough exploration to uncover meaningful insights about income distribution across different population segments.
 
 **Task:**  
-Using the Adult Census Income dataset, conduct comprehensive exploratory data analysis to: (1) summarize and describe the distribution of key demographic and economic variables; (2) identify relationships between demographic factors (age, education, occupation, marital status) and income levels; (3) segment the population into meaningful groups and compare income patterns across segments; (4) create summary tables and visualizations that highlight key findings; and (5) provide insights about factors that may influence income levels based on the exploratory analysis.
+Using the Adult Census Income dataset, conduct comprehensive exploratory data analysis to:
+- Summarize and describe the distribution of key demographic and economic variables
+- Identify relationships between demographic factors (age, education, occupation, marital status) and income levels
+- Segment the population into meaningful groups and compare income patterns across segments
+- Create summary tables and visualizations that highlight key findings
+- Provide insights about factors that may influence income levels based on the exploratory analysis
 
 **Dataset Description:**  
 Demographic, social, and economic attributes from the 1994 U.S. Census database. Rich in categorical and numerical variables, ideal for exploring relationships and patterns across demographic groups.
@@ -87,7 +103,13 @@ Demographic, social, and economic attributes from the 1994 U.S. Census database.
 The World Happiness Report tracks happiness levels across countries over multiple years, but the data needs to be analyzed and visualized to understand trends, regional patterns, and factors contributing to national well-being. Stakeholders need clear, comparative visualizations to identify which countries have improved or declined in happiness and what factors drive these changes.
 
 **Task:**  
-Using the World Happiness Report dataset (2015-2019), create a comprehensive visualization and analysis to: (1) compare happiness levels across countries and regions over time; (2) identify trends and changes in happiness rankings; (3) analyze relationships between happiness scores and contributing factors (GDP, social support, life expectancy, etc.); (4) build an interactive dashboard with multiple visualizations that allow exploration of the data; (5) create comparative visualizations showing changes over the five-year period; and (6) provide insights about what factors are most strongly associated with high happiness levels.
+Using the World Happiness Report dataset (2015-2019), create a comprehensive visualization and analysis to:
+- Compare happiness levels across countries and regions over time
+- Identify trends and changes in happiness rankings
+- Analyze relationships between happiness scores and contributing factors (GDP, social support, life expectancy, etc.)
+- Build an interactive dashboard with multiple visualizations that allow exploration of the data
+- Create comparative visualizations showing changes over the five-year period
+- Provide insights about what factors are most strongly associated with high happiness levels
 
 **Dataset Description:**  
 Happiness levels and related factors (economic, social, health) for over 150 countries across multiple years (2015-2019). Excellent for creating comparative visualizations and time-series analyses.
@@ -112,7 +134,13 @@ Happiness levels and related factors (economic, social, health) for over 150 cou
 A bank needs to optimize its marketing campaigns by understanding which customer segments are most likely to subscribe to term deposits. The bank has collected data from previous marketing campaigns but needs analysis to identify patterns, segment customers effectively, and improve future campaign targeting and effectiveness.
 
 **Task:**  
-Using the Bank Marketing dataset, perform comprehensive marketing analytics to: (1) analyze campaign effectiveness and subscription rates; (2) segment customers based on demographic and behavioral characteristics; (3) identify factors that influence subscription decisions; (4) calculate key marketing metrics (conversion rates, segment performance, campaign ROI indicators); (5) create visualizations that highlight customer segments and campaign performance; and (6) provide actionable recommendations for improving marketing campaign targeting and effectiveness.
+Using the Bank Marketing dataset, perform comprehensive marketing analytics to:
+- Analyze campaign effectiveness and subscription rates
+- Segment customers based on demographic and behavioral characteristics
+- Identify factors that influence subscription decisions
+- Calculate key marketing metrics (conversion rates, segment performance, campaign ROI indicators)
+- Create visualizations that highlight customer segments and campaign performance
+- Provide actionable recommendations for improving marketing campaign targeting and effectiveness
 
 **Dataset Description:**  
 Marketing campaign data from a Portuguese banking institution, including customer demographics, campaign details, and subscription outcomes. Perfect for analyzing marketing effectiveness and customer behavior patterns.
@@ -133,7 +161,13 @@ Marketing campaign data from a Portuguese banking institution, including custome
 Understanding the factors that influence housing prices is essential for homebuyers, real estate professionals, and policy makers. The Boston Housing dataset contains information about various neighborhood characteristics, but requires statistical analysis to determine which factors significantly affect housing prices and to what extent.
 
 **Task:**  
-Using the Boston Housing dataset, conduct comprehensive statistical analysis to: (1) explore relationships between housing prices and neighborhood characteristics; (2) perform correlation analysis to identify strong associations; (3) build regression models to predict housing prices based on key factors; (4) test statistical hypotheses about relationships between variables; (5) interpret statistical results and assess model performance; and (6) provide insights about which neighborhood characteristics are most important in determining housing prices and their relative impact.
+Using the Boston Housing dataset, conduct comprehensive statistical analysis to:
+- Explore relationships between housing prices and neighborhood characteristics
+- Perform correlation analysis to identify strong associations
+- Build regression models to predict housing prices based on key factors
+- Test statistical hypotheses about relationships between variables
+- Interpret statistical results and assess model performance
+- Provide insights about which neighborhood characteristics are most important in determining housing prices and their relative impact
 
 **Dataset Description:**  
 Housing data from Boston, Massachusetts, including prices and various neighborhood characteristics. Designed for analyzing relationships between house prices and features, perfect for regression analysis.
@@ -154,7 +188,13 @@ Housing data from Boston, Massachusetts, including prices and various neighborho
 Investors and financial analysts need to understand stock price trends, volatility patterns, and relationships between different technology stocks to make informed investment decisions. The stock price data for major technology companies contains temporal patterns that require time series analysis to identify trends, compare performance, and understand market dynamics.
 
 **Task:**  
-Using the Stock Price dataset (Amazon, Apple, Facebook, Google, Netflix), perform comprehensive time series analysis to: (1) analyze price trends and patterns over time for each company; (2) compare performance across different technology stocks; (3) calculate and visualize key metrics (returns, volatility, trading volume patterns); (4) identify seasonal patterns, trends, and anomalies in the data; (5) create time series visualizations that effectively communicate stock performance; and (6) provide insights about stock performance patterns, volatility characteristics, and comparative analysis of the technology sector.
+Using the Stock Price dataset (Amazon, Apple, Facebook, Google, Netflix), perform comprehensive time series analysis to:
+- Analyze price trends and patterns over time for each company
+- Compare performance across different technology stocks
+- Calculate and visualize key metrics (returns, volatility, trading volume patterns)
+- Identify seasonal patterns, trends, and anomalies in the data
+- Create time series visualizations that effectively communicate stock performance
+- Provide insights about stock performance patterns, volatility characteristics, and comparative analysis of the technology sector
 
 **Dataset Description:**  
 Daily stock prices for major technology companies (Amazon, Apple, Facebook, Google, Netflix) including open, high, low, close prices and trading volume. Ideal for practicing time series analysis and trend identification.
