@@ -515,8 +515,8 @@ section {
     
     .topic-image {
         flex-shrink: 0;
-        width: 250px;
-        height: 150px;
+        width: 400px;
+        height: 250px;
         border-radius: $radius-md;
         overflow: hidden;
         box-shadow: $shadow-md;
@@ -524,7 +524,7 @@ section {
         
         @media (max-width: $breakpoint-md) {
             width: 100%;
-            height: 200px;
+            height: 300px;
         }
         
         img {
