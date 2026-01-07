@@ -20,7 +20,7 @@ Each topic includes a curated dataset with detailed instructions. Groups report 
 
 <div class="topic-header">
     <div class="topic-image">
-        <img src="../student%20desk/Topic/01-Superstore-Sales/topic1.jpeg" alt="Superstore Sales Visualization" />
+        <img src="{{ site.baseurl }}/assets/images/topics/topic1.jpeg" alt="Superstore Sales Visualization" />
     </div>
     <div class="topic-title-wrapper">
         <h3>Topic 1: Superstore Sales <span class="difficulty-badge badge-easy">Easy</span></h3>
@@ -53,7 +53,7 @@ Sales data for a fictional retail company, including product information, orders
 
 <div class="topic-header">
     <div class="topic-image">
-        <img src="../student%20desk/Topic/02-Titanic/topic2.jpeg" alt="Titanic Dataset Visualization" />
+        <img src="{{ site.baseurl }}/assets/images/topics/topic2.jpeg" alt="Titanic Dataset Visualization" />
     </div>
     <div class="topic-title-wrapper">
         <h3>Topic 2: Titanic <span class="difficulty-badge badge-easy">Easy</span></h3>
@@ -87,7 +87,7 @@ Passenger information from the Titanic, including demographics, ticket class, an
 
 <div class="topic-header">
     <div class="topic-image">
-        <img src="../student%20desk/Topic/03-Adult-Census-Income/topic3.jpeg" alt="Adult Census Income Visualization" />
+        <img src="{{ site.baseurl }}/assets/images/topics/topic3.jpeg" alt="Adult Census Income Visualization" />
     </div>
     <div class="topic-title-wrapper">
         <h3>Topic 3: Adult Census Income <span class="difficulty-badge badge-easy">Easy</span></h3>
@@ -120,7 +120,7 @@ Demographic, social, and economic attributes from the 1994 U.S. Census database.
 
 <div class="topic-header">
     <div class="topic-image">
-        <img src="../student%20desk/Topic/04-World-Happiness-Report/topic4.jpeg" alt="World Happiness Report Visualization" />
+        <img src="{{ site.baseurl }}/assets/images/topics/topic4.jpeg" alt="World Happiness Report Visualization" />
     </div>
     <div class="topic-title-wrapper">
         <h3>Topic 4: World Happiness Report <span class="difficulty-badge badge-medium">Medium</span></h3>
@@ -158,7 +158,7 @@ Happiness levels and related factors (economic, social, health) for over 150 cou
 
 <div class="topic-header">
     <div class="topic-image">
-        <img src="../student%20desk/Topic/05-Bank-Marketing/topic5.jpeg" alt="Bank Marketing Visualization" />
+        <img src="{{ site.baseurl }}/assets/images/topics/topic5.jpeg" alt="Bank Marketing Visualization" />
     </div>
     <div class="topic-title-wrapper">
         <h3>Topic 5: Bank Marketing <span class="difficulty-badge badge-medium">Medium</span></h3>
@@ -192,7 +192,7 @@ Marketing campaign data from a Portuguese banking institution, including custome
 
 <div class="topic-header">
     <div class="topic-image">
-        <img src="../student%20desk/Topic/06-Boston-Housing/topic6.jpeg" alt="Boston Housing Visualization" />
+        <img src="{{ site.baseurl }}/assets/images/topics/topic6.jpeg" alt="Boston Housing Visualization" />
     </div>
     <div class="topic-title-wrapper">
         <h3>Topic 6: Boston Housing <span class="difficulty-badge badge-hard">Hard</span></h3>
@@ -226,7 +226,7 @@ Housing data from Boston, Massachusetts, including prices and various neighborho
 
 <div class="topic-header">
     <div class="topic-image">
-        <img src="../student%20desk/Topic/07-Stock-Price/topic7.jpeg" alt="Stock Price Visualization" />
+        <img src="{{ site.baseurl }}/assets/images/topics/topic7.jpeg" alt="Stock Price Visualization" />
     </div>
     <div class="topic-title-wrapper">
         <h3>Topic 7: Stock Price <span class="difficulty-badge badge-hard">Hard</span></h3>
