@@ -18,6 +18,7 @@ Each topic includes a curated dataset with detailed instructions. Groups report 
 
 <section id="topic-1" class="topic-card difficulty-easy">
 
+{::nomarkdown}
 <div class="topic-header">
     <div class="topic-image">
         <img src="{{ site.baseurl }}/assets/images/topics/topic1.jpeg" alt="Superstore Sales Visualization" />
@@ -26,6 +27,7 @@ Each topic includes a curated dataset with detailed instructions. Groups report 
         <h3>Topic 1: Superstore Sales <span class="difficulty-badge badge-easy">Easy</span></h3>
     </div>
 </div>
+{:/nomarkdown}
 
 **Problem:**  
 A retail company needs to analyze its sales performance to identify opportunities for growth, understand customer behavior, and optimize product strategies. The company has collected comprehensive sales data but lacks insights to make data-driven business decisions.
@@ -51,6 +53,7 @@ Sales data for a fictional retail company, including product information, orders
 
 <section id="topic-2" class="topic-card difficulty-easy">
 
+{::nomarkdown}
 <div class="topic-header">
     <div class="topic-image">
         <img src="{{ site.baseurl }}/assets/images/topics/topic2.jpeg" alt="Titanic Dataset Visualization" />
@@ -59,6 +62,7 @@ Sales data for a fictional retail company, including product information, orders
         <h3>Topic 2: Titanic <span class="difficulty-badge badge-easy">Easy</span></h3>
     </div>
 </div>
+{:/nomarkdown}
 
 **Problem:**  
 Historical passenger data from the Titanic contains inconsistencies, missing values, and data quality issues that prevent accurate analysis. The data needs to be cleaned, standardized, and validated before any meaningful insights can be extracted about passenger demographics, survival patterns, and factors affecting survival rates.
@@ -85,6 +89,7 @@ Passenger information from the Titanic, including demographics, ticket class, an
 
 <section id="topic-3" class="topic-card difficulty-easy">
 
+{::nomarkdown}
 <div class="topic-header">
     <div class="topic-image">
         <img src="{{ site.baseurl }}/assets/images/topics/topic3.jpeg" alt="Adult Census Income Visualization" />
@@ -93,6 +98,7 @@ Passenger information from the Titanic, including demographics, ticket class, an
         <h3>Topic 3: Adult Census Income <span class="difficulty-badge badge-easy">Easy</span></h3>
     </div>
 </div>
+{:/nomarkdown}
 
 **Problem:**  
 Understanding the relationship between demographic characteristics and income levels is crucial for policy makers, researchers, and social programs. The census data contains rich demographic information that can reveal patterns and relationships, but requires thorough exploration to uncover meaningful insights about income distribution across different population segments.
@@ -118,6 +124,7 @@ Demographic, social, and economic attributes from the 1994 U.S. Census database.
 
 <section id="topic-4" class="topic-card difficulty-medium">
 
+{::nomarkdown}
 <div class="topic-header">
     <div class="topic-image">
         <img src="{{ site.baseurl }}/assets/images/topics/topic4.jpeg" alt="World Happiness Report Visualization" />
@@ -126,6 +133,7 @@ Demographic, social, and economic attributes from the 1994 U.S. Census database.
         <h3>Topic 4: World Happiness Report <span class="difficulty-badge badge-medium">Medium</span></h3>
     </div>
 </div>
+{:/nomarkdown}
 
 **Problem:**  
 The World Happiness Report tracks happiness levels across countries over multiple years, but the data needs to be analyzed and visualized to understand trends, regional patterns, and factors contributing to national well-being. Stakeholders need clear, comparative visualizations to identify which countries have improved or declined in happiness and what factors drive these changes.
@@ -156,6 +164,7 @@ Happiness levels and related factors (economic, social, health) for over 150 cou
 
 <section id="topic-5" class="topic-card difficulty-medium">
 
+{::nomarkdown}
 <div class="topic-header">
     <div class="topic-image">
         <img src="{{ site.baseurl }}/assets/images/topics/topic5.jpeg" alt="Bank Marketing Visualization" />
@@ -164,6 +173,7 @@ Happiness levels and related factors (economic, social, health) for over 150 cou
         <h3>Topic 5: Bank Marketing <span class="difficulty-badge badge-medium">Medium</span></h3>
     </div>
 </div>
+{:/nomarkdown}
 
 **Problem:**  
 A bank needs to optimize its marketing campaigns by understanding which customer segments are most likely to subscribe to term deposits. The bank has collected data from previous marketing campaigns but needs analysis to identify patterns, segment customers effectively, and improve future campaign targeting and effectiveness.
@@ -190,6 +200,7 @@ Marketing campaign data from a Portuguese banking institution, including custome
 
 <section id="topic-6" class="topic-card difficulty-hard">
 
+{::nomarkdown}
 <div class="topic-header">
     <div class="topic-image">
         <img src="{{ site.baseurl }}/assets/images/topics/topic6.jpeg" alt="Boston Housing Visualization" />
@@ -198,6 +209,7 @@ Marketing campaign data from a Portuguese banking institution, including custome
         <h3>Topic 6: Boston Housing <span class="difficulty-badge badge-hard">Hard</span></h3>
     </div>
 </div>
+{:/nomarkdown}
 
 **Problem:**  
 Understanding the factors that influence housing prices is essential for homebuyers, real estate professionals, and policy makers. The Boston Housing dataset contains information about various neighborhood characteristics, but requires statistical analysis to determine which factors significantly affect housing prices and to what extent.
@@ -224,6 +236,7 @@ Housing data from Boston, Massachusetts, including prices and various neighborho
 
 <section id="topic-7" class="topic-card difficulty-hard">
 
+{::nomarkdown}
 <div class="topic-header">
     <div class="topic-image">
         <img src="{{ site.baseurl }}/assets/images/topics/topic7.jpeg" alt="Stock Price Visualization" />
@@ -232,6 +245,7 @@ Housing data from Boston, Massachusetts, including prices and various neighborho
         <h3>Topic 7: Stock Price <span class="difficulty-badge badge-hard">Hard</span></h3>
     </div>
 </div>
+{:/nomarkdown}
 
 **Problem:**  
 Investors and financial analysts need to understand stock price trends, volatility patterns, and relationships between different technology stocks to make informed investment decisions. The stock price data for major technology companies contains temporal patterns that require time series analysis to identify trends, compare performance, and understand market dynamics.
