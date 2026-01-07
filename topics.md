@@ -35,8 +35,8 @@ Using the Superstore Sales dataset, conduct a comprehensive business analysis to
 Sales data for a fictional retail company, including product information, orders, customers, and financial metrics. Ideal for practicing Excel fundamentals with real business context.
 
 **Dataset Files:**
-- [SuperStoreUS-2015.xlsx](../student%20desk/Topic/01-Excel-Basics-Business-Analytics/SuperStoreUS-2015.xlsx)
-- [Dataset Instructions](../student%20desk/Topic/01-Excel-Basics-Business-Analytics/Dataset_Details.docx)
+- [SuperStoreUS-2015.xlsx](../student%20desk/Topic/01-Superstore-Sales/SuperStoreUS-2015.xlsx)
+- [Dataset Instructions](../student%20desk/Topic/01-Superstore-Sales/Dataset_Details.docx)
 
 ---
 
@@ -62,8 +62,8 @@ Using the Titanic dataset, perform comprehensive data cleaning and preparation t
 Passenger information from the Titanic, including demographics, ticket class, and survival status. Contains missing values and various data types, perfect for practicing data cleaning techniques.
 
 **Dataset Files:**
-- [Titanic.xlsx](../student%20desk/Topic/02-Data-Cleaning-Preparation/Titanic.xlsx)
-- [Dataset Instructions](../student%20desk/Topic/02-Data-Cleaning-Preparation/Dataset_Details.docx)
+- [Titanic.xlsx](../student%20desk/Topic/02-Titanic/Titanic.xlsx)
+- [Dataset Instructions](../student%20desk/Topic/02-Titanic/Dataset_Details.docx)
 
 ---
 
@@ -88,8 +88,8 @@ Using the Adult Census Income dataset, conduct comprehensive exploratory data an
 Demographic, social, and economic attributes from the 1994 U.S. Census database. Rich in categorical and numerical variables, ideal for exploring relationships and patterns across demographic groups.
 
 **Dataset Files:**
-- [adult.xlsx](../student%20desk/Topic/03-Exploratory-Data-Analysis/adult.xlsx)
-- [Dataset Instructions](../student%20desk/Topic/03-Exploratory-Data-Analysis/Dataset_Details.docx)
+- [adult.xlsx](../student%20desk/Topic/03-Adult-Census-Income/adult.xlsx)
+- [Dataset Instructions](../student%20desk/Topic/03-Adult-Census-Income/Dataset_Details.docx)
 
 ---
 
@@ -115,12 +115,12 @@ Using the World Happiness Report dataset (2015-2019), create a comprehensive vis
 Happiness levels and related factors (economic, social, health) for over 150 countries across multiple years (2015-2019). Excellent for creating comparative visualizations and time-series analyses.
 
 **Dataset Files:**
-- [2015.xlsx](../student%20desk/Topic/04-Data-Visualization-Comparative/2015.xlsx)
-- [2016.xlsx](../student%20desk/Topic/04-Data-Visualization-Comparative/2016.xlsx)
-- [2017.xlsx](../student%20desk/Topic/04-Data-Visualization-Comparative/2017.xlsx)
-- [2018.xlsx](../student%20desk/Topic/04-Data-Visualization-Comparative/2018.xlsx)
-- [2019.xlsx](../student%20desk/Topic/04-Data-Visualization-Comparative/2019.xlsx)
-- [Dataset Instructions](../student%20desk/Topic/04-Data-Visualization-Comparative/Dataset_Details.docx)
+- [2015.xlsx](../student%20desk/Topic/04-World-Happiness-Report/2015.xlsx)
+- [2016.xlsx](../student%20desk/Topic/04-World-Happiness-Report/2016.xlsx)
+- [2017.xlsx](../student%20desk/Topic/04-World-Happiness-Report/2017.xlsx)
+- [2018.xlsx](../student%20desk/Topic/04-World-Happiness-Report/2018.xlsx)
+- [2019.xlsx](../student%20desk/Topic/04-World-Happiness-Report/2019.xlsx)
+- [Dataset Instructions](../student%20desk/Topic/04-World-Happiness-Report/Dataset_Details.docx)
 
 ---
 
@@ -146,8 +146,8 @@ Using the Bank Marketing dataset, perform comprehensive marketing analytics to:
 Marketing campaign data from a Portuguese banking institution, including customer demographics, campaign details, and subscription outcomes. Perfect for analyzing marketing effectiveness and customer behavior patterns.
 
 **Dataset Files:**
-- [bank-additional-full.xlsx](../student%20desk/Topic/07-Marketing-Business-Intelligence/bank-additional-full.xlsx)
-- [Dataset Instructions](../student%20desk/Topic/07-Marketing-Business-Intelligence/Dataset_Details.docx)
+- [bank-additional-full.xlsx](../student%20desk/Topic/05-Bank-Marketing/bank-additional-full.xlsx)
+- [Dataset Instructions](../student%20desk/Topic/05-Bank-Marketing/Dataset_Details.docx)
 
 ---
 
@@ -173,8 +173,8 @@ Using the Boston Housing dataset, conduct comprehensive statistical analysis to:
 Housing data from Boston, Massachusetts, including prices and various neighborhood characteristics. Designed for analyzing relationships between house prices and features, perfect for regression analysis.
 
 **Dataset Files:**
-- [boston.xlsx](../student%20desk/Topic/05-Statistical-Analysis-Regression/boston.xlsx)
-- [Dataset Instructions](../student%20desk/Topic/05-Statistical-Analysis-Regression/Dataset_Details.docx)
+- [boston.xlsx](../student%20desk/Topic/06-Boston-Housing/boston.xlsx)
+- [Dataset Instructions](../student%20desk/Topic/06-Boston-Housing/Dataset_Details.docx)
 
 ---
 
@@ -200,12 +200,12 @@ Using the Stock Price dataset (Amazon, Apple, Facebook, Google, Netflix), perfor
 Daily stock prices for major technology companies (Amazon, Apple, Facebook, Google, Netflix) including open, high, low, close prices and trading volume. Ideal for practicing time series analysis and trend identification.
 
 **Dataset Files:**
-- [Amazon.xlsx](../student%20desk/Topic/06-Time-Series-Analysis/Amazon.xlsx)
-- [Apple.xlsx](../student%20desk/Topic/06-Time-Series-Analysis/Apple.xlsx)
-- [Facebook.xlsx](../student%20desk/Topic/06-Time-Series-Analysis/Facebook.xlsx)
-- [Google.xlsx](../student%20desk/Topic/06-Time-Series-Analysis/Google.xlsx)
-- [Netflix.xlsx](../student%20desk/Topic/06-Time-Series-Analysis/Netflix.xlsx)
-- [Dataset Instructions](../student%20desk/Topic/06-Time-Series-Analysis/Dataset_Details.docx)
+- [Amazon.xlsx](../student%20desk/Topic/07-Stock-Price/Amazon.xlsx)
+- [Apple.xlsx](../student%20desk/Topic/07-Stock-Price/Apple.xlsx)
+- [Facebook.xlsx](../student%20desk/Topic/07-Stock-Price/Facebook.xlsx)
+- [Google.xlsx](../student%20desk/Topic/07-Stock-Price/Google.xlsx)
+- [Netflix.xlsx](../student%20desk/Topic/07-Stock-Price/Netflix.xlsx)
+- [Dataset Instructions](../student%20desk/Topic/07-Stock-Price/Dataset_Details.docx)
 
 ---
 
