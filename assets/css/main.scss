@@ -971,6 +971,290 @@ ul, ol {
 .mb-2 { margin-bottom: $spacing-md; }
 .mb-3 { margin-bottom: $spacing-lg; }
 
+// Lab Instructions Page Styles
+.lab-instructions-page {
+    .lab-hero {
+        text-align: center;
+        padding: $spacing-xl $spacing-lg;
+        background: linear-gradient(135deg, $primary-blue 0%, $secondary-blue 100%);
+        color: white;
+        margin: -$spacing-lg -$spacing-lg $spacing-xl -$spacing-lg;
+        border-radius: $radius-lg $radius-lg 0 0;
+        
+        @media (max-width: $breakpoint-md) {
+            margin: -$spacing-md -$spacing-md $spacing-lg -$spacing-md;
+            padding: $spacing-lg $spacing-md;
+        }
+        
+        h1 {
+            color: white;
+            border: none;
+            margin-bottom: $spacing-md;
+            font-size: 2.5rem;
+            
+            @media (max-width: $breakpoint-md) {
+                font-size: 2rem;
+            }
+        }
+        
+        .lab-subtitle {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.125rem;
+            margin-bottom: 0;
+        }
+    }
+    
+    .lab-section {
+        margin-bottom: $spacing-xl;
+        
+        h2 {
+            color: $primary-blue;
+            border-bottom: 3px solid $secondary-blue;
+            padding-bottom: $spacing-sm;
+            margin-top: $spacing-xl;
+            margin-bottom: $spacing-lg;
+            
+            &:first-of-type {
+                margin-top: 0;
+            }
+        }
+        
+        h3 {
+            color: $medium-gray;
+            margin-top: $spacing-lg;
+            margin-bottom: $spacing-md;
+        }
+        
+        h4 {
+            color: $text-dark;
+            margin-top: $spacing-md;
+            margin-bottom: $spacing-sm;
+        }
+        
+        code {
+            background-color: rgba($primary-blue, 0.1);
+            color: $primary-blue;
+            padding: 0.125rem 0.375rem;
+            border-radius: $radius-sm;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre {
+            background-color: $dark-gray;
+            color: #f0f0f0;
+            padding: $spacing-md;
+            border-radius: $radius-md;
+            overflow-x: auto;
+            margin: $spacing-md 0;
+            box-shadow: $shadow-md;
+            
+            code {
+                background-color: transparent;
+                color: #f0f0f0;
+                padding: 0;
+                font-size: 0.9rem;
+                line-height: 1.6;
+            }
+        }
+        
+        ul, ol {
+            margin-left: $spacing-lg;
+            margin-bottom: $spacing-md;
+            
+            li {
+                margin-bottom: $spacing-xs;
+                line-height: 1.7;
+            }
+        }
+    }
+    
+    .comparison-table {
+        margin: $spacing-lg 0;
+        
+        th {
+            background: $primary-blue;
+            color: white;
+        }
+        
+        td {
+            vertical-align: top;
+        }
+    }
+    
+    .function-category {
+        margin-bottom: $spacing-xl;
+        
+        h3 {
+            color: $primary-blue;
+            border-bottom: 2px solid $lighter-gray;
+            padding-bottom: $spacing-xs;
+            margin-bottom: $spacing-lg;
+            margin-top: $spacing-xl;
+            
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+    
+    .function-card {
+        background: rgba(255, 255, 255, 0.9);
+        border-left: 4px solid $secondary-blue;
+        padding: $spacing-lg;
+        margin-bottom: $spacing-lg;
+        border-radius: $radius-md;
+        box-shadow: $shadow-sm;
+        transition: box-shadow 0.2s ease, transform 0.2s ease;
+        
+        &:hover {
+            box-shadow: $shadow-md;
+            transform: translateX(4px);
+        }
+        
+        h4 {
+            color: $primary-blue;
+            margin-top: 0;
+            font-size: 1.25rem;
+            border-bottom: 1px solid $lighter-gray;
+            padding-bottom: $spacing-xs;
+            margin-bottom: $spacing-md;
+        }
+        
+        p {
+            margin-bottom: $spacing-sm;
+        }
+        
+        ul, ol {
+            margin-left: $spacing-lg;
+            margin-bottom: $spacing-sm;
+        }
+        
+        pre {
+            margin: $spacing-sm 0;
+        }
+    }
+    
+    .exercise-intro {
+        font-size: 1.125rem;
+        color: $text-medium;
+        margin-bottom: $spacing-lg;
+        padding: $spacing-md;
+        background: rgba($accent-blue, 0.1);
+        border-left: 4px solid $accent-blue;
+        border-radius: $radius-sm;
+    }
+    
+    .exercise-section {
+        margin-bottom: $spacing-xl;
+        
+        h3 {
+            color: $primary-blue;
+            border-bottom: 2px solid $lighter-gray;
+            padding-bottom: $spacing-xs;
+            margin-bottom: $spacing-lg;
+            margin-top: $spacing-xl;
+            
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+    
+    .exercise-card {
+        background: rgba(255, 255, 255, 0.95);
+        border: 1px solid $lighter-gray;
+        border-left: 4px solid $excel-green;
+        padding: $spacing-lg;
+        margin-bottom: $spacing-lg;
+        border-radius: $radius-md;
+        box-shadow: $shadow-sm;
+        transition: box-shadow 0.2s ease;
+        
+        &:hover {
+            box-shadow: $shadow-md;
+        }
+        
+        h4 {
+            color: $excel-green;
+            margin-top: 0;
+            font-size: 1.2rem;
+            margin-bottom: $spacing-sm;
+        }
+        
+        p {
+            margin-bottom: $spacing-sm;
+            
+            strong {
+                color: $text-dark;
+                font-weight: 600;
+            }
+        }
+        
+        ol, ul {
+            margin-left: $spacing-lg;
+            margin-bottom: $spacing-md;
+            
+            li {
+                margin-bottom: $spacing-xs;
+                line-height: 1.7;
+            }
+        }
+        
+        code {
+            background-color: rgba($excel-green, 0.1);
+            color: darken($excel-green, 10%);
+        }
+        
+        pre {
+            background-color: $dark-gray;
+            color: #f0f0f0;
+            padding: $spacing-md;
+            border-radius: $radius-md;
+            overflow-x: auto;
+            margin: $spacing-sm 0;
+            
+            code {
+                background-color: transparent;
+                color: #f0f0f0;
+            }
+        }
+    }
+    
+    .error-card {
+        background: rgba($difficulty-hard, 0.05);
+        border-left: 4px solid $difficulty-hard;
+        padding: $spacing-md;
+        margin-bottom: $spacing-md;
+        border-radius: $radius-sm;
+        
+        h4 {
+            color: $difficulty-hard;
+            margin-top: 0;
+            font-size: 1.1rem;
+            margin-bottom: $spacing-xs;
+        }
+        
+        p {
+            margin-bottom: $spacing-xs;
+            
+            strong {
+                color: $text-dark;
+            }
+        }
+        
+        ul {
+            margin-left: $spacing-lg;
+            margin-top: $spacing-xs;
+        }
+        
+        code {
+            background-color: rgba($difficulty-hard, 0.1);
+            color: darken($difficulty-hard, 10%);
+        }
+    }
+}
+
 // Print Styles
 @media print {
     .site-header,
@@ -983,6 +1267,15 @@ ul, ol {
         box-shadow: none;
         margin: 0;
         padding: 0;
+    }
+    
+    .lab-instructions-page {
+        .lab-hero {
+            background: white;
+            color: $text-dark;
+            margin: 0;
+            padding: $spacing-md 0;
+        }
     }
 }
 

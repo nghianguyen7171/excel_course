@@ -160,7 +160,7 @@ Access: [O'Reilly Learning Platform](https://www.oreilly.com/library/view/modern
 
 | Week | Type | Main Topic | Key Content | Readings | CLOs | Assessment |
 | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
-| 1 | **Lecture** | Course Introduction & Excel Basics | Course overview, analytics workflow, Excel interface, essential formulas (SUM, AVERAGE, COUNT, IF, VLOOKUP) | [1] Ch. 1 | CLO 1 | Participation |
+| 1 | **Lecture** | Course Introduction & Excel Basics | Course overview, analytics workflow, Excel interface, essential formulas (SUM, AVERAGE, COUNT, IF, VLOOKUP)<br><br><strong>Materials:</strong> [Lab 1 Instructions]({{ site.baseurl }}/lab-1-instructions) | [1] Ch. 1 | CLO 1 | Participation |
 | 2 | **Lab** | Excel Basics Practice | Hands-on practice with formulas and functions; Group topic selection and initial project planning | [1] Ch. 1 | CLO 1 | Lab Assignment 1 + Group Progress Report 1 |
 | 3 | **Lecture** | Data Import & Cleaning | Import from CSV/Excel/web, Power Query basics, data cleaning, handling missing values | [1] Ch. 2-3 | CLO 1 | - |
 | 4 | **Lab** | Data Import & Cleaning Practice | Import and clean datasets using Power Query; Groups report on data import progress for their project | [1] Ch. 2-3 | CLO 1 | Lab Assignment 2 + Group Progress Report 2 |
