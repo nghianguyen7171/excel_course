@@ -3,6 +3,7 @@ title: Week 1 Quiz - Excel Basics
 layout: default
 ---
 
+{::nomarkdown}
 <div class="quiz-page">
 <section id="week1-quiz" class="quiz-section">
   <div class="quiz-hero">
@@ -145,3 +146,4 @@ layout: default
   </div>
 </section>
 </div>
+{:/nomarkdown}
