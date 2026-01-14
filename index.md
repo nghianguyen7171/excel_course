@@ -154,25 +154,25 @@ Access: [O'Reilly Learning Platform](https://www.oreilly.com/library/view/modern
 
 ## 7. SIMPLIFIED 15-WEEK SCHEDULE (Alternating Lecture/Lab with Group Project Focus)
 
-**Schedule Pattern:** Lectures and Labs alternate. Lecture weeks introduce core concepts and techniques that apply to all project topics. Lab weeks include hands-on practice with these concepts and group progress reports on their chosen project topic. Groups select a project topic from the 7 available options and work on it throughout the semester, applying the concepts learned in lectures.
+**Schedule Pattern:** Lectures and Labs alternate. Lecture weeks introduce core concepts and techniques that apply to all project topics. Lab weeks include hands-on practice with these concepts and structured group progress reports that follow a scientific research workflow. Groups select a project topic from the 11 available options and work on it throughout the semester, applying concepts learned in lectures. Each progress report builds toward answering specific research questions related to their chosen topic's problem statement.
 
 <div class="table-wrapper">
 
 | Week | Type | Main Topic | Key Content | Readings | CLOs | Assessment |
 | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
 | 1 | **Lecture** | Course Introduction & Excel Basics | Course overview, analytics workflow, Excel interface, essential formulas (SUM, AVERAGE, COUNT, IF, VLOOKUP)<br><br><strong>Materials:</strong> [Lab 1 Instructions]({{ site.baseurl }}/lab-1-instructions) | [1] Ch. 1 | CLO 1 | Participation |
-| 2 | **Lab** | Excel Basics Practice | Hands-on practice with formulas and functions; Group topic selection and initial project planning | [1] Ch. 1 | CLO 1 | Lab Assignment 1 + Group Progress Report 1 |
+| 2 | **Lab** | Excel Basics Practice | Hands-on practice with formulas and functions; **Group Progress Report 1:** Topic selection, problem statement, research questions, and initial data exploration plan | [1] Ch. 1 | CLO 1 | Lab Assignment 1 + Group Progress Report 1 |
 | 3 | **Lecture** | Data Import & Cleaning | Import from CSV/Excel/web, Power Query basics, data cleaning, handling missing values | [1] Ch. 2-3 | CLO 1 | - |
-| 4 | **Lab** | Data Import & Cleaning Practice | Import and clean datasets using Power Query; Groups report on data import progress for their project | [1] Ch. 2-3 | CLO 1 | Lab Assignment 2 + Group Progress Report 2 |
+| 4 | **Lab** | Data Import & Cleaning Practice | Import and clean datasets using Power Query; **Group Progress Report 2:** Data quality assessment, cleaning methodology, and preliminary data structure documentation | [1] Ch. 2-3 | CLO 1 | Lab Assignment 2 + Group Progress Report 2 |
 | 5 | **Lecture** | Exploratory Data Analysis | Descriptive statistics, summary tables, data segmentation, PivotTables | [1] Ch. 4; [2] Ch. 8 | CLO 2 | - |
-| 6 | **Lab** | EDA Practice | Perform descriptive analysis and create PivotTables; Groups report on initial exploration findings | [1] Ch. 4 | CLO 2 | Lab Assignment 3 + Group Progress Report 3 |
+| 6 | **Lab** | EDA Practice | Perform descriptive analysis and create PivotTables; **Group Progress Report 3:** Descriptive statistics summary, key patterns/insights relevant to research questions, and identification of variables for further analysis | [1] Ch. 4 | CLO 2 | Lab Assignment 3 + Group Progress Report 3 |
 | 7 | **Lecture** | Data Visualization & Dashboards | Chart types, design principles, effective visualizations, interactive dashboards | [1] Ch. 9, 28-29 | CLO 4 | - |
-| 8 | **Lab** | Visualization Practice | Create charts and build interactive dashboards; Groups present EDA findings and visualizations | [1] Ch. 9 | CLO 4 | Lab Assignment 4 + Group Progress Report 4 |
+| 8 | **Lab** | Visualization Practice | Create charts and build interactive dashboards; **Group Progress Report 4:** Visual analysis of key research variables, preliminary dashboard prototype, and visual insights that address specific research questions | [1] Ch. 9 | CLO 4 | Lab Assignment 4 + Group Progress Report 4 |
 | 9 | **Lecture** | Statistical Analysis & Regression | Hypothesis testing basics, simple regression, interpreting results | [2] Ch. 2-6 | CLO 3 | - |
 | 10 | **Midterm** | Midterm Exam | Comprehensive exam covering weeks 1-9 (Excel basics, data import, EDA, visualization, statistics) | Review materials | CLO 1-4 | Midterm Exam (30%) |
-| 11 | **Lab** | Statistical Analysis Practice | Apply statistical tests and build regression models; Groups report on statistical analysis progress | [2] Ch. 5-6 | CLO 3 | Lab Assignment 5 + Group Progress Report 5 |
+| 11 | **Lab** | Statistical Analysis Practice | Apply statistical tests and build regression models; **Group Progress Report 5:** Statistical hypotheses, analysis results (correlations, regression models, or survival analysis), and interpretation of findings in context of research problem | [2] Ch. 5-6 | CLO 3 | Lab Assignment 5 + Group Progress Report 5 |
 | 12 | **Lecture** | Professional Reporting & Communication | Report structure, writing for audiences, presenting insights effectively | [1] Ch. 11; [3] Ch. 10 | CLO 5 | - |
-| 13 | **Lab** | Final Project Work I | Complete analysis, build visualizations/dashboards, write report drafts; Group progress review | Project guidelines | CLO 1-6 | Project Checkpoint |
+| 13 | **Lab** | Final Project Work I | Complete analysis, build visualizations/dashboards, write report drafts; **Project Checkpoint:** Full analysis results, comprehensive dashboard addressing all research questions, draft report with methodology and findings sections | Project guidelines | CLO 1-6 | Project Checkpoint |
 | 14 | **Lab** | Final Project Work II | Refine analysis, finalize dashboards, complete written reports; Peer review and feedback | Project guidelines | CLO 1-6 | Project Refinement |
 | 15 | **Lab** | Final Presentations | Student group presentations (15 min each), Q&A, course wrap-up | - | CLO 5,6 | Final Presentation (50%) |
 
@@ -182,7 +182,7 @@ Access: [O'Reilly Learning Platform](https://www.oreilly.com/library/view/modern
 - **Weeks 1, 3, 5, 7, 9, 12:** Lecture sessions (concise but comprehensive conceptual learning applicable to all project topics)
 - **Weeks 2, 4, 6, 8, 11, 13, 14, 15:** Lab sessions (hands-on practice + group project reporting)
 - **Week 10:** Midterm Exam (90 minutes, computer-based)
-- **Group Project Work:** Students form groups (3-4 members) and select one of 7 available project topics. Groups work on their chosen topic throughout the semester, applying concepts learned in lectures. Groups report progress during each lab week, building toward final presentation in Week 15.
+- **Group Project Work:** Students form groups (3-4 members) and select one of 11 available project topics. Groups work on their chosen topic throughout the semester, following a structured research workflow. Each progress report (Weeks 2, 4, 6, 8, 11) has specific deliverables linked to scientific research milestones: problem formulation → data preparation → exploratory analysis → visual analysis → statistical analysis. Groups build toward final presentation in Week 15, demonstrating how their analysis addresses the research problem and answers their research questions.
 
 ---
 
@@ -281,14 +281,107 @@ Students work in groups (3-4 members) and select **one of 11 available topics** 
 
 ### Timeline & Group Reporting:
 
-- **Week 2 (Lab):** Topic selection and initial project planning
-- **Week 4 (Lab):** Progress Report 1 - Data import and initial cleaning
-- **Week 6 (Lab):** Progress Report 2 - Data cleaning and initial exploration findings
-- **Week 8 (Lab):** Progress Report 3 - EDA findings and initial visualizations
-- **Week 11 (Lab):** Progress Report 4 - Statistical analysis progress
-- **Week 13 (Lab):** Project Checkpoint - Complete analysis, dashboards, report drafts
-- **Week 14 (Lab):** Project Refinement - Finalize reports, peer review, prepare presentations
-- **Week 15 (Lab):** Final Presentations - Group presentations and project submission
+#### **Week 2 (Lab) - Progress Report 1: Project Initiation & Problem Formulation**
+**Deliverables:**
+- Selected topic and dataset justification
+- Clear problem statement linked to the chosen topic's research context
+- 3-5 specific research questions that address the problem
+- Initial data exploration plan (what variables will be analyzed and why)
+- Group work plan and role assignments
+
+**Format:** 1-2 page document (Word/PDF) + Excel file with initial data overview
+
+---
+
+#### **Week 4 (Lab) - Progress Report 2: Data Preparation & Quality Assessment**
+**Deliverables:**
+- Data quality report (missing values, outliers, inconsistencies identified)
+- Documented data cleaning methodology (decisions made and rationale)
+- Cleaned dataset with data dictionary (variable definitions, types, ranges)
+- Preliminary data structure analysis (shape, key variables, relationships)
+- Challenges encountered and solutions applied
+
+**Format:** Excel file with cleaned data + 1-2 page methodology document
+
+---
+
+#### **Week 6 (Lab) - Progress Report 3: Exploratory Data Analysis & Pattern Discovery**
+**Deliverables:**
+- Descriptive statistics summary relevant to research questions
+- Key patterns and insights discovered through EDA
+- Identification of important variables for addressing research questions
+- PivotTables summarizing critical dimensions
+- Preliminary findings that begin to answer research questions
+
+**Format:** Excel file with EDA analysis + 2-3 page findings summary with tables
+
+---
+
+#### **Week 8 (Lab) - Progress Report 4: Visual Analysis & Dashboard Prototype**
+**Deliverables:**
+- Visualizations addressing specific research questions (minimum 5 charts)
+- Preliminary interactive dashboard prototype
+- Visual insights that support or challenge initial hypotheses
+- Chart selection rationale (why each chart type was chosen)
+- Dashboard layout and functionality demonstration
+
+**Format:** Excel dashboard file + 2-page visual analysis document
+
+---
+
+#### **Week 11 (Lab) - Progress Report 5: Statistical Analysis & Hypothesis Testing**
+**Deliverables:**
+- Statistical hypotheses formulated based on research questions
+- Results of statistical analyses (correlation, regression, survival analysis, etc.)
+- Interpretation of findings in context of the research problem
+- Model diagnostics and validation (if applicable)
+- Statistical evidence supporting or refuting research hypotheses
+
+**Format:** Excel file with analysis results + 3-4 page statistical analysis report
+
+---
+
+#### **Week 13 (Lab) - Project Checkpoint: Comprehensive Analysis Review**
+**Deliverables:**
+- Complete analysis addressing all research questions
+- Comprehensive interactive dashboard with all key visualizations
+- Draft written report (minimum 1500 words) including:
+  - Introduction and problem statement
+  - Methodology section
+  - Findings and results section
+  - Initial insights and implications
+- Presentation outline/slides draft
+
+**Format:** Complete Excel workbook + Draft report (Word/PDF) + Presentation slides
+
+---
+
+#### **Week 14 (Lab) - Project Refinement: Final Report & Peer Review**
+**Deliverables:**
+- Finalized written report (2,000-2,500 words) with:
+  - Complete methodology and analysis sections
+  - Comprehensive findings and interpretations
+  - Recommendations based on research findings
+  - Conclusions and limitations
+- Final dashboard with all refinements
+- Peer review feedback incorporated
+- Presentation finalized and rehearsed
+
+**Format:** Final Excel workbook + Complete report + Final presentation slides
+
+---
+
+#### **Week 15 (Lab) - Final Presentations: Research Findings Communication**
+**Deliverables:**
+- 15-minute group presentation covering:
+  - Problem statement and research questions
+  - Methodology overview
+  - Key findings and insights
+  - Recommendations and conclusions
+- Q&A session (5 minutes)
+- Final submission of all project materials
+
+**Format:** Live presentation + Submission of all deliverables (Excel, report, slides)
 
 **Available Topics:** 11 curated topics aligned with course curriculum (see Topics page for details). Groups select one topic that best fits their interests and career goals.
 
