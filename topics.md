@@ -45,7 +45,7 @@ Sales data for a fictional retail company, including product information, orders
 
 **Dataset Files:**
 - [SuperStoreUS-2015.xlsx](../student%20desk/Topic/01-Superstore-Sales/SuperStoreUS-2015.xlsx)
-- [Dataset Instructions](../student%20desk/Topic/01-Superstore-Sales/Dataset_Details.docx)
+- [Dataset Instructions]({{ site.baseurl }}/datasets/01-superstore-sales-instructions)
 
 ---
 
@@ -81,7 +81,7 @@ Passenger information from the Titanic, including demographics, ticket class, an
 
 **Dataset Files:**
 - [Titanic.xlsx](../student%20desk/Topic/02-Titanic/Titanic.xlsx)
-- [Dataset Instructions](../student%20desk/Topic/02-Titanic/Dataset_Details.docx)
+- [Dataset Instructions]({{ site.baseurl }}/datasets/02-titanic-instructions)
 
 ---
 
@@ -116,7 +116,7 @@ Demographic, social, and economic attributes from the 1994 U.S. Census database.
 
 **Dataset Files:**
 - [adult.xlsx](../student%20desk/Topic/03-Adult-Census-Income/adult.xlsx)
-- [Dataset Instructions](../student%20desk/Topic/03-Adult-Census-Income/Dataset_Details.docx)
+- [Dataset Instructions]({{ site.baseurl }}/datasets/03-adult-census-income-instructions)
 
 ---
 
@@ -156,7 +156,7 @@ Happiness levels and related factors (economic, social, health) for over 150 cou
 - [2017.xlsx](../student%20desk/Topic/04-World-Happiness-Report/2017.xlsx)
 - [2018.xlsx](../student%20desk/Topic/04-World-Happiness-Report/2018.xlsx)
 - [2019.xlsx](../student%20desk/Topic/04-World-Happiness-Report/2019.xlsx)
-- [Dataset Instructions](../student%20desk/Topic/04-World-Happiness-Report/Dataset_Details.docx)
+- [Dataset Instructions]({{ site.baseurl }}/datasets/04-world-happiness-report-instructions)
 
 ---
 
@@ -192,7 +192,7 @@ Marketing campaign data from a Portuguese banking institution, including custome
 
 **Dataset Files:**
 - [bank-additional-full.xlsx](../student%20desk/Topic/05-Bank-Marketing/bank-additional-full.xlsx)
-- [Dataset Instructions](../student%20desk/Topic/05-Bank-Marketing/Dataset_Details.docx)
+- [Dataset Instructions]({{ site.baseurl }}/datasets/05-bank-marketing-instructions)
 
 ---
 
@@ -228,7 +228,7 @@ Housing data from Boston, Massachusetts, including prices and various neighborho
 
 **Dataset Files:**
 - [boston.xlsx](../student%20desk/Topic/06-Boston-Housing/boston.xlsx)
-- [Dataset Instructions](../student%20desk/Topic/06-Boston-Housing/Dataset_Details.docx)
+- [Dataset Instructions]({{ site.baseurl }}/datasets/06-boston-housing-instructions)
 
 ---
 
@@ -268,7 +268,7 @@ Daily stock prices for major technology companies (Amazon, Apple, Facebook, Goog
 - [Facebook.xlsx](../student%20desk/Topic/07-Stock-Price/Facebook.xlsx)
 - [Google.xlsx](../student%20desk/Topic/07-Stock-Price/Google.xlsx)
 - [Netflix.xlsx](../student%20desk/Topic/07-Stock-Price/Netflix.xlsx)
-- [Dataset Instructions](../student%20desk/Topic/07-Stock-Price/Dataset_Details.docx)
+- [Dataset Instructions]({{ site.baseurl }}/datasets/07-stock-price-instructions)
 
 ---
 
@@ -305,7 +305,7 @@ Loan data with time-to-event information for 5,000 loans, including borrower cha
 
 **Dataset Files:**
 - [loan_default_survival.xlsx](../student%20desk/Topic/08-Loan-Default-Survival/loan_default_survival.xlsx)
-- [Dataset Instructions](../student%20desk/Topic/08-Loan-Default-Survival/Dataset_Details.md)
+- [Dataset Instructions]({{ site.baseurl }}/datasets/08-loan-default-survival-instructions)
 
 ---
 
@@ -342,7 +342,7 @@ Patient survival data from the German Breast Cancer Study Group 2 (GBSG2), conta
 
 **Dataset Files:**
 - [gbsg2.xlsx](../student%20desk/Topic/09-Patient-Survival/gbsg2.xlsx)
-- [Dataset Instructions](../student%20desk/Topic/09-Patient-Survival/Dataset_Details.md)
+- [Dataset Instructions]({{ site.baseurl }}/datasets/09-patient-survival-instructions)
 
 ---
 
