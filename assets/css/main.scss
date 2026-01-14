@@ -473,6 +473,10 @@ section {
 }
 
 // Quiz Styles
+.quiz-page {
+    padding: $spacing-lg 0;
+}
+
 .quiz-section {
     max-width: 1100px;
     margin: 0 auto $spacing-2xl auto;
