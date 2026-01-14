@@ -270,7 +270,7 @@ Access: [O'Reilly Learning Platform](https://www.oreilly.com/library/view/modern
 
 ### Project Structure:
 
-Students work in groups (3-4 members) and select **one of 7 available topics** for their final project. Each topic is aligned with specific course knowledge areas and includes a curated dataset with instructions. See the [Topics page]({{ site.baseurl }}/topics) for detailed information on all available topics.
+Students work in groups (3-4 members) and select **one of 9 available topics** for their final project. Each topic is aligned with specific course knowledge areas and includes a curated dataset with instructions. See the [Topics page]({{ site.baseurl }}/topics) for detailed information on all available topics.
 
 ### Components:
 
@@ -290,7 +290,7 @@ Students work in groups (3-4 members) and select **one of 7 available topics** f
 - **Week 14 (Lab):** Project Refinement - Finalize reports, peer review, prepare presentations
 - **Week 15 (Lab):** Final Presentations - Group presentations and project submission
 
-**Available Topics:** 7 curated topics aligned with course curriculum (see Topics page for details). Groups select one topic that best fits their interests and career goals.
+**Available Topics:** 9 curated topics aligned with course curriculum (see Topics page for details). Groups select one topic that best fits their interests and career goals.
 
 ---
 

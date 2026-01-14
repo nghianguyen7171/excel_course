@@ -1,14 +1,14 @@
 ---
 layout: default
 title: Course Topics - Data Analysis with Spreadsheet Program
-description: Explore the 7 available project topics for the Data Analysis with Spreadsheet Program course
+description: Explore the 9 available project topics for the Data Analysis with Spreadsheet Program course
 ---
 
 <section id="topics-hero">
 
 ## Course Project Topics
 
-This course offers **7 curated project topics** for group work. Students work in groups (3-4 members) to select **one topic** for their final project. Groups work on their chosen topic throughout the semester, applying all course skills learned in lectures—from data import and cleaning to statistical analysis and professional reporting.
+This course offers **9 curated project topics** for group work. Students work in groups (3-4 members) to select **one topic** for their final project. Groups work on their chosen topic throughout the semester, applying all course skills learned in lectures—from data import and cleaning to statistical analysis and professional reporting.
 
 Each topic includes a curated dataset with detailed instructions. Groups report on their project progress during each lab week, building toward a comprehensive final presentation in Week 15.
 
@@ -274,6 +274,80 @@ Daily stock prices for major technology companies (Amazon, Apple, Facebook, Goog
 
 </section>
 
+<section id="topic-8" class="topic-card difficulty-hard">
+
+{::nomarkdown}
+<div class="topic-header">
+    <div class="topic-image">
+        <img src="{{ site.baseurl }}/assets/images/topics/topic8.jpeg" alt="Loan Default Survival Analysis Visualization" />
+    </div>
+    <div class="topic-title-wrapper">
+        <h3>Topic 8: Loan Default Survival Analysis <span class="difficulty-badge badge-hard">Hard</span></h3>
+    </div>
+</div>
+{:/nomarkdown}
+
+**Problem:**  
+Financial institutions need to understand not just whether loans will default, but when defaults occur. Analyzing the time until loan default helps banks manage risk, set appropriate interest rates, and develop early warning systems. The loan portfolio contains time-to-event data that requires survival analysis techniques to identify risk factors and predict default timing.
+
+**Task:**  
+Using the Loan Default Survival dataset, perform comprehensive survival analysis to:
+- Calculate survival probabilities (non-default rates) over time
+- Identify factors that influence time to default (loan amount, interest rate, borrower characteristics)
+- Create Kaplan-Meier survival curves using Excel
+- Analyze censored data (loans still active or completed without default)
+- Compare default risk across different borrower segments (credit score, loan grade, purpose)
+- Build visualizations showing survival curves and risk comparisons
+- Provide insights for credit risk management and loan portfolio optimization
+
+**Dataset Description:**  
+Loan data with time-to-event information for 5,000 loans, including borrower characteristics, loan details, and survival outcomes (default or censored). Contains time-to-default, event indicators, and various risk factors. Ideal for practicing survival analysis techniques in Excel.
+
+**Dataset Files:**
+- [loan_default_survival.xlsx](../student%20desk/Topic/08-Loan-Default-Survival/loan_default_survival.xlsx)
+- [Dataset Instructions](../student%20desk/Topic/08-Loan-Default-Survival/Dataset_Details.md)
+
+---
+
+</section>
+
+<section id="topic-9" class="topic-card difficulty-hard">
+
+{::nomarkdown}
+<div class="topic-header">
+    <div class="topic-image">
+        <img src="{{ site.baseurl }}/assets/images/topics/topic9.jpeg" alt="Patient Survival Analysis Visualization" />
+    </div>
+    <div class="topic-title-wrapper">
+        <h3>Topic 9: Patient Survival Analysis <span class="difficulty-badge badge-hard">Hard</span></h3>
+    </div>
+</div>
+{:/nomarkdown}
+
+**Problem:**  
+Healthcare providers need to evaluate treatment effectiveness and patient prognosis by analyzing survival times. Understanding factors that influence patient survival helps improve treatment strategies and resource allocation. The patient data contains survival times and prognostic factors that require survival analysis to assess treatment outcomes and identify critical risk factors.
+
+**Task:**  
+Using the Patient Survival dataset (GBSG2), perform comprehensive survival analysis to:
+- Calculate survival probabilities over time
+- Compare survival across different treatment groups (hormonal therapy)
+- Identify prognostic factors (age, disease stage, treatment type, tumor characteristics)
+- Create survival curves and compare groups visually
+- Analyze censored observations (patients still alive or lost to follow-up)
+- Build comparative visualizations showing survival differences across patient groups
+- Provide insights for treatment planning, patient care, and clinical decision-making
+
+**Dataset Description:**  
+Patient survival data from the German Breast Cancer Study Group 2 (GBSG2), containing information on 686 patients with primary node-positive breast cancer. Includes survival times, event indicators, treatment information, and clinical variables. Ideal for practicing survival analysis techniques in healthcare contexts.
+
+**Dataset Files:**
+- [gbsg2.xlsx](../student%20desk/Topic/09-Patient-Survival/gbsg2.xlsx)
+- [Dataset Instructions](../student%20desk/Topic/09-Patient-Survival/Dataset_Details.md)
+
+---
+
+</section>
+
 <section id="topic-selection">
 
 ## Topic Selection Guidelines
@@ -283,7 +357,7 @@ Daily stock prices for major technology companies (Amazon, Apple, Facebook, Goog
 - Consider diverse skills and interests when forming groups
 
 **Selection Process:**
-- Review all 7 topics and their descriptions
+- Review all 9 topics and their descriptions
 - Select a topic that aligns with your group's interests and career goals
 - Consider the complexity and scope appropriate for your skill level
 - Finalize topic selection during Week 2 lab session
