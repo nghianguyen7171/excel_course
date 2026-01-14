@@ -143,6 +143,142 @@ layout: default
         <p><strong>Explanation:</strong> SUMPRODUCT multiplies price and quantity only for rows where category matches, then sums the results.</p>
       </details>
     </div>
+
+    <!-- Q8 -->
+    <div class="quiz-card">
+      <h3>Q8. MIN and MAX Functions</h3>
+      <p>You want to find the lowest unit price in range E2:E51. Which formula is correct?</p>
+      <ul class="quiz-options">
+        <li>A) <code>=MINIMUM(E2:E51)</code></li>
+        <li>B) <code>=MIN(E2:E51)</code></li>
+        <li>C) <code>=SMALL(E2:E51,1)</code></li>
+        <li>D) Both B and C are correct</li>
+      </ul>
+      <details class="quiz-answer">
+        <summary>Show answer</summary>
+        <p><strong>Answer:</strong> D) Both B and C are correct</p>
+        <p><strong>Explanation:</strong> MIN(E2:E51) and SMALL(E2:E51,1) both return the minimum value. MIN is more straightforward for this purpose.</p>
+      </details>
+    </div>
+
+    <!-- Q9 -->
+    <div class="quiz-card">
+      <h3>Q9. SUMIF Function</h3>
+      <p>Sum all quantities (F2:F51) where the category (C2:C51) is "Electronics". Which formula?</p>
+      <ul class="quiz-options">
+        <li>A) <code>=SUMIF(C2:C51,"Electronics",F2:F51)</code></li>
+        <li>B) <code>=SUMIF(F2:F51,C2:C51,"Electronics")</code></li>
+        <li>C) <code>=SUMIF(C2:C51,F2:F51,"Electronics")</code></li>
+        <li>D) <code>=SUMIF("Electronics",C2:C51,F2:F51)</code></li>
+      </ul>
+      <details class="quiz-answer">
+        <summary>Show answer</summary>
+        <p><strong>Answer:</strong> A) <code>=SUMIF(C2:C51,"Electronics",F2:F51)</code></p>
+        <p><strong>Explanation:</strong> SUMIF syntax is SUMIF(criteria_range, criteria, sum_range). The criteria range comes first, then the criteria, then the range to sum.</p>
+      </details>
+    </div>
+
+    <!-- Q10 -->
+    <div class="quiz-card">
+      <h3>Q10. Nested IF Function</h3>
+      <p>Create a formula that returns "High" if quantity (F2) > 100, "Medium" if > 50, otherwise "Low". Which is correct?</p>
+      <ul class="quiz-options">
+        <li>A) <code>=IF(F2>100,"High",IF(F2>50,"Medium","Low"))</code></li>
+        <li>B) <code>=IF(F2>50,"Medium",IF(F2>100,"High","Low"))</code></li>
+        <li>C) <code>=IF(F2>100,"High","Medium",IF(F2>50,"Low"))</code></li>
+        <li>D) <code>=IF(F2>50,"Low",IF(F2>100,"High","Medium"))</code></li>
+      </ul>
+      <details class="quiz-answer">
+        <summary>Show answer</summary>
+        <p><strong>Answer:</strong> A) <code>=IF(F2>100,"High",IF(F2>50,"Medium","Low"))</code></p>
+        <p><strong>Explanation:</strong> Check the highest threshold first (100), then the next (50), then default to "Low". Order matters in nested IF statements.</p>
+      </details>
+    </div>
+
+    <!-- Q11 -->
+    <div class="quiz-card">
+      <h3>Q11. Absolute Cell Reference</h3>
+      <p>You want to copy a formula from B2 that multiplies A2 by a tax rate in cell $C$1. Which formula in B2 ensures C1 stays fixed when copied down?</p>
+      <ul class="quiz-options">
+        <li>A) <code>=A2*C1</code></li>
+        <li>B) <code>=A2*$C$1</code></li>
+        <li>C) <code>=A2*$C1</code></li>
+        <li>D) <code>=$A$2*C1</code></li>
+      </ul>
+      <details class="quiz-answer">
+        <summary>Show answer</summary>
+        <p><strong>Answer:</strong> B) <code>=A2*$C$1</code></p>
+        <p><strong>Explanation:</strong> $C$1 is an absolute reference that locks both row and column, so it won't change when copied. A2 is relative and will adjust.</p>
+      </details>
+    </div>
+
+    <!-- Q12 -->
+    <div class="quiz-card">
+      <h3>Q12. COUNTIF with Wildcards</h3>
+      <p>Count products in C2:C51 where the category name starts with "Elect". Which formula?</p>
+      <ul class="quiz-options">
+        <li>A) <code>=COUNTIF(C2:C51,"Elect")</code></li>
+        <li>B) <code>=COUNTIF(C2:C51,"Elect*")</code></li>
+        <li>C) <code>=COUNTIF(C2:C51,"*Elect")</code></li>
+        <li>D) <code>=COUNTIF(C2:C51,"Electronics")</code></li>
+      </ul>
+      <details class="quiz-answer">
+        <summary>Show answer</summary>
+        <p><strong>Answer:</strong> B) <code>=COUNTIF(C2:C51,"Elect*")</code></p>
+        <p><strong>Explanation:</strong> The asterisk (*) is a wildcard that matches any characters. "Elect*" matches any text starting with "Elect".</p>
+      </details>
+    </div>
+
+    <!-- Q13 -->
+    <div class="quiz-card">
+      <h3>Q13. VLOOKUP Approximate Match</h3>
+      <p>You have a lookup table with discount thresholds. For a purchase amount in A10, you want to find the discount rate using approximate match. The lookup table is in E2:F5 (amounts in E, rates in F), sorted ascending. Which formula?</p>
+      <ul class="quiz-options">
+        <li>A) <code>=VLOOKUP(A10,E2:F5,2,FALSE)</code></li>
+        <li>B) <code>=VLOOKUP(A10,E2:F5,2,TRUE)</code></li>
+        <li>C) <code>=VLOOKUP(A10,E2:F5,1,TRUE)</code></li>
+        <li>D) <code>=VLOOKUP(A10,F2:E5,2,TRUE)</code></li>
+      </ul>
+      <details class="quiz-answer">
+        <summary>Show answer</summary>
+        <p><strong>Answer:</strong> B) <code>=VLOOKUP(A10,E2:F5,2,TRUE)</code></p>
+        <p><strong>Explanation:</strong> TRUE enables approximate match (or omit it). Column index 2 returns the discount rate. The table must be sorted ascending for approximate match to work correctly.</p>
+      </details>
+    </div>
+
+    <!-- Q14 -->
+    <div class="quiz-card">
+      <h3>Q14. SUMIFS with Multiple Criteria</h3>
+      <p>Sum quantities (F2:F51) where category (C2:C51) is "Electronics" AND unit price (E2:E51) is greater than 50. Which formula?</p>
+      <ul class="quiz-options">
+        <li>A) <code>=SUMIFS(F2:F51,C2:C51,"Electronics",E2:E51,">50")</code></li>
+        <li>B) <code>=SUMIFS(F2:F51,E2:E51,">50",C2:C51,"Electronics")</code></li>
+        <li>C) <code>=SUMIF(C2:C51,"Electronics",F2:F51)*SUMIF(E2:E51,">50",F2:F51)</code></li>
+        <li>D) Both A and B are correct</li>
+      </ul>
+      <details class="quiz-answer">
+        <summary>Show answer</summary>
+        <p><strong>Answer:</strong> D) Both A and B are correct</p>
+        <p><strong>Explanation:</strong> SUMIFS applies AND logic to all criteria. The order of criteria pairs doesn't matter, as long as each pair is (criteria_range, criteria).</p>
+      </details>
+    </div>
+
+    <!-- Q15 -->
+    <div class="quiz-card">
+      <h3>Q15. VLOOKUP Error Handling</h3>
+      <p>You use VLOOKUP to find a product, but some product IDs don't exist. You want to show "Not Found" instead of #N/A. Which formula wraps the VLOOKUP?</p>
+      <ul class="quiz-options">
+        <li>A) <code>=IFERROR(VLOOKUP(A2,D2:E100,2,FALSE),"Not Found")</code></li>
+        <li>B) <code>=IF(VLOOKUP(A2,D2:E100,2,FALSE)="#N/A","Not Found",VLOOKUP(A2,D2:E100,2,FALSE))</code></li>
+        <li>C) <code>=VLOOKUP(A2,D2:E100,2,FALSE) OR "Not Found"</code></li>
+        <li>D) <code>=ERROR(VLOOKUP(A2,D2:E100,2,FALSE),"Not Found")</code></li>
+      </ul>
+      <details class="quiz-answer">
+        <summary>Show answer</summary>
+        <p><strong>Answer:</strong> A) <code>=IFERROR(VLOOKUP(A2,D2:E100,2,FALSE),"Not Found")</code></p>
+        <p><strong>Explanation:</strong> IFERROR catches any error (including #N/A) and returns the specified value. This is cleaner than checking for specific error types.</p>
+      </details>
+    </div>
   </div>
 </section>
 </div>
