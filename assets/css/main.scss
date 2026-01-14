@@ -506,8 +506,8 @@ section {
 }
 
 .quiz-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    display: flex;
+    flex-direction: column;
     gap: $spacing-lg;
     padding: $spacing-xl;
 }
