@@ -8,7 +8,7 @@ description: Explore the 9 available project topics for the Data Analysis with S
 
 ## Course Project Topics
 
-This course offers **9 curated project topics** for group work. Students work in groups (3-4 members) to select **one topic** for their final project. Groups work on their chosen topic throughout the semester, applying all course skills learned in lectures—from data import and cleaning to statistical analysis and professional reporting.
+This course offers **11 curated project topics** for group work. Students work in groups (3-4 members) to select **one topic** for their final project. Groups work on their chosen topic throughout the semester, applying all course skills learned in lectures—from data import and cleaning to statistical analysis and professional reporting.
 
 Each topic includes a curated dataset with detailed instructions. Groups report on their project progress during each lab week, building toward a comprehensive final presentation in Week 15.
 
@@ -348,6 +348,81 @@ Patient survival data from the German Breast Cancer Study Group 2 (GBSG2), conta
 
 </section>
 
+<section id="topic-10" class="topic-card difficulty-medium">
+
+{::nomarkdown}
+<div class="topic-header">
+    <div class="topic-image">
+        <img src="{{ site.baseurl }}/assets/images/topics/topic10.png" alt="Healthcare Costs & Utilization Analysis Visualization" />
+    </div>
+    <div class="topic-title-wrapper">
+        <h3>Topic 10: Healthcare Costs & Utilization Analysis <span class="difficulty-badge badge-medium">Medium</span></h3>
+    </div>
+</div>
+{:/nomarkdown}
+
+**Problem:**  
+Healthcare administrators need to understand cost patterns, utilization rates, and resource allocation across different patient demographics, medical conditions, and treatment types. The healthcare cost data contains multiple dimensions that require comprehensive analysis to identify cost drivers, utilization patterns, and opportunities for cost optimization.
+
+**Task:**  
+Using the Healthcare Costs dataset, perform comprehensive analysis to:
+- Analyze healthcare costs across different patient demographics (age, gender, region)
+- Compare utilization rates by medical condition, treatment type, and provider
+- Identify cost drivers and high-cost patient segments
+- Create comparative visualizations showing cost patterns across groups
+- Build an interactive dashboard with multiple visualizations for cost exploration
+- Segment patients by cost categories and analyze utilization patterns
+- Provide insights for healthcare resource allocation and cost management strategies
+
+**Dataset Description:**  
+Healthcare cost and utilization data including patient demographics, medical conditions, treatment types, costs, length of stay, and provider information. Rich in categorical and numerical variables, ideal for segmentation analysis and comparative visualizations.
+
+**Dataset Files:**
+- [healthcare_costs.xlsx](../student%20desk/Topic/10-Healthcare-Costs/healthcare_costs.xlsx)
+- [Dataset Instructions]({{ site.baseurl }}/datasets/10-healthcare-costs-instructions)
+
+---
+
+</section>
+
+<section id="topic-11" class="topic-card difficulty-hard">
+
+{::nomarkdown}
+<div class="topic-header">
+    <div class="topic-image">
+        <img src="{{ site.baseurl }}/assets/images/topics/topic11.png" alt="Disease Progression & Treatment Outcomes Visualization" />
+    </div>
+    <div class="topic-title-wrapper">
+        <h3>Topic 11: Disease Progression & Treatment Outcomes <span class="difficulty-badge badge-hard">Hard</span></h3>
+    </div>
+</div>
+{:/nomarkdown}
+
+**Problem:**  
+Medical researchers and clinicians need to understand how patient characteristics, treatment protocols, and clinical variables influence disease progression and treatment outcomes. The clinical data contains multiple prognostic factors that require statistical analysis to identify significant predictors and build predictive models for patient outcomes.
+
+**Task:**  
+Using the Disease Progression dataset, conduct comprehensive statistical analysis to:
+- Explore relationships between patient characteristics and disease outcomes
+- Perform correlation analysis to identify strong associations with disease progression
+- Build regression models to predict treatment outcomes based on clinical variables
+- Compare treatment effectiveness across different patient groups
+- Test statistical hypotheses about relationships between variables
+- Analyze time-to-event outcomes (disease progression, treatment response)
+- Interpret statistical results and assess model performance
+- Provide insights about which factors are most important in predicting patient outcomes
+
+**Dataset Description:**  
+Clinical data from patients with a chronic disease, including baseline characteristics, treatment information, clinical measurements over time, and disease progression outcomes. Contains multiple time points (longitudinal data), making it suitable for longitudinal analysis and statistical modeling.
+
+**Dataset Files:**
+- [disease_progression.xlsx](../student%20desk/Topic/11-Disease-Progression/disease_progression.xlsx)
+- [Dataset Instructions]({{ site.baseurl }}/datasets/11-disease-progression-instructions)
+
+---
+
+</section>
+
 <section id="topic-selection">
 
 ## Topic Selection Guidelines
@@ -357,7 +432,7 @@ Patient survival data from the German Breast Cancer Study Group 2 (GBSG2), conta
 - Consider diverse skills and interests when forming groups
 
 **Selection Process:**
-- Review all 9 topics and their descriptions
+- Review all 11 topics and their descriptions
 - Select a topic that aligns with your group's interests and career goals
 - Consider the complexity and scope appropriate for your skill level
 - Finalize topic selection during Week 2 lab session
