@@ -279,7 +279,7 @@ Daily stock prices for major technology companies (Amazon, Apple, Facebook, Goog
 {::nomarkdown}
 <div class="topic-header">
     <div class="topic-image">
-        <img src="{{ site.baseurl }}/assets/images/topics/topic8.jpeg" alt="Loan Default Survival Analysis Visualization" />
+        <img src="{{ site.baseurl }}/assets/images/topics/topic8.png" alt="Loan Default Survival Analysis Visualization" />
     </div>
     <div class="topic-title-wrapper">
         <h3>Topic 8: Loan Default Survival Analysis <span class="difficulty-badge badge-hard">Hard</span></h3>
@@ -316,7 +316,7 @@ Loan data with time-to-event information for 5,000 loans, including borrower cha
 {::nomarkdown}
 <div class="topic-header">
     <div class="topic-image">
-        <img src="{{ site.baseurl }}/assets/images/topics/topic9.jpeg" alt="Patient Survival Analysis Visualization" />
+        <img src="{{ site.baseurl }}/assets/images/topics/topic9.png" alt="Patient Survival Analysis Visualization" />
     </div>
     <div class="topic-title-wrapper">
         <h3>Topic 9: Patient Survival Analysis <span class="difficulty-badge badge-hard">Hard</span></h3>
