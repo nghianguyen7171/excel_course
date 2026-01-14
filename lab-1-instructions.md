@@ -559,6 +559,7 @@ If table_array is `A2:H51`:
 
 </section>
 
+<!-- TEMPORARILY HIDDEN - Lab Exercises section (to be enabled in the future)
 <section id="exercises" class="lab-section">
 <h2>Lab Exercises</h2>
 
@@ -1053,6 +1054,7 @@ If table_array is `A2:H51`:
 </section>
 
 </section>
+-- END OF TEMPORARILY HIDDEN SECTION -->
 
 <section id="verification" class="lab-section">
 ## Verification & Expected Results
