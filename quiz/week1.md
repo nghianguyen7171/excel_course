@@ -3,6 +3,7 @@ title: Week 1 Quiz - Excel Basics
 layout: default
 ---
 
+<div class="quiz-page">
 <section id="week1-quiz" class="quiz-section">
   <div class="quiz-hero">
     <h1>Week 1's Quiz</h1>
@@ -143,3 +144,4 @@ layout: default
     </div>
   </div>
 </section>
+</div>
