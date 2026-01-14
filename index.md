@@ -46,7 +46,7 @@ description: Course syllabus and information for Data Analysis with Spreadsheet 
 </div>
 </div>
 
-### Teaching Assistant
+### Tutorial
 
 <div class="instructor-profile">
 <div class="instructor-image">
@@ -265,7 +265,7 @@ Access: [O'Reilly Learning Platform](https://www.oreilly.com/library/view/modern
 
 - University Writing Center: Report writing and editing
 - Library Services: Data sourcing and research support
-- **Course TA (MSc. Khanh-Le Duy):** Available for lab troubleshooting and homework help
+- **Course Tutorial (MSc. Khanh-Le Duy):** Available for lab troubleshooting and homework help
   - Email: [khanhld@neu.edu.vn](mailto:khanhld@neu.edu.vn)
   - Office Hours: To be determined
 
@@ -402,71 +402,6 @@ Students work in groups (3-4 members) and select **one of 11 available topics** 
 **Available Topics:** 11 curated topics aligned with course curriculum (see Topics page for details). Groups select one topic that best fits their interests and career goals.
 
 ---
-
-## 13. KEY LEARNING COMPETENCIES BY PHASE
-
-### Phase 1: Foundations
-
-| Competency | Skills | Assessments |
-| :--: | :--: | :--: |
-| Technical Proficiency | Excel navigation, formulas, data structures | Homework 1-3 |
-| Data Preparation | Importing, cleaning, transforming raw data | Homework 2-3 |
-
-### Phase 2: Analysis & Visualization
-
-| Competency | Skills | Assessments |
-| :--: | :--: | :--: |
-| Analytical Thinking | Pattern recognition, hypothesis testing, modeling | Midterm exam, Homework 6-7 |
-| Visualization Design | Creating effective charts and dashboards | Homework 4-5 |
-| Statistical Reasoning | Understanding distributions, tests, regression, forecasting | Homework 6-7, Midterm |
-
-### Phase 3: Integration & Communication
-
-| Competency | Skills | Assessments |
-| :--: | :--: | :--: |
-| Project Management | Planning, executing, documenting analytics projects | Weeks 13-15 project |
-| Professional Communication | Writing reports and presenting findings clearly | Homework 8, Final presentation |
-| Independent Learning | Self-directed analytics work on real datasets | Final project |
-
----
-
-</section>
-
-<section id="contacts">
-
-## 14. COURSE CONTACTS & RESOURCES
-
-### Primary Instructor:
-
-**Name:** Dr. Trong-Nghia Nguyen  
-**Email:** [nghiant@neu.edu.vn](mailto:nghiant@neu.edu.vn)  
-**Website:** [https://nghianguyen7171.github.io/](https://nghianguyen7171.github.io/)  
-**Office:** Room 1613, Building A1, National Economics University  
-**Office Hours:** [Days & Times - To be determined]
-
-### Teaching Assistant:
-
-**Name:** [TA Name]  
-**Email:** [ta.email@neu.edu.vn](mailto:ta.email@neu.edu.vn)  
-**Lab Hours:** [Times]  
-
-**Course Website:** Canvas LMS [Course Link]  
-**Emergency Contact:** [Department Phone Number]
-
----
-
-## 15. SYLLABUS POLICIES & DISCLAIMERS
-
-- This syllabus is subject to change at instructor discretion
-- Significant changes will be announced in class and on Canvas
-- Students are responsible for checking Canvas regularly for updates
-- In case of emergency, course format may shift to online/hybrid delivery
-
-**Version:** 1.0 (Simplified Edition - Phase-Integrated Schedule)  
-**Effective Date:** Fall 2025  
-**Last Updated:** November 2025
-
-This syllabus follows National Economics University academic standards and quality assurance guidelines for higher education programs.
 
 </section>
 
