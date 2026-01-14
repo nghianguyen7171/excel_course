@@ -46,6 +46,20 @@ description: Course syllabus and information for Data Analysis with Spreadsheet 
 </div>
 </div>
 
+### Teaching Assistant
+
+<div class="instructor-profile">
+<div class="instructor-image">
+<img src="{{ site.baseurl }}/assets/images/khanhleduy.jpg" alt="MSc. Khanh-Le Duy" class="profile-picture">
+</div>
+<div class="instructor-details">
+<h3>MSc. Khanh-Le Duy</h3>
+<p><strong>Email:</strong> <a href="mailto:khanhld@neu.edu.vn">khanhld@neu.edu.vn</a></p>
+<p><strong>Website:</strong> <a href="https://fda.neu.edu.vn/fda-members/ths-le-duy-khanh/" target="_blank" rel="noopener noreferrer">Faculty Profile</a></p>
+<p><strong>Role:</strong> Lab troubleshooting and homework help</p>
+</div>
+</div>
+
 ---
 
 </section>
@@ -251,7 +265,9 @@ Access: [O'Reilly Learning Platform](https://www.oreilly.com/library/view/modern
 
 - University Writing Center: Report writing and editing
 - Library Services: Data sourcing and research support
-- Course TA: Available for lab troubleshooting and homework help
+- **Course TA (MSc. Khanh-Le Duy):** Available for lab troubleshooting and homework help
+  - Email: [khanhld@neu.edu.vn](mailto:khanhld@neu.edu.vn)
+  - Office Hours: To be determined
 
 ---
 
