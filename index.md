@@ -174,7 +174,7 @@ Access: [O'Reilly Learning Platform](https://www.oreilly.com/library/view/modern
 
 | Week | Type | Main Topic | Key Content | Readings | CLOs | Assessment |
 | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
-| 1 | **Lecture** | Course Introduction & Excel Basics | Course overview, analytics workflow, Excel interface, essential formulas (SUM, AVERAGE, COUNT, IF, VLOOKUP)<br><br><strong>Materials:</strong> [Lab 1 Instructions]({{ site.baseurl }}/lab-1-instructions) | [1] Ch. 1 | CLO 1 | Participation |
+| 1 | **Lecture** | Course Introduction & Excel Basics | Course overview, analytics workflow, Excel interface, essential formulas (SUM, AVERAGE, COUNT, IF, VLOOKUP)<br><br><strong>Materials:</strong> [Week 1 Slides]({{ site.baseurl }}/materials/1.Intro.pdf) | [Lab 1 Instructions]({{ site.baseurl }}/lab-1-instructions) | [1] Ch. 1 | CLO 1 | Participation |
 | 2 | **Lab** | Excel Basics Practice | Hands-on practice with formulas and functions; **Group Progress Report 1:** Topic selection, problem statement, research questions, and initial data exploration plan | [1] Ch. 1 | CLO 1 | Lab Assignment 1 + Group Progress Report 1 |
 | 3 | **Lecture** | Data Import & Cleaning | Import from CSV/Excel/web, Power Query basics, data cleaning, handling missing values | [1] Ch. 2-3 | CLO 1 | - |
 | 4 | **Lab** | Data Import & Cleaning Practice | Import and clean datasets using Power Query; **Group Progress Report 2:** Data quality assessment, cleaning methodology, and preliminary data structure documentation | [1] Ch. 2-3 | CLO 1 | Lab Assignment 2 + Group Progress Report 2 |
