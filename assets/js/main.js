@@ -80,5 +80,80 @@ document.addEventListener('DOMContentLoaded', function() {
         
         lastScroll = currentScroll;
     });
+    
+    // Quiz functionality
+    const quizForm = document.getElementById('quiz-form');
+    if (quizForm) {
+        const submitButtons = document.querySelectorAll('.quiz-submit-btn');
+        const quizCards = document.querySelectorAll('.quiz-card');
+        
+        // Handle answer selection
+        const radioInputs = document.querySelectorAll('.quiz-option input[type="radio"]');
+        radioInputs.forEach(input => {
+            input.addEventListener('change', function() {
+                const card = this.closest('.quiz-card');
+                const submitBtn = card.querySelector('.quiz-submit-btn');
+                if (!card.classList.contains('submitted')) {
+                    submitBtn.disabled = false;
+                    submitBtn.classList.add('enabled');
+                }
+            });
+        });
+        
+        // Handle submit button clicks
+        submitButtons.forEach(button => {
+            button.disabled = true;
+            button.addEventListener('click', function() {
+                const questionNum = this.getAttribute('data-question');
+                const card = this.closest('.quiz-card');
+                const selectedInput = card.querySelector('input[type="radio"]:checked');
+                const correctAnswer = card.getAttribute('data-correct');
+                const answerDiv = document.getElementById(`answer-${questionNum}`);
+                
+                if (!selectedInput) {
+                    alert('Please select an answer before submitting.');
+                    return;
+                }
+                
+                const selectedValue = selectedInput.value;
+                const isCorrect = selectedValue === correctAnswer;
+                
+                // Mark card as submitted
+                card.classList.add('submitted');
+                if (isCorrect) {
+                    card.classList.add('correct');
+                } else {
+                    card.classList.add('incorrect');
+                }
+                
+                // Disable all radio buttons in this question
+                const allInputs = card.querySelectorAll('input[type="radio"]');
+                allInputs.forEach(input => input.disabled = true);
+                
+                // Disable submit button
+                this.disabled = true;
+                this.textContent = 'Submitted';
+                this.classList.remove('enabled');
+                
+                // Show answer
+                if (answerDiv) {
+                    answerDiv.style.display = 'block';
+                }
+                
+                // Highlight correct answer
+                const correctOption = card.querySelector(`input[type="radio"][value="${correctAnswer}"]`);
+                if (correctOption) {
+                    const correctLabel = correctOption.closest('.quiz-option');
+                    correctLabel.classList.add('correct-answer');
+                }
+                
+                // Highlight selected answer if incorrect
+                if (!isCorrect) {
+                    const selectedLabel = selectedInput.closest('.quiz-option');
+                    selectedLabel.classList.add('incorrect-answer');
+                }
+            });
+        });
+    }
 });
 
