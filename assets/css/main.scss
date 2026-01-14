@@ -472,6 +472,107 @@ section {
     }
 }
 
+// Quiz Styles
+.quiz-section {
+    max-width: 1100px;
+    margin: 0 auto $spacing-2xl auto;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: $radius-lg;
+    box-shadow: $shadow-xl;
+    overflow: hidden;
+}
+
+.quiz-hero {
+    text-align: center;
+    padding: $spacing-2xl $spacing-lg;
+    background: linear-gradient(135deg, $primary-blue 0%, $secondary-blue 100%);
+    color: white;
+
+    h1 {
+        margin: 0 0 $spacing-sm 0;
+        color: white;
+        font-size: 2.2rem;
+    }
+    .quiz-subtitle {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 1.05rem;
+    }
+}
+
+.quiz-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: $spacing-lg;
+    padding: $spacing-xl;
+}
+
+.quiz-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-left: 4px solid $primary-blue;
+    border-radius: $radius-md;
+    padding: $spacing-lg;
+    box-shadow: $shadow-sm;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+
+    &:hover {
+        box-shadow: $shadow-md;
+        transform: translateY(-2px);
+    }
+
+    h3 {
+        margin-top: 0;
+        margin-bottom: $spacing-sm;
+        color: $primary-blue;
+    }
+
+    p {
+        margin-top: 0;
+        color: $text-medium;
+    }
+}
+
+.quiz-options {
+    margin: $spacing-md 0;
+    padding-left: $spacing-md;
+    color: $text-medium;
+    li { margin-bottom: $spacing-xs; }
+    code { background: rgba($dark-gray, 0.08); padding: 2px 4px; border-radius: $radius-xs; }
+}
+
+.quiz-answer {
+    summary {
+        cursor: pointer;
+        font-weight: 600;
+        color: $primary-blue;
+    }
+    padding-top: $spacing-xs;
+    p { margin: $spacing-xs 0; color: $text-medium; }
+}
+
+.quiz-table-wrapper {
+    overflow-x: auto;
+    margin: $spacing-md 0;
+}
+
+.quiz-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+
+    th, td {
+        border: 1px solid $lighter-gray;
+        padding: $spacing-xs $spacing-sm;
+        text-align: left;
+    }
+    th {
+        background: $primary-blue;
+        color: white;
+    }
+    tbody tr:nth-of-type(odd) {
+        background: rgba(0,0,0,0.02);
+    }
+}
 // Topic Card Styles
 .topic-card {
     padding: $spacing-xl $spacing-lg;
