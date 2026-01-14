@@ -79,7 +79,7 @@ layout: default
           </tbody>
         </table>
       </div>
-      <p>Assume the table range is <code>A2:D100</code> with Product ID in column A and Supplier Name in column D. Which formula returns the Supplier Name?</p>
+      <p>Assume the table range is <code>A2:D100</code> with Product ID in column A (1st column), Product Name in column B (2nd column), Category in column C (3rd column), and Supplier Name in column D (4th column). Which formula correctly returns the Supplier Name for Product ID "PRD-015"?</p>
       <ul class="quiz-options">
         <li>A) <code>=VLOOKUP("PRD-015",A2:D100,2,FALSE)</code></li>
         <li>B) <code>=VLOOKUP("PRD-015",A2:D100,3,FALSE)</code></li>
