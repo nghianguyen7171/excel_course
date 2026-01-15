@@ -44,7 +44,7 @@ Using the Superstore Sales dataset, conduct a comprehensive business analysis to
 Sales data for a fictional retail company, including product information, orders, customers, and financial metrics. Ideal for practicing Excel fundamentals with real business context.
 
 **Dataset Files:**
-- [SuperStoreUS-2015.xlsx](../student%20desk/Topic/01-Superstore-Sales/SuperStoreUS-2015.xlsx)
+- [SuperStoreUS-2015.xlsx]({{ site.baseurl }}/datasets/files/SuperStoreUS-2015.xlsx)
 - [Dataset Instructions]({{ site.baseurl }}/datasets/01-superstore-sales-instructions)
 
 ---
@@ -80,7 +80,7 @@ Using the Titanic dataset, perform comprehensive data cleaning and preparation t
 Passenger information from the Titanic, including demographics, ticket class, and survival status. Contains missing values and various data types, perfect for practicing data cleaning techniques.
 
 **Dataset Files:**
-- [Titanic.xlsx](../student%20desk/Topic/02-Titanic/Titanic.xlsx)
+- [Titanic.xlsx]({{ site.baseurl }}/datasets/files/Titanic.xlsx)
 - [Dataset Instructions]({{ site.baseurl }}/datasets/02-titanic-instructions)
 
 ---
@@ -115,7 +115,7 @@ Using the Adult Census Income dataset, conduct comprehensive exploratory data an
 Demographic, social, and economic attributes from the 1994 U.S. Census database. Rich in categorical and numerical variables, ideal for exploring relationships and patterns across demographic groups.
 
 **Dataset Files:**
-- [adult.xlsx](../student%20desk/Topic/03-Adult-Census-Income/adult.xlsx)
+- [adult.xlsx]({{ site.baseurl }}/datasets/files/adult.xlsx)
 - [Dataset Instructions]({{ site.baseurl }}/datasets/03-adult-census-income-instructions)
 
 ---
@@ -151,11 +151,11 @@ Using the World Happiness Report dataset (2015-2019), create a comprehensive vis
 Happiness levels and related factors (economic, social, health) for over 150 countries across multiple years (2015-2019). Excellent for creating comparative visualizations and time-series analyses.
 
 **Dataset Files:**
-- [2015.xlsx](../student%20desk/Topic/04-World-Happiness-Report/2015.xlsx)
-- [2016.xlsx](../student%20desk/Topic/04-World-Happiness-Report/2016.xlsx)
-- [2017.xlsx](../student%20desk/Topic/04-World-Happiness-Report/2017.xlsx)
-- [2018.xlsx](../student%20desk/Topic/04-World-Happiness-Report/2018.xlsx)
-- [2019.xlsx](../student%20desk/Topic/04-World-Happiness-Report/2019.xlsx)
+- [2015.xlsx]({{ site.baseurl }}/datasets/files/2015.xlsx)
+- [2016.xlsx]({{ site.baseurl }}/datasets/files/2016.xlsx)
+- [2017.xlsx]({{ site.baseurl }}/datasets/files/2017.xlsx)
+- [2018.xlsx]({{ site.baseurl }}/datasets/files/2018.xlsx)
+- [2019.xlsx]({{ site.baseurl }}/datasets/files/2019.xlsx)
 - [Dataset Instructions]({{ site.baseurl }}/datasets/04-world-happiness-report-instructions)
 
 ---
@@ -191,7 +191,7 @@ Using the Bank Marketing dataset, perform comprehensive marketing analytics to:
 Marketing campaign data from a Portuguese banking institution, including customer demographics, campaign details, and subscription outcomes. Perfect for analyzing marketing effectiveness and customer behavior patterns.
 
 **Dataset Files:**
-- [bank-additional-full.xlsx](../student%20desk/Topic/05-Bank-Marketing/bank-additional-full.xlsx)
+- [bank-additional-full.xlsx]({{ site.baseurl }}/datasets/files/bank-additional-full.xlsx)
 - [Dataset Instructions]({{ site.baseurl }}/datasets/05-bank-marketing-instructions)
 
 ---
@@ -227,7 +227,7 @@ Using the Boston Housing dataset, conduct comprehensive statistical analysis to:
 Housing data from Boston, Massachusetts, including prices and various neighborhood characteristics. Designed for analyzing relationships between house prices and features, perfect for regression analysis.
 
 **Dataset Files:**
-- [boston.xlsx](../student%20desk/Topic/06-Boston-Housing/boston.xlsx)
+- [boston.xlsx]({{ site.baseurl }}/datasets/files/boston.xlsx)
 - [Dataset Instructions]({{ site.baseurl }}/datasets/06-boston-housing-instructions)
 
 ---
@@ -263,11 +263,11 @@ Using the Stock Price dataset (Amazon, Apple, Facebook, Google, Netflix), perfor
 Daily stock prices for major technology companies (Amazon, Apple, Facebook, Google, Netflix) including open, high, low, close prices and trading volume. Ideal for practicing time series analysis and trend identification.
 
 **Dataset Files:**
-- [Amazon.xlsx](../student%20desk/Topic/07-Stock-Price/Amazon.xlsx)
-- [Apple.xlsx](../student%20desk/Topic/07-Stock-Price/Apple.xlsx)
-- [Facebook.xlsx](../student%20desk/Topic/07-Stock-Price/Facebook.xlsx)
-- [Google.xlsx](../student%20desk/Topic/07-Stock-Price/Google.xlsx)
-- [Netflix.xlsx](../student%20desk/Topic/07-Stock-Price/Netflix.xlsx)
+- [Amazon.xlsx]({{ site.baseurl }}/datasets/files/Amazon.xlsx)
+- [Apple.xlsx]({{ site.baseurl }}/datasets/files/Apple.xlsx)
+- [Facebook.xlsx]({{ site.baseurl }}/datasets/files/Facebook.xlsx)
+- [Google.xlsx]({{ site.baseurl }}/datasets/files/Google.xlsx)
+- [Netflix.xlsx]({{ site.baseurl }}/datasets/files/Netflix.xlsx)
 - [Dataset Instructions]({{ site.baseurl }}/datasets/07-stock-price-instructions)
 
 ---
@@ -304,7 +304,7 @@ Using the Loan Default Survival dataset, perform comprehensive survival analysis
 Loan data with time-to-event information for 5,000 loans, including borrower characteristics, loan details, and survival outcomes (default or censored). Contains time-to-default, event indicators, and various risk factors. Ideal for practicing survival analysis techniques in Excel.
 
 **Dataset Files:**
-- [loan_default_survival.xlsx](../student%20desk/Topic/08-Loan-Default-Survival/loan_default_survival.xlsx)
+- [loan_default_survival.xlsx]({{ site.baseurl }}/datasets/files/loan_default_survival.xlsx)
 - [Dataset Instructions]({{ site.baseurl }}/datasets/08-loan-default-survival-instructions)
 
 ---
@@ -341,7 +341,7 @@ Using the Patient Survival dataset (GBSG2), perform comprehensive survival analy
 Patient survival data from the German Breast Cancer Study Group 2 (GBSG2), containing information on 686 patients with primary node-positive breast cancer. Includes survival times, event indicators, treatment information, and clinical variables. Ideal for practicing survival analysis techniques in healthcare contexts.
 
 **Dataset Files:**
-- [gbsg2.xlsx](../student%20desk/Topic/09-Patient-Survival/gbsg2.xlsx)
+- [gbsg2.xlsx]({{ site.baseurl }}/datasets/files/gbsg2.xlsx)
 - [Dataset Instructions]({{ site.baseurl }}/datasets/09-patient-survival-instructions)
 
 ---
@@ -378,7 +378,7 @@ Using the Healthcare Costs dataset, perform comprehensive analysis to:
 Healthcare cost and utilization data including patient demographics, medical conditions, treatment types, costs, length of stay, and provider information. Rich in categorical and numerical variables, ideal for segmentation analysis and comparative visualizations.
 
 **Dataset Files:**
-- [healthcare_costs.xlsx](../student%20desk/Topic/10-Healthcare-Costs/healthcare_costs.xlsx)
+- [healthcare_costs.xlsx]({{ site.baseurl }}/datasets/files/healthcare_costs.xlsx)
 - [Dataset Instructions]({{ site.baseurl }}/datasets/10-healthcare-costs-instructions)
 
 ---
@@ -416,7 +416,7 @@ Using the Disease Progression dataset, conduct comprehensive statistical analysi
 Clinical data from patients with a chronic disease, including baseline characteristics, treatment information, clinical measurements over time, and disease progression outcomes. Contains multiple time points (longitudinal data), making it suitable for longitudinal analysis and statistical modeling.
 
 **Dataset Files:**
-- [disease_progression.xlsx](../student%20desk/Topic/11-Disease-Progression/disease_progression.xlsx)
+- [disease_progression.xlsx]({{ site.baseurl }}/datasets/files/disease_progression.xlsx)
 - [Dataset Instructions]({{ site.baseurl }}/datasets/11-disease-progression-instructions)
 
 ---
