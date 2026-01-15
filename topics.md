@@ -130,7 +130,7 @@ Demographic, social, and economic attributes from the 1994 U.S. Census database.
         <img src="{{ site.baseurl }}/assets/images/topics/topic4.jpeg" alt="World Happiness Report Visualization" />
     </div>
     <div class="topic-title-wrapper">
-        <h3>Topic 4: World Happiness Report <span class="difficulty-badge badge-medium">Medium</span></h3>
+        <h3>Topic 4: World Happiness Report <span class="difficulty-badge badge-medium">Medium +0.5</span></h3>
     </div>
 </div>
 {:/nomarkdown}
@@ -170,7 +170,7 @@ Happiness levels and related factors (economic, social, health) for over 150 cou
         <img src="{{ site.baseurl }}/assets/images/topics/topic5.jpeg" alt="Bank Marketing Visualization" />
     </div>
     <div class="topic-title-wrapper">
-        <h3>Topic 5: Bank Marketing <span class="difficulty-badge badge-medium">Medium</span></h3>
+        <h3>Topic 5: Bank Marketing <span class="difficulty-badge badge-medium">Medium +0.5</span></h3>
     </div>
 </div>
 {:/nomarkdown}
@@ -206,7 +206,7 @@ Marketing campaign data from a Portuguese banking institution, including custome
         <img src="{{ site.baseurl }}/assets/images/topics/topic6.jpeg" alt="Boston Housing Visualization" />
     </div>
     <div class="topic-title-wrapper">
-        <h3>Topic 6: Boston Housing <span class="difficulty-badge badge-hard">Hard</span></h3>
+        <h3>Topic 6: Boston Housing <span class="difficulty-badge badge-hard">Hard +1.5</span></h3>
     </div>
 </div>
 {:/nomarkdown}
@@ -242,7 +242,7 @@ Housing data from Boston, Massachusetts, including prices and various neighborho
         <img src="{{ site.baseurl }}/assets/images/topics/topic7.jpeg" alt="Stock Price Visualization" />
     </div>
     <div class="topic-title-wrapper">
-        <h3>Topic 7: Stock Price <span class="difficulty-badge badge-hard">Hard</span></h3>
+        <h3>Topic 7: Stock Price <span class="difficulty-badge badge-hard">Hard +1.5</span></h3>
     </div>
 </div>
 {:/nomarkdown}
@@ -282,7 +282,7 @@ Daily stock prices for major technology companies (Amazon, Apple, Facebook, Goog
         <img src="{{ site.baseurl }}/assets/images/topics/topic8.png" alt="Loan Default Survival Analysis Visualization" />
     </div>
     <div class="topic-title-wrapper">
-        <h3>Topic 8: Loan Default Survival Analysis <span class="difficulty-badge badge-hard">Hard</span></h3>
+        <h3>Topic 8: Loan Default Survival Analysis <span class="difficulty-badge badge-hard">Hard +1.5</span></h3>
     </div>
 </div>
 {:/nomarkdown}
@@ -319,7 +319,7 @@ Loan data with time-to-event information for 5,000 loans, including borrower cha
         <img src="{{ site.baseurl }}/assets/images/topics/topic9.png" alt="Patient Survival Analysis Visualization" />
     </div>
     <div class="topic-title-wrapper">
-        <h3>Topic 9: Patient Survival Analysis <span class="difficulty-badge badge-hard">Hard</span></h3>
+        <h3>Topic 9: Patient Survival Analysis <span class="difficulty-badge badge-hard">Hard +1.5</span></h3>
     </div>
 </div>
 {:/nomarkdown}
@@ -356,7 +356,7 @@ Patient survival data from the German Breast Cancer Study Group 2 (GBSG2), conta
         <img src="{{ site.baseurl }}/assets/images/topics/topic10.png" alt="Healthcare Costs & Utilization Analysis Visualization" />
     </div>
     <div class="topic-title-wrapper">
-        <h3>Topic 10: Healthcare Costs & Utilization Analysis <span class="difficulty-badge badge-medium">Medium</span></h3>
+        <h3>Topic 10: Healthcare Costs & Utilization Analysis <span class="difficulty-badge badge-medium">Medium +0.5</span></h3>
     </div>
 </div>
 {:/nomarkdown}
@@ -393,7 +393,7 @@ Healthcare cost and utilization data including patient demographics, medical con
         <img src="{{ site.baseurl }}/assets/images/topics/topic11.png" alt="Disease Progression & Treatment Outcomes Visualization" />
     </div>
     <div class="topic-title-wrapper">
-        <h3>Topic 11: Disease Progression & Treatment Outcomes <span class="difficulty-badge badge-hard">Hard</span></h3>
+        <h3>Topic 11: Disease Progression & Treatment Outcomes <span class="difficulty-badge badge-hard">Hard +1.5</span></h3>
     </div>
 </div>
 {:/nomarkdown}
