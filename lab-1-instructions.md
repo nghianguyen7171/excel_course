@@ -575,9 +575,9 @@ If table_array is `A2:H51`:
 **Instructions:**
 1. Create a new sheet called "Analysis"
 2. In cell A1, type: `Total Inventory Value`
-3. In cell B1, enter the formula: `=SUM(Inventory!E2:E51*Inventory!F2:F51)`
-   - **Excel:** This is an array formula. After typing, press **Ctrl+Shift+Enter** (Windows) or **Cmd+Shift+Enter** (Mac)
-   - **Google Sheets:** Array formulas work automatically - just press Enter
+3. In cell B1, enter the formula: `=SUMPRODUCT(Inventory!E2:E51, Inventory!F2:F51)`
+   - This formula multiplies each Unit Price by its corresponding Quantity, then sums all the results
+   - Works the same way in both Excel and Google Sheets - just press Enter
 4. Format cell B1 as Currency:
    - **Excel:** Right-click cell B1 → Format Cells → Number → Currency
    - **Google Sheets:** Select cell B1 → Click "123" dropdown in toolbar → Currency, OR Format → Number → Currency
