@@ -9,6 +9,21 @@ layout: default
 
 This dataset contains clinical data from patients with **Rheumatoid Arthritis (RA)**, a chronic autoimmune inflammatory disease that primarily affects joints. The dataset includes baseline characteristics, treatment information, clinical measurements over time, and disease progression outcomes. RA is characterized by joint inflammation, pain, swelling, and progressive joint damage. The dataset contains multiple time points (longitudinal data) with measurements at baseline, 3 months, 6 months, and 12 months, making it suitable for longitudinal analysis and statistical modeling of disease progression and treatment response.
 
+### Clinical Context: Rheumatoid Arthritis
+
+**Rheumatoid Arthritis (RA)** is a chronic autoimmune disease where the immune system mistakenly attacks the joints, causing inflammation, pain, swelling, and eventual joint damage. Key characteristics:
+
+- **Prevalence**: Affects approximately 1% of the global population, with women being 2-3 times more likely to develop RA than men
+- **Progression**: Without effective treatment, RA can cause permanent joint damage, deformity, and disability
+- **Treatment Goals**: Reduce inflammation, prevent joint damage, improve quality of life, and achieve disease remission
+- **Monitoring**: Disease activity is tracked through composite scores, inflammatory biomarkers (CRP, ESR), and patient-reported outcomes
+
+**Clinical Biomarkers in RA:**
+- **C-Reactive Protein (CRP)**: Rapidly increases with inflammation and decreases when inflammation subsides. Used to monitor disease activity and treatment response.
+- **Erythrocyte Sedimentation Rate (ESR)**: Elevated in active inflammation. Less specific than CRP but still valuable for monitoring disease activity.
+
+**Disease Activity Scores**: The 0-100 severity score in this dataset is a composite measure that typically includes joint counts, pain assessments, and functional limitations. Lower scores indicate better disease control.
+
 ## Dataset Structure
 
 The dataset is organized in two sheets:
