@@ -7,7 +7,7 @@ layout: default
 
 ## Dataset Overview
 
-This dataset contains clinical data from patients with a chronic disease, including baseline characteristics, treatment information, clinical measurements over time, and disease progression outcomes. The dataset contains multiple time points (longitudinal data), making it suitable for longitudinal analysis and statistical modeling.
+This dataset contains clinical data from patients with **Rheumatoid Arthritis (RA)**, a chronic autoimmune inflammatory disease that primarily affects joints. The dataset includes baseline characteristics, treatment information, clinical measurements over time, and disease progression outcomes. RA is characterized by joint inflammation, pain, swelling, and progressive joint damage. The dataset contains multiple time points (longitudinal data) with measurements at baseline, 3 months, 6 months, and 12 months, making it suitable for longitudinal analysis and statistical modeling of disease progression and treatment response.
 
 ## Dataset Structure
 
@@ -37,12 +37,12 @@ Contains one record per patient with baseline characteristics and final outcomes
 - **treatment_type**: Treatment assignment (Treatment A, Treatment B, Placebo)
 
 ### Disease Progression Variables
-- **disease_severity**: Disease severity score (0-100, higher = more severe)
-- **severity_change**: Change in severity from baseline (can be negative for improvement)
-- **lab_value_1**: Clinical biomarker value (continuous)
-- **lab_value_2**: Another clinical biomarker value (continuous)
-- **treatment_response**: Treatment response indicator (1=improved, 0=stable/worsened)
-- **adverse_event**: Adverse event occurrence (1=yes, 0=no)
+- **disease_severity**: RA disease activity score (0-100, higher = more severe disease activity). This composite score reflects joint inflammation, pain, and functional limitations. Lower scores indicate better disease control.
+- **severity_change**: Change in disease severity from baseline (can be negative for improvement). Negative values indicate improvement, positive values indicate worsening.
+- **lab_value_1**: **C-Reactive Protein (CRP)** - Inflammatory biomarker measured in mg/L. CRP is a protein produced by the liver in response to inflammation. Normal range: < 3 mg/L. Elevated CRP indicates active inflammation in RA patients.
+- **lab_value_2**: **Erythrocyte Sedimentation Rate (ESR)** - Inflammatory biomarker measured in mm/hr. ESR measures how quickly red blood cells settle in a test tube. Normal range: < 20 mm/hr (men), < 30 mm/hr (women). Higher ESR indicates inflammation and disease activity.
+- **treatment_response**: Treatment response indicator (1=improved, 0=stable/worsened). Improvement is defined as ≥20% reduction in disease severity score from baseline.
+- **adverse_event**: Adverse event occurrence (1=yes, 0=no). Any treatment-related side effects or complications reported during the study period.
 
 ## Variables Description (Patient_Summary)
 

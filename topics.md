@@ -399,7 +399,7 @@ Healthcare cost and utilization data including patient demographics, medical con
 {:/nomarkdown}
 
 **Problem:**  
-Medical researchers and clinicians need to understand how patient characteristics, treatment protocols, and clinical variables influence disease progression and treatment outcomes. The clinical data contains multiple prognostic factors that require statistical analysis to identify significant predictors and build predictive models for patient outcomes.
+Medical researchers and clinicians need to understand how patient characteristics, treatment protocols, and clinical variables influence disease progression and treatment outcomes in **Rheumatoid Arthritis (RA)**. RA is a chronic autoimmune disease that causes joint inflammation, pain, and progressive joint damage. The clinical data contains multiple prognostic factors (demographics, comorbidities, inflammatory biomarkers, treatment types) that require statistical analysis to identify significant predictors and build predictive models for treatment response and disease outcomes.
 
 **Task:**  
 Using the Disease Progression dataset, conduct comprehensive statistical analysis to:
@@ -413,7 +413,7 @@ Using the Disease Progression dataset, conduct comprehensive statistical analysi
 - Provide insights about which factors are most important in predicting patient outcomes
 
 **Dataset Description:**  
-Clinical data from patients with a chronic disease, including baseline characteristics, treatment information, clinical measurements over time, and disease progression outcomes. Contains multiple time points (longitudinal data), making it suitable for longitudinal analysis and statistical modeling.
+Clinical data from patients with **Rheumatoid Arthritis (RA)**, including baseline characteristics, treatment information, clinical measurements over time, and disease progression outcomes. The dataset includes inflammatory biomarkers (C-Reactive Protein, Erythrocyte Sedimentation Rate) and disease activity scores measured at multiple time points (baseline, 3, 6, and 12 months), making it suitable for longitudinal analysis and statistical modeling of treatment response patterns.
 
 **Dataset Files:**
 - [disease_progression.xlsx]({{ site.baseurl }}/datasets/files/disease_progression.xlsx)
