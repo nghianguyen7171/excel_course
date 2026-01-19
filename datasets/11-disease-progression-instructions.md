@@ -9,6 +9,8 @@ layout: default
 
 This dataset contains clinical data from patients with **Rheumatoid Arthritis (RA)**, a chronic autoimmune inflammatory disease that primarily affects joints. The dataset includes baseline characteristics, treatment information, clinical measurements over time, and disease progression outcomes. RA is characterized by joint inflammation, pain, swelling, and progressive joint damage. The dataset contains multiple time points (longitudinal data) with measurements at baseline, 3 months, 6 months, and 12 months, making it suitable for longitudinal analysis and statistical modeling of disease progression and treatment response.
 
+**Geographic Scope**: This dataset represents clinical data collected from patients in **Gwanju, Korea**.
+
 ### Clinical Context: Rheumatoid Arthritis
 
 **Rheumatoid Arthritis (RA)** is a chronic autoimmune disease where the immune system mistakenly attacks the joints, causing inflammation, pain, swelling, and eventual joint damage. Key characteristics:
