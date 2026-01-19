@@ -22,7 +22,7 @@ This dataset contains clinical data from patients with **Rheumatoid Arthritis (R
 - **C-Reactive Protein (CRP)**: Rapidly increases with inflammation and decreases when inflammation subsides. Used to monitor disease activity and treatment response.
 - **Erythrocyte Sedimentation Rate (ESR)**: Elevated in active inflammation. Less specific than CRP but still valuable for monitoring disease activity.
 
-**Disease Activity Scores**: The 0-100 severity score in this dataset is a composite measure that typically includes joint counts, pain assessments, and functional limitations. Lower scores indicate better disease control.
+**Disease Activity Scores**: The disease severity score in this dataset is based on **DAS28 (Disease Activity Score 28)**, the gold standard composite measure for assessing RA disease activity. DAS28 evaluates 28 joints for swelling and tenderness, along with patient global assessment and inflammatory markers (ESR or CRP). The score is normalized to a 0-100 scale for this dataset (higher = more severe disease activity). Lower scores indicate better disease control. DAS28 interpretation: < 2.6 = remission, 2.6-3.2 = low disease activity, 3.2-5.1 = moderate disease activity, > 5.1 = high disease activity (on the original 0-10 scale).
 
 ## Dataset Structure
 
@@ -55,7 +55,7 @@ Contains one record per patient with baseline characteristics and final outcomes
   - **Placebo**: Control group receiving no active treatment (used for comparison in clinical trials).
 
 ### Disease Progression Variables
-- **disease_severity**: RA disease activity score (0-100, higher = more severe disease activity). This composite score reflects joint inflammation, pain, and functional limitations. Lower scores indicate better disease control.
+- **disease_severity**: **DAS28 (Disease Activity Score 28)** normalized to 0-100 scale (higher = more severe disease activity). DAS28 is the gold standard composite measure for RA that evaluates 28 joints for swelling and tenderness, patient global assessment, and inflammatory markers. Lower scores indicate better disease control. On the original DAS28 scale (0-10): < 2.6 = remission, 2.6-3.2 = low, 3.2-5.1 = moderate, > 5.1 = high disease activity.
 - **severity_change**: Change in disease severity from baseline (can be negative for improvement). Negative values indicate improvement, positive values indicate worsening.
 - **lab_value_1**: **C-Reactive Protein (CRP)** - Inflammatory biomarker measured in mg/L. CRP is a protein produced by the liver in response to inflammation. Normal range: < 3 mg/L. Elevated CRP indicates active inflammation in RA patients.
 - **lab_value_2**: **Erythrocyte Sedimentation Rate (ESR)** - Inflammatory biomarker measured in mm/hr. ESR measures how quickly red blood cells settle in a test tube. Normal range: < 20 mm/hr (men), < 30 mm/hr (women). Higher ESR indicates inflammation and disease activity.
@@ -72,10 +72,10 @@ Contains one record per patient with baseline characteristics and final outcomes
 - **has_diabetes**: Diabetes comorbidity
 - **has_hypertension**: Hypertension comorbidity
 - **treatment_type**: Treatment assignment
-- **baseline_severity**: Disease severity at baseline (0-100)
+- **baseline_severity**: DAS28 disease severity at baseline (0-100, normalized from DAS28 0-10 scale)
 
 ### Outcome Variables
-- **final_severity**: Disease severity at 12 months (0-100)
+- **final_severity**: DAS28 disease severity at 12 months (0-100, normalized from DAS28 0-10 scale)
 - **time_to_improvement**: Months until first improvement (3, 6, 12, or censored)
 - **improved**: Improvement indicator (1=improved, 0=not improved)
 - **censored**: Censoring indicator for time-to-improvement (1=censored, 0=event occurred)
