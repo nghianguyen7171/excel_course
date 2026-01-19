@@ -49,7 +49,10 @@ Contains one record per patient with baseline characteristics and final outcomes
 - **has_hypertension**: Hypertension comorbidity (1=yes, 0=no)
 
 ### Treatment Information
-- **treatment_type**: Treatment assignment (Treatment A, Treatment B, Placebo)
+- **treatment_type**: Treatment assignment (Methotrexate, Adalimumab, Placebo)
+  - **Methotrexate**: A disease-modifying antirheumatic drug (DMARD) that is the first-line standard treatment for RA. It works by suppressing the immune system to reduce inflammation and slow disease progression.
+  - **Adalimumab**: A biologic medication (TNF-alpha inhibitor) used for moderate to severe RA when conventional DMARDs are insufficient. It blocks tumor necrosis factor, a key inflammatory protein.
+  - **Placebo**: Control group receiving no active treatment (used for comparison in clinical trials).
 
 ### Disease Progression Variables
 - **disease_severity**: RA disease activity score (0-100, higher = more severe disease activity). This composite score reflects joint inflammation, pain, and functional limitations. Lower scores indicate better disease control.
