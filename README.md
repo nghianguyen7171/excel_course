@@ -75,6 +75,15 @@ excel_course_site/
 
 **Note:** The base URL `/excel_course` is important for local testing to match production.
 
+### View Lab 2 Instructions locally (standalone HTML)
+
+The **Lab-2-Dataset** folder (see `student desk/Lab-2-Dataset/`) contains:
+
+- **Lab-2-Instructions-WithKeys.html** — instructions with answer keys (for instructors / self-check).
+- **Lab-2-Instructions-NoKeys.html** — student version without answer keys.
+
+Open either HTML file in your browser. The page loads CSS from the deployed site; use the dataset files in the same folder for offline work.
+
 ## Deployment to GitHub Pages
 
 This site is automatically deployed to GitHub Pages when changes are pushed to the `main` branch.

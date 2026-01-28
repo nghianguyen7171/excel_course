@@ -1,0 +1,365 @@
+---
+layout: null
+permalink: /lab-2-instructions-nokeys.html
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 2: Data Import &amp; Cleaning | Data Analysis with Spreadsheet Program</title>
+    <link rel="stylesheet" href="https://nghianguyen7171.github.io/excel_course/assets/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page-wrapper">
+        <main class="main-content">
+            <div class="content-wrapper">
+                <div class="lab-instructions-page">
+<section id="lab-header" class="lab-hero"><h1>Lab 2: Data Import &amp; Cleaning with Store Sales Orders (Student Version — No Answer Key)</h1><p class="lab-subtitle">Import from CSV/Excel, clean data with Power Query, and handle missing values.</p></section>
+<hr />
+<section class="lab-section"><h2>Important: Excel vs Google Sheets</h2>
+<p>This lab is designed for <strong>Microsoft Excel</strong> and <strong>Power Query</strong>. Get Data and the Power Query Editor are Excel-specific. Google Sheets uses different tools (e.g. Connect to data, Import). Students should use <strong>Excel</strong> for these exercises.</p>
+<hr />
+<section class="lab-section"><h2>Dataset Overview</h2>
+<h3>Introduction</h3>
+<p>This lab uses a <strong>Store Sales Orders</strong> dataset — a synthetic table with <strong>deliberate data quality issues</strong> so you can practice importing, cleaning, and handling missing values with Power Query. The dataset has <strong>200+ rows</strong> (including duplicates and blank rows), making it suitable for practicing transformations at a realistic scale.</p>
+<p><strong>What is Power Query?</strong> Power Query is Excel’s data connection and transformation engine. It lets you <strong>import</strong> data from files, databases, and the web, <strong>transform</strong> it (clean, reshape, merge), and <strong>load</strong> it into a worksheet or the Data Model. All steps are recorded and can be refreshed when the source changes.</p>
+<p><strong>Typical workflow:</strong> Import (Get Data) → Preview &amp; detect types → Transform (clean, fix types, remove duplicates, etc.) → Load (worksheet or Data Model) → Refresh when needed.</p>
+<h3>Dataset Files</h3>
+<p>Download the Lab 2 dataset (<code>Lab2-StoreOrders.csv</code>, <code>Lab2-StoreOrders.xlsx</code>) from:</p>
+<ul>
+<li><strong><a href="https://drive.google.com/drive/folders/1F92S9FEN5SWvUQsEXIs9c1J4q90uARCm?usp=sharing" target="_blank" rel="noopener noreferrer">Lab 2 Dataset — Google Drive</a></strong></li>
+</ul>
+<p>Use the CSV for <em>Import from CSV</em> exercises and the Excel file for <em>Import from Excel</em> exercises. Save both to a folder on your computer before starting.</p>
+<h3>Variables</h3>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Intended type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OrderID</td>
+<td>Text</td>
+<td>Unique order identifier (e.g. ORD-1001)</td>
+</tr>
+<tr>
+<td>OrderDate</td>
+<td>Date</td>
+<td>Order date (stored as text in the source)</td>
+</tr>
+<tr>
+<td>Customer</td>
+<td>Text</td>
+<td>Customer name</td>
+</tr>
+<tr>
+<td>Category</td>
+<td>Text</td>
+<td>Product category (Electronics, Clothing, Food, Books, Sports)</td>
+</tr>
+<tr>
+<td>Amount</td>
+<td>Number</td>
+<td>Order amount (some rows stored as text)</td>
+</tr>
+<tr>
+<td>Quantity</td>
+<td>Number</td>
+<td>Quantity (some rows stored as text)</td>
+</tr>
+<tr>
+<td>Region</td>
+<td>Text</td>
+<td>Sales region (North, South, East, West)</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td>Text</td>
+<td>Optional notes (many blanks)</td>
+</tr>
+</tbody>
+</table>
+<h3>Data Quality Notes</h3>
+<p>The dataset contains <strong>intentional issues</strong> for practice:</p>
+<ul>
+<li><strong>Duplicates:</strong> Several exact duplicate rows.</li>
+<li><strong>Wrong types:</strong> Order dates stored as text; Amount and Quantity stored as text in many rows.</li>
+<li><strong>Trim/Clean:</strong> Leading and trailing spaces in Customer, Category, and Region.</li>
+<li><strong>Missing values:</strong> Blanks in Region (several rows) and Notes (many rows).</li>
+<li><strong>Blank rows:</strong> Several fully blank rows.</li>
+<li><strong>Replace Values:</strong> Inconsistent Category values (e.g. "Electronics", " electronics ", "ELECTRONICS").</li>
+</ul>
+<h3>Learning Objectives</h3>
+<p>By completing this lab, you will:</p>
+<ul>
+<li>Import data from CSV and Excel using Get Data (Power Query).</li>
+<li>Use the Power Query Editor to change data types, remove duplicates, filter rows, and replace values.</li>
+<li>Apply Trim and Clean, remove blank rows, and add a conditional column to flag missing values.</li>
+<li>Load cleaned data to a worksheet (and optionally the Data Model) and refresh queries.</li>
+<li>Document your data-cleaning decisions and handle missing values in a principled way.</li>
+</ul>
+<hr />
+<section class="lab-section"><h2>Power Query &amp; Excel Quick Reference</h2>
+<h3>Import Data</h3>
+<p><strong>Import CSV:</strong> <code>Data → Get Data → From File → From Text/CSV → Load / Transform Data</code><br />
+<strong>Import Excel:</strong> <code>Data → Get Data → From File → From Excel Workbook → Select Sheet/Table → Load / Transform Data</code><br />
+<strong>Import Web:</strong> <code>Data → Get Data → From Other Sources → From Web → Enter URL → Transform Data</code></p>
+<h3>Open Power Query Editor</h3>
+<p><code>Data → Get Data → Transform Data</code><br />
+or<br />
+<code>Data → Queries &amp; Connections → Right-click Query → Edit</code></p>
+<h3>Data Type</h3>
+<p><code>Power Query Editor → Transform → Data Type</code></p>
+<h3>Remove Duplicates</h3>
+<p><code>Power Query Editor → Home → Remove Rows → Remove Duplicates</code></p>
+<h3>Filter Rows</h3>
+<p><code>Column Header → Filter Dropdown → Text / Number / Date Filters</code></p>
+<h3>Replace Values</h3>
+<p><code>Power Query Editor → Transform → Replace Values</code></p>
+<h3>Trim / Clean Text</h3>
+<p><code>Power Query Editor → Transform → Format → Trim</code><br />
+<code>Power Query Editor → Transform → Format → Clean</code></p>
+<h3>Remove Blank Rows</h3>
+<p><code>Power Query Editor → Home → Remove Rows → Remove Blank Rows</code></p>
+<h3>Conditional Column (Flag Missing)</h3>
+<p><code>Power Query Editor → Add Column → Conditional Column</code></p>
+<h3>Load Data</h3>
+<p><strong>Load to Worksheet:</strong> <code>Power Query Editor → Close &amp; Load</code><br />
+<strong>Load to Data Model:</strong> <code>Power Query Editor → Close &amp; Load To… → Only Create Connection → Add this data to the Data Model</code></p>
+<h3>Refresh Data</h3>
+<p><code>Data → Refresh All</code><br />
+or<br />
+<code>Data → Queries &amp; Connections → Right-click Query → Refresh</code></p>
+<hr />
+<section class="lab-section"><h2>Lab Exercises</h2>
+<p>The following exercises guide you through importing, cleaning, and loading the Store Sales Orders data with Power Query. Each exercise includes a question and step-by-step instructions. Complete the exercises in order and document your results; later steps assume earlier transformations.</p>
+<hr />
+<h3>Part A: Import Data</h3>
+<h4>Exercise A1: Import from CSV</h4>
+<p><strong>Question:</strong> Import the Store Sales Orders data from CSV and open the Power Query Editor. What do you see in the preview (column types, obvious issues)?</p>
+<p><strong>Instructions:</strong></p>
+<ol>
+<li><strong>Excel:</strong> Data → Get Data → From File → From Text/CSV.</li>
+<li>Select <code>Lab2-StoreOrders.csv</code> (from this folder or where you saved it). Click <strong>Transform Data</strong> (not Load) so you open the Power Query Editor before loading.</li>
+<li>In the Power Query Editor, check the data types shown in the column headers (ABC, 123, calendar icons). Scroll through the table and look for duplicates, blank rows, extra spaces in text, and missing values.</li>
+</ol>
+<p><strong>Explanation:</strong> Using <strong>Transform Data</strong> instead of <strong>Load</strong> lets you clean the data first. The preview shows how Excel interprets each column; types may be wrong (e.g. dates or numbers as Text) and need fixing.</p>
+<hr />
+<h4>Exercise A2: Import from Excel</h4>
+<p><strong>Question:</strong> Import the same dataset from the Excel workbook and open the Power Query Editor.</p>
+<p><strong>Instructions:</strong></p>
+<ol>
+<li><strong>Excel:</strong> Data → Get Data → From File → From Excel Workbook.</li>
+<li>Select <code>Lab2-StoreOrders.xlsx</code>, then choose the <strong>Orders</strong> sheet (or table). Click <strong>Transform Data</strong>.</li>
+<li>Confirm the structure (columns and row count) matches the CSV import.</li>
+</ol>
+<p><strong>Explanation:</strong> Importing from Excel often preserves more type information than CSV, but you still need to verify. Use one source (CSV or Excel) consistently for Parts B–D.</p>
+<hr />
+<h4>Exercise A3 (optional): Import from Web</h4>
+<p><strong>Question:</strong> Import a small table from a web page using Get Data → From Web.</p>
+<p><strong>Instructions:</strong></p>
+<ol>
+<li><strong>Excel:</strong> Data → Get Data → From Other Sources → From Web.</li>
+<li>Enter a URL that contains an HTML table (e.g. a simple reference or demo table). Use <strong>Transform Data</strong> to preview and clean if needed.</li>
+<li>Document the URL and the steps you used.</li>
+</ol>
+<hr />
+<h4>Exercise A4: Compare CSV vs Excel Import</h4>
+<p><strong>Question:</strong> If you imported both CSV and Excel, compare the two queries. Do the initial detected data types or row counts differ? Why might they?</p>
+<p><strong>Instructions:</strong></p>
+<ol>
+<li>Create two queries: one from <code>Lab2-StoreOrders.csv</code>, one from <code>Lab2-StoreOrders.xlsx</code> (both with Transform Data).</li>
+<li>In each, note the detected types for OrderDate, Amount, and Quantity, and the row count at the bottom.</li>
+<li>Briefly note any differences.</li>
+</ol>
+<p><strong>Explanation:</strong> CSV has no type information; Excel infers from cell formats. Excel workbooks can preserve Number/Date formats, so Power Query may detect them more accurately. Row counts should match if the sources are the same.</p>
+<hr />
+<h3>Part B: Power Query Transformations</h3>
+<h4>Exercise B1: Change Data Types</h4>
+<p><strong>Question:</strong> Set correct data types for OrderDate, Amount, and Quantity.</p>
+<p><strong>Instructions:</strong></p>
+<ol>
+<li>Select the <strong>OrderDate</strong> column. Transform → Data Type → Date (or Date/Time). Choose the correct locale if prompted (e.g. day/month/year vs month/day/year).</li>
+<li>Select <strong>Amount</strong> → Transform → Data Type → Decimal Number (or Currency if you prefer).</li>
+<li>Select <strong>Quantity</strong> → Transform → Data Type → Whole Number.</li>
+<li>Check for any columns still detected as Text that should be numeric or date; fix them.</li>
+</ol>
+<p><strong>Explanation:</strong> Correct types ensure filtering, sorting, and calculations work properly. Wrong types (e.g. numbers as text) cause incorrect sums or sorts.</p>
+<hr />
+<h4>Exercise B2: Remove Duplicates</h4>
+<p><strong>Question:</strong> Remove duplicate rows and note how many rows were removed.</p>
+<p><strong>Instructions:</strong></p>
+<ol>
+<li>Select all columns (or the key columns you use for duplicates, e.g. OrderID).</li>
+<li>Home → Remove Rows → Remove Duplicates.</li>
+<li>Check the row count before and after; record the number of rows removed.</li>
+</ol>
+<p><strong>Explanation:</strong> Duplicates inflate counts and can bias analysis. Remove them based on a meaningful key (e.g. OrderID) or on all columns, depending on your definition of a duplicate.</p>
+<hr />
+<h4>Exercise B3: Filter Rows</h4>
+<p><strong>Question:</strong> Use the column filter dropdowns to inspect or exclude certain values (e.g. blanks or a specific Category/Region).</p>
+<p><strong>Instructions:</strong></p>
+<ol>
+<li>Click the filter icon on a column header (e.g. Category or Region).</li>
+<li>Use Text Filters or "Remove Empty" (or equivalent) to filter out blanks if needed, or filter to a single category for inspection.</li>
+<li>Remove or adjust the filter as needed for later steps (e.g. you may remove blank rows via Home → Remove Rows → Remove Blank Rows instead).</li>
+</ol>
+<p><strong>Explanation:</strong> Filtering helps you explore subsets and confirm where blanks or odd values appear. Use it before standardizing categories or removing blank rows.</p>
+<hr />
+<h4>Exercise B4: Replace Values</h4>
+<p><strong>Question:</strong> Standardize the Category column (e.g. replace "ELECTRONICS", " electronics " with "Electronics").</p>
+<p><strong>Instructions:</strong></p>
+<ol>
+<li>Select the <strong>Category</strong> column. Transform → Replace Values.</li>
+<li>Replace each variant (e.g. "ELECTRONICS", " electronics ") with the standard form "Electronics". Repeat for other categories (Clothing, Food, Books, Sports) as needed.</li>
+<li>Alternatively, use a Conditional Column or multiple Replace Values steps.</li>
+</ol>
+<p><strong>Explanation:</strong> Inconsistent categories split groups in PivotTables and reports. Standardizing them ensures correct aggregation and filters.</p>
+<hr />
+<h4>Exercise B5: Trim and Clean</h4>
+<p><strong>Question:</strong> Apply Trim to Customer, Category, and Region; use Clean if you encounter non-printable characters.</p>
+<p><strong>Instructions:</strong></p>
+<ol>
+<li>Select <strong>Customer</strong>. Transform → Format → Trim. Repeat for <strong>Category</strong> and <strong>Region</strong>.</li>
+<li>If any column has non-printable characters (e.g. from imported web or text data), use Transform → Format → Clean on that column.</li>
+</ol>
+<p><strong>Explanation:</strong> Trim removes leading and trailing spaces; Clean removes non-printable characters (e.g. tab, vertical tab). Both improve matching and grouping.</p>
+<hr />
+<h4>Exercise B6: Duplicates by Key vs All Columns</h4>
+<p><strong>Question:</strong> Try removing duplicates first by <strong>OrderID only</strong>, then (in a new query or after undoing) by <strong>all columns</strong>. Compare the number of rows removed in each case. When would you use each approach?</p>
+<p><strong>Instructions:</strong></p>
+<ol>
+<li>Remove duplicates based only on <strong>OrderID</strong>. Note the row count before and after.</li>
+<li>Start again from the source (or use a duplicate of the query) and remove duplicates based on <strong>all columns</strong>. Note the row count before and after.</li>
+<li>Compare and briefly explain when to use key-only vs all-column duplicate removal.</li>
+</ol>
+<p><strong>Explanation:</strong> Key-only (e.g. OrderID) treats two rows as duplicates if the key is the same, even if other columns differ. All-column duplicate removal keeps only rows that are identical in every column. Use key-only when the key uniquely identifies a record; use all-column when you want to drop only exact duplicates.</p>
+<hr />
+<h3>Part C: Missing Values</h3>
+<h4>Exercise C1: Remove Blank Rows</h4>
+<p><strong>Question:</strong> Remove fully blank rows and note the change in row count.</p>
+<p><strong>Instructions:</strong></p>
+<ol>
+<li>Home → Remove Rows → Remove Blank Rows.</li>
+<li>Compare the row count before and after.</li>
+</ol>
+<p><strong>Explanation:</strong> Blank rows can break PivotTables and formulas. Remove them when they add no information.</p>
+<hr />
+<h4>Exercise C2: Flag Missing Notes</h4>
+<p><strong>Question:</strong> Add a conditional column that flags rows where Notes is null or blank, without deleting those rows.</p>
+<p><strong>Instructions:</strong></p>
+<ol>
+<li>Add Column → Conditional Column.</li>
+<li>Set <strong>Column name</strong> (e.g. <code>Notes_Missing</code>). If <strong>Notes</strong> is null or equals <code>""</code>, output <code>Yes</code> (or <code>True</code>); otherwise <code>No</code> (or <code>False</code>).</li>
+<li>Load the query and confirm the new column appears.</li>
+</ol>
+<p><strong>Explanation:</strong> Flagging missing values preserves all rows for analysis while making it easy to filter or report on missingness.</p>
+<hr />
+<h4>Exercise C3: Document Your Strategy</h4>
+<p><strong>Question:</strong> In one or two sentences, state how you handled missing values in Region and Notes (e.g. removed blank rows, flagged missing, left as-is).</p>
+<hr />
+<h4>Exercise C4: When to Impute, Flag, or Delete</h4>
+<p><strong>Question:</strong> Briefly explain when you would (a) delete rows with missing values, (b) flag missing values with a new column, or (c) impute (e.g. fill with mean/median/mode). Give one example each.</p>
+<p><strong>Instructions:</strong></p>
+<ol>
+<li>Consider amount of missing data, whether it’s random or systematic, and how the variable is used.</li>
+<li>Write 1–2 sentences for each of (a), (b), and (c) with a concrete example.</li>
+</ol>
+<p><strong>Explanation:</strong> Deletion is simple but loses data; use when missing is small and random. Flagging keeps all rows and supports analysis of missingness. Imputation preserves sample size but can bias results if done poorly; use when justified and documented.</p>
+<hr />
+<h3>Part D: Load and Refresh</h3>
+<h4>Exercise D1: Load to Worksheet</h4>
+<p><strong>Question:</strong> Load the cleaned data into an Excel table in a new sheet.</p>
+<p><strong>Instructions:</strong></p>
+<ol>
+<li>In the Power Query Editor, <strong>Close &amp; Load</strong>.</li>
+<li>Ensure the query has a clear name (e.g. <code>StoreOrders_Cleaned</code>). Rename it in Queries &amp; Connections if needed.</li>
+</ol>
+<hr />
+<h4>Exercise D2 (optional): Load to Data Model</h4>
+<p><strong>Question:</strong> Create a connection that loads the data into the Data Model only (no worksheet).</p>
+<p><strong>Instructions:</strong></p>
+<ol>
+<li>Duplicate the query or create a new one from the same source. <strong>Close &amp; Load To…</strong></li>
+<li>Choose <strong>Only Create Connection</strong> and check <strong>Add this data to the Data Model</strong>.</li>
+<li>Confirm in Data → Queries &amp; Connections that the query exists and is connected to the Data Model.</li>
+</ol>
+<hr />
+<h4>Exercise D3: Refresh Data</h4>
+<p><strong>Question:</strong> Refresh the query after changing the source file and confirm the change appears.</p>
+<p><strong>Instructions:</strong></p>
+<ol>
+<li>Close the workbook or ensure the source CSV/Excel is not locked. Add a new row to the source file (or change an existing value), then save.</li>
+<li>In Excel, Data → Refresh All (or right-click the query → Refresh).</li>
+<li>Verify that the updated data appears in the loaded table.</li>
+</ol>
+<hr />
+<h4>Exercise D4: Connection and Refresh Settings</h4>
+<p><strong>Question:</strong> Where can you change the source file path or refresh settings for a query? What happens if you move or rename the source file?</p>
+<p><strong>Instructions:</strong></p>
+<ol>
+<li>Open Data → Queries &amp; Connections. Right-click the query → <strong>Edit</strong> or <strong>Properties</strong> (depending on your Excel version).</li>
+<li>Look for <strong>Source</strong> or <strong>Connection</strong> settings. Note how the path is stored.</li>
+<li>Move or rename the source file, then try Refresh. Observe the result.</li>
+</ol>
+<p><strong>Explanation:</strong> The connection stores the full path to the source. If you move or rename the file, Refresh fails until you update the path (e.g. via Data Source Settings or by editing the query and changing the source step).</p>
+<hr />
+<section class="lab-section"><h2>Verification &amp; Expected Results</h2>
+<h3>Quick Verification Checklist</h3>
+<p>After completing all exercises, verify:</p>
+<ul>
+<li>[ ] Data imported from CSV and from Excel (and optionally from Web).</li>
+<li>[ ] OrderDate, Amount, and Quantity have correct data types.</li>
+<li>[ ] Duplicates removed; row count change documented.</li>
+<li>[ ] Category standardized; Trim (and Clean if needed) applied to text columns.</li>
+<li>[ ] No fully blank rows; optional Notes_Missing (or similar) column added.</li>
+<li>[ ] Query loaded to worksheet (and optionally to Data Model).</li>
+<li>[ ] Refresh works after updating the source file.</li>
+<li>[ ] Your strategy for missing values (Region, Notes) is documented.</li>
+</ul>
+<h3>Common Errors &amp; Troubleshooting</h3>
+<p><strong>Date stays as text after Change Type</strong><br />
+- <strong>Cause:</strong> Format or locale mismatch; column contains invalid dates.<br />
+- <strong>Fix:</strong> Use Transform → Data Type → Date and choose the correct locale. Ensure all values are valid dates; fix or remove problematic rows if needed.</p>
+<p><strong>Wrong step order or duplicate steps</strong><br />
+- <strong>Cause:</strong> Steps applied in the wrong order or applied twice.<br />
+- <strong>Fix:</strong> In Applied Steps, delete or reorder steps as needed. Re-run the query to preview results.</p>
+<p><strong>Refresh fails</strong><br />
+- <strong>Cause:</strong> Source file moved, renamed, or open elsewhere; connection settings incorrect.<br />
+- <strong>Fix:</strong> Ensure the source path is correct, the file is not locked by another app, and the connection uses the right file path. Re-import or update the source step if necessary.</p>
+<p><strong>Duplicate removal removes too many or too few rows</strong><br />
+- <strong>Cause:</strong> Duplicates defined by all columns vs key columns only.<br />
+- <strong>Fix:</strong> Decide whether duplicates are defined by a key (e.g. OrderID) or by all columns; select the appropriate columns before Remove Duplicates.</p>
+<hr />
+<section class="lab-section"><h2>Conclusion</h2>
+<p>Congratulations! You have completed Lab 2 covering:</p>
+<ul>
+<li>Import from CSV and Excel (and optionally Web) using Get Data.</li>
+<li>Power Query transformations: Change Type, Remove Duplicates, Filter Rows, Replace Values, Trim, Clean, Remove Blank Rows.</li>
+<li>Handling missing values: Remove Blank Rows, Conditional Column to flag missing, and documenting your strategy.</li>
+<li>Loading to a worksheet (and optionally the Data Model) and refreshing queries.</li>
+<li>When to impute, flag, or delete missing values, and how connection/source settings affect refresh.</li>
+</ul>
+<h3>Next Steps</h3>
+<ul>
+<li>Use the cleaned Store Sales Orders data for EDA and PivotTables in later labs.</li>
+<li>Practice the same workflow on other datasets (e.g. Titanic, project topic data).</li>
+<li>Prepare for <strong>Group Progress Report 2:</strong> data quality assessment, cleaning methodology, and preliminary data structure documentation (see course schedule).</li>
+</ul>
+<hr />
+<p><strong>Lab Completed:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em><br />
+<strong>Date:</strong> </em></strong><strong><em>_</em></strong><strong><em>_</em></strong><br />
+<strong>Instructor Signature:</strong> <strong><em>_</em></strong><strong><em>_</em></strong>___</p></section></section></section></section></section></section>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
