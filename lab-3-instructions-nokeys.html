@@ -1,0 +1,367 @@
+---
+layout: null
+permalink: /lab-3-instructions-nokeys.html
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lab 3 Instructions - Medical EDA (No Keys)</title>
+<link rel="stylesheet" href="https://nghianguyen7171.github.io/excel_course/assets/css/main.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="page-wrapper">
+<main class="main-content">
+<div class="content-wrapper">
+<div class="lab-instructions-page">
+<h1>Lab 3: Medical EDA with Confidence Intervals and p-values</h1>
+<p class="lab-subtitle">Load and clean medical data, run descriptive analysis, segment with PivotTables, and practice CI/p-value interpretation in Excel.</p>
+
+<h2>Important: Excel vs Google Sheets</h2>
+<p>This lab is designed for <strong>Microsoft Excel</strong>. You may use formulas in both tools, but menu paths for <strong>Power Query</strong>, <strong>PivotTables</strong>, and some statistical options are Excel-specific.</p>
+<hr />
+<h2>Dataset Overview</h2>
+<h3>Introduction</h3>
+<p>This lab uses a synthetic <strong>Medical EDA</strong> dataset (patient-level records) created for Week 5 content:</p>
+<ul>
+<li>Descriptive statistics</li>
+<li>Summary tables</li>
+<li>Data segmentation</li>
+<li>PivotTables</li>
+<li>Introductory confidence intervals (95% CI) and p-values</li>
+</ul>
+<h3>Dataset Files</h3>
+<ol>
+<li><strong>Google Drive (recommended):</strong> <a href="https://drive.google.com/drive/folders/1F92S9FEN5SWvUQsEXIs9c1J4q90uARCm?usp=sharing"><strong>Lab 2/3 Dataset Folder</strong></a></li>
+<li><strong>Course website (alternative):</strong></li>
+<li><a href="https://nghianguyen7171.github.io/excel_course/datasets/files/Medical-EDA.csv"><strong>Medical-EDA.csv</strong></a></li>
+<li><a href="https://nghianguyen7171.github.io/excel_course/datasets/files/Medical-EDA.xlsx"><strong>Medical-EDA.xlsx</strong></a></li>
+<li><strong>Student package:</strong> <code>student desk/Lab-3-Dataset/</code> (if provided)</li>
+</ol>
+<h3>Variables</h3>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PatientID</td>
+<td>Text</td>
+<td>Unique patient ID</td>
+</tr>
+<tr>
+<td>VisitDate</td>
+<td>Date/Text</td>
+<td>Visit date (some rows need type fixes)</td>
+</tr>
+<tr>
+<td>Age</td>
+<td>Number</td>
+<td>Age in years</td>
+</tr>
+<tr>
+<td>Sex</td>
+<td>Text</td>
+<td>Female/Male</td>
+</tr>
+<tr>
+<td>Region</td>
+<td>Text</td>
+<td>North/South/East/West (inconsistent spacing/case in some rows)</td>
+</tr>
+<tr>
+<td>HospitalUnit</td>
+<td>Text</td>
+<td>Clinical unit</td>
+</tr>
+<tr>
+<td>DiagnosisGroup</td>
+<td>Text</td>
+<td>Hypertension/Diabetes/Respiratory (inconsistent case in some rows)</td>
+</tr>
+<tr>
+<td>TreatmentGroup</td>
+<td>Text</td>
+<td>A/B (some lowercase values)</td>
+</tr>
+<tr>
+<td>BaselineSBP</td>
+<td>Number</td>
+<td>Baseline systolic blood pressure</td>
+</tr>
+<tr>
+<td>FollowupSBP</td>
+<td>Number</td>
+<td>Follow-up systolic blood pressure</td>
+</tr>
+<tr>
+<td>LDL</td>
+<td>Number/Text</td>
+<td>LDL cholesterol (mixed numeric/text in some rows)</td>
+</tr>
+<tr>
+<td>HbA1c</td>
+<td>Number</td>
+<td>Glycemic marker (some missing values)</td>
+</tr>
+<tr>
+<td>BMI</td>
+<td>Number</td>
+<td>Body Mass Index</td>
+</tr>
+<tr>
+<td>AdherenceScore</td>
+<td>Number/Text</td>
+<td>Medication adherence score (mixed numeric/text in some rows)</td>
+</tr>
+<tr>
+<td>LengthOfStay</td>
+<td>Number</td>
+<td>Days in hospital</td>
+</tr>
+<tr>
+<td>Readmission30d</td>
+<td>Binary (0/1)</td>
+<td>30-day readmission indicator</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td>Text</td>
+<td>Optional notes</td>
+</tr>
+</tbody>
+</table>
+<h3>Data Quality Notes</h3>
+<ul>
+<li>Duplicate records</li>
+<li>Blank rows</li>
+<li>Mixed text/number types (LDL, AdherenceScore)</li>
+<li>Inconsistent category formatting (Region, DiagnosisGroup, TreatmentGroup)</li>
+<li>Missing values (Region, HbA1c)</li>
+<li>Outliers (BMI, LengthOfStay)</li>
+</ul>
+<h3>Learning Objectives</h3>
+<p>By the end of this lab, you can:</p>
+<ul>
+<li>Import and clean medical data in Excel</li>
+<li>Produce descriptive statistics and segmented summaries</li>
+<li>Build PivotTables for subgroup analysis</li>
+<li>Compute and interpret 95% CIs</li>
+<li>Compute and interpret p-values for simple comparisons</li>
+</ul>
+<hr />
+<h2>Quick Reference (Week 5 Skills)</h2>
+<ul>
+<li>Import: <code>Data -&gt; Get Data -&gt; From File -&gt; From Text/CSV</code> or <code>From Excel Workbook</code></li>
+<li>Open query again: <code>Data -&gt; Queries &amp; Connections -&gt; Right-click query -&gt; Edit</code></li>
+<li>PivotTable: <code>Insert -&gt; PivotTable</code></li>
+<li>Pivot grouping: right-click date/number field -&gt; Group</li>
+<li>Pivot filters: Report Filter and optional Slicer</li>
+<li>Pivot design: Subtotals, Grand Totals, Report Layout</li>
+<li>Pivot calculated field: PivotTable Analyze -&gt; Fields, Items, &amp; Sets -&gt; Calculated Field</li>
+<li>Refresh: <code>Data -&gt; Refresh All</code></li>
+<li>95% CI formula: <code>mean +/- t* * (SD / sqrt(n))</code></li>
+<li>Two-sample p-value: <code>=T.TEST(rangeA, rangeB, 2, 3)</code></li>
+<li>Categorical p-value (optional): <code>=CHISQ.TEST(actual_range, expected_range)</code></li>
+</ul>
+<hr />
+<h2>Lab Exercises</h2>
+<h3>Part A: Load and Clean</h3>
+
+<h3>Exercise A1: Import and Inspect</h3>
+<p><strong>Question:</strong> Import <code>Medical-EDA.csv</code> (or <code>.xlsx</code>) and identify at least 4 quality issues.</p>
+<p><strong>Instructions:</strong><br />
+1. Import with <strong>Transform Data</strong>.<br />
+2. Inspect data types and scan columns for missing values and inconsistent categories.<br />
+3. Record at least 4 issues found.</p>
+<hr />
+<h3>Exercise A2: Clean Core Columns</h3>
+<p><strong>Question:</strong> Clean data so all key columns are analysis-ready.</p>
+<p><strong>Instructions:</strong><br />
+1. Remove fully blank rows.<br />
+2. Remove duplicates (all columns).<br />
+3. Trim text columns: <code>Region</code>, <code>DiagnosisGroup</code>, <code>TreatmentGroup</code>.<br />
+4. Replace category variants (e.g., <code>a</code> -&gt; <code>A</code>, <code>b</code> -&gt; <code>B</code>, uppercase/lowercase diagnosis labels -&gt; standard labels).<br />
+5. Set data types:<br />
+   - <code>VisitDate</code> -&gt; Date<br />
+   - <code>Age</code>, <code>BaselineSBP</code>, <code>FollowupSBP</code>, <code>LDL</code>, <code>HbA1c</code>, <code>BMI</code>, <code>AdherenceScore</code>, <code>LengthOfStay</code> -&gt; Number<br />
+   - <code>Readmission30d</code> -&gt; Whole Number</p>
+<hr />
+<h3>Part B: Descriptive Statistics</h3>
+
+<h3>Exercise B1: Overall Summary</h3>
+<p><strong>Question:</strong> Build a summary table for <code>BaselineSBP</code>, <code>FollowupSBP</code>, <code>LDL</code>, and <code>BMI</code>.</p>
+<p><strong>Instructions:</strong><br />
+1. On a new sheet, create a table with metrics: Mean, Median, SD, Min, Max, N.<br />
+2. Use formulas such as:<br />
+   - <code>AVERAGE(range)</code><br />
+   - <code>MEDIAN(range)</code><br />
+   - <code>STDEV.S(range)</code><br />
+   - <code>MIN(range)</code>, <code>MAX(range)</code><br />
+   - <code>COUNT(range)</code></p>
+<hr />
+<h3>Exercise B2: Segment by Treatment</h3>
+<p><strong>Question:</strong> Compare <code>FollowupSBP</code> and <code>LengthOfStay</code> between Treatment A and B.</p>
+<p><strong>Instructions:</strong><br />
+1. Use <code>AVERAGEIFS</code> (or PivotTable) to compute mean by treatment.<br />
+2. Report group means side-by-side.</p>
+<hr />
+<h3>Part C: Summary Tables and Segmentation</h3>
+
+<h3>Exercise C1: COUNTIFS and AVERAGEIFS</h3>
+<p><strong>Question:</strong> Create a segmented summary by Region and DiagnosisGroup.</p>
+<p><strong>Instructions:</strong><br />
+1. Build a small matrix of counts: <code>COUNTIFS(Region, r, DiagnosisGroup, d)</code>.<br />
+2. Build another matrix of means: <code>AVERAGEIFS(FollowupSBP, Region, r, DiagnosisGroup, d)</code>.</p>
+<hr />
+<h3>Exercise C2: Readmission Segmentation</h3>
+<p><strong>Question:</strong> Compare readmission rates by TreatmentGroup and Sex.</p>
+<p><strong>Instructions:</strong><br />
+1. Compute subgroup readmission rate: <code>AVERAGEIFS(Readmission30d, TreatmentGroup, g, Sex, s)</code>.<br />
+2. Convert to percent format.</p>
+<hr />
+<h3>Part D: PivotTables</h3>
+
+<h3>Exercise D1: PivotTable 1 (Clinical Outcome by Treatment)</h3>
+<p><strong>Question:</strong> Summarize <code>FollowupSBP</code> and <code>LengthOfStay</code> by <code>TreatmentGroup</code>.</p>
+<p><strong>Instructions:</strong><br />
+1. Insert PivotTable from clean table.<br />
+2. Rows: <code>TreatmentGroup</code><br />
+3. Values: Average of <code>FollowupSBP</code>, Average of <code>LengthOfStay</code></p>
+<hr />
+<h3>Exercise D2: PivotTable 2 (Readmission by Region and Diagnosis)</h3>
+<p><strong>Question:</strong> Build a segmented PivotTable for readmission.</p>
+<p><strong>Instructions:</strong><br />
+1. Rows: <code>Region</code><br />
+2. Columns: <code>DiagnosisGroup</code><br />
+3. Values: Average of <code>Readmission30d</code> (format as %)<br />
+4. Optional Filter: <code>Sex</code></p>
+<hr />
+<h3>Exercise D3: PivotTable 3 (Time Grouping by Month/Quarter)</h3>
+<p><strong>Question:</strong> Group patient visits by month/quarter and summarize average follow-up SBP.</p>
+<p><strong>Instructions:</strong><br />
+1. Create a new PivotTable from the clean table.<br />
+2. Rows: <code>VisitDate</code><br />
+3. Values: Average of <code>FollowupSBP</code><br />
+4. Right-click any date in the PivotTable -&gt; <strong>Group</strong> -&gt; select <code>Months</code> (and optionally <code>Quarters</code>).<br />
+5. Add <code>TreatmentGroup</code> to Filters to compare A vs B after grouping.</p>
+<hr />
+<h3>Exercise D4: Pivot Layout, Filters, and Slicers</h3>
+<p><strong>Question:</strong> Improve readability and interactivity of a PivotTable.</p>
+<p><strong>Instructions:</strong><br />
+1. Start from PivotTable 1 or 2.<br />
+2. Turn on/off <strong>Subtotals</strong> and <strong>Grand Totals</strong> (PivotTable Design tab).<br />
+3. Change <strong>Report Layout</strong> (Compact/Outline/Tabular) and choose the clearest format.<br />
+4. Add at least one report filter (e.g., <code>Sex</code> or <code>HospitalUnit</code>).<br />
+5. Optional: Insert a <strong>Slicer</strong> for <code>TreatmentGroup</code> and test interactive filtering.</p>
+<hr />
+<h3>Exercise D5 (optional): Calculated Field in PivotTable</h3>
+<p><strong>Question:</strong> Add a calculated field for SBP improvement (<code>BaselineSBP - FollowupSBP</code>) in a PivotTable.</p>
+<p><strong>Instructions:</strong><br />
+1. Open a PivotTable built from the cleaned data.<br />
+2. PivotTable Analyze -&gt; <strong>Fields, Items, &amp; Sets</strong> -&gt; <strong>Calculated Field</strong>.<br />
+3. Name: <code>SBP_Improvement</code>.<br />
+4. Formula: <code>=BaselineSBP - FollowupSBP</code><br />
+5. Add <code>TreatmentGroup</code> as Rows and summarize average <code>SBP_Improvement</code>.</p>
+<hr />
+<h3>Part E: Confidence Intervals and p-values</h3>
+
+<h3>Exercise E1: 95% CI for Mean FollowupSBP (Overall)</h3>
+<p><strong>Question:</strong> Calculate the 95% CI for mean <code>FollowupSBP</code>.</p>
+<p><strong>Instructions:</strong><br />
+1. Compute:<br />
+   - <code>mean = AVERAGE(range)</code><br />
+   - <code>sd = STDEV.S(range)</code><br />
+   - <code>n = COUNT(range)</code><br />
+2. Compute t critical:<br />
+   - <code>t_star = T.INV.2T(0.05, n-1)</code><br />
+3. Margin of error:<br />
+   - <code>ME = t_star * sd / SQRT(n)</code><br />
+4. CI bounds:<br />
+   - <code>Lower = mean - ME</code><br />
+   - <code>Upper = mean + ME</code></p>
+<hr />
+<h3>Exercise E2: 95% CI by Treatment Group</h3>
+<p><strong>Question:</strong> Compute separate 95% CIs for Treatment A and B (FollowupSBP).</p>
+<p><strong>Instructions:</strong><br />
+1. Filter or reference each treatment group separately.<br />
+2. Repeat E1 formulas for each group.<br />
+3. Compare intervals qualitatively (overlap vs separation).</p>
+<hr />
+<h3>Exercise E3: p-value for Difference in Means (Treatment A vs B)</h3>
+<p><strong>Question:</strong> Is <code>FollowupSBP</code> different between Treatment A and B?</p>
+<p><strong>Instructions:</strong><br />
+1. Put group ranges in two columns (A and B).<br />
+2. Use:<br />
+   - <code>=T.TEST(rangeA, rangeB, 2, 3)</code><br />
+   - <code>2</code> = two-tailed, <code>3</code> = unequal variances (Welch)<br />
+3. Decision rule:<br />
+   - If <code>p &lt; 0.05</code>, reject equal-means null hypothesis.</p>
+<hr />
+<h3>Exercise E4 (optional): p-value for Categorical Association</h3>
+<p><strong>Question:</strong> Is 30-day readmission associated with TreatmentGroup?</p>
+<p><strong>Instructions:</strong><br />
+1. Build a 2x2 observed table (<code>TreatmentGroup</code> x <code>Readmission30d</code>) using <code>COUNTIFS</code> or PivotTable.<br />
+2. Build expected counts table.<br />
+3. Use <code>CHISQ.TEST(observed_range, expected_range)</code>.</p>
+<hr />
+<h3>Part F: Short Interpretation</h3>
+
+<h3>Exercise F1: Mini report paragraph</h3>
+<p><strong>Question:</strong> Write 5-8 sentences summarizing findings.</p>
+<p><strong>Instructions:</strong><br />
+Include:<br />
+1. One descriptive-statistics insight<br />
+2. One segmentation/PivotTable insight<br />
+3. One CI statement<br />
+4. One p-value statement<br />
+5. One practical implication for healthcare decision-making</p>
+<hr />
+<h2>Verification Checklist</h2>
+<ul>
+<li>[ ] Cleaned dataset loaded in Excel</li>
+<li>[ ] Descriptive statistics table completed</li>
+<li>[ ] At least 2 segmented summary tables completed</li>
+<li>[ ] At least 3 PivotTables completed (including one grouped by month/quarter)</li>
+<li>[ ] At least one Pivot filter (or slicer) used</li>
+<li>[ ] Optional calculated field tested (<code>SBP_Improvement</code>)</li>
+<li>[ ] 95% CI computed correctly (overall and by treatment)</li>
+<li>[ ] p-value test completed and interpreted correctly</li>
+<li>[ ] Mini report paragraph completed</li>
+</ul>
+<hr />
+<h2>Common Errors and Fixes</h2>
+<ul>
+<li><strong>Numbers treated as text</strong></li>
+<li>Fix with data type conversion in Power Query or <code>VALUE()</code> in Excel.</li>
+<li><strong>Date not recognized</strong></li>
+<li>Check locale and source format; re-parse date column.</li>
+<li><strong>T.TEST returns error</strong></li>
+<li>Ensure both ranges are numeric and contain no text blanks.</li>
+<li><strong>CHISQ.TEST error</strong></li>
+<li>Observed and expected ranges must have same shape and non-zero expected counts.</li>
+</ul>
+<hr />
+<h2>Conclusion</h2>
+<p>You practiced the full Week 5 EDA workflow on medical data:</p>
+<ul>
+<li>Load and clean</li>
+<li>Descriptive and segmented summaries</li>
+<li>PivotTables</li>
+<li>Confidence intervals and p-values</li>
+</ul>
+<p>These outputs feed directly into Group Progress Report 3 and prepare you for later visualization and statistical-analysis weeks.</p>
+</div>
+</div>
+</main>
+</div>
+</body>
+</html>

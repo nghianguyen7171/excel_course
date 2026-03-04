@@ -1,0 +1,472 @@
+---
+layout: null
+permalink: /week5-eda-tutorial.html
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week 5 Tutorial - Descriptive Statistics, Summary Tables, Data Segmentation</title>
+  <link rel="stylesheet" href="https://nghianguyen7171.github.io/excel_course/assets/css/main.css">
+  <style>
+    .tutorial-wrap { max-width: 1100px; margin: 0 auto; padding: 2rem 1.25rem 3rem; }
+    .tutorial-hero { border-left: 6px solid #2563eb; padding: 1rem 1.25rem; background: #f8fbff; margin-bottom: 1.25rem; }
+    .tutorial-card { border: 1px solid #e5e7eb; border-radius: 10px; padding: 1rem 1rem 0.5rem; margin-bottom: 1rem; background: #fff; }
+    .kpi-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.75rem; margin: 0.75rem 0 1rem; }
+    .kpi { border: 1px solid #e5e7eb; border-radius: 8px; padding: 0.7rem; background: #fafafa; }
+    .kpi .label { font-size: 0.8rem; color: #6b7280; }
+    .kpi .value { font-size: 1.1rem; font-weight: 700; }
+    pre { white-space: pre-wrap; }
+    table { width: 100%; }
+  </style>
+</head>
+<body>
+  <div class="tutorial-wrap">
+    <section class="tutorial-hero">
+      <h1>Week 5 Guided Tutorial (Medical-EDA Dataset)</h1>
+      <p><strong>Focus:</strong> Descriptive Statistics, Summary Tables, and Data Segmentation (for lecture slides).</p>
+      <p><strong>Dataset:</strong> <code>Medical-EDA.csv / Medical-EDA.xlsx</code> from Lab 3.</p>
+    </section>
+
+    <section class="tutorial-card">
+      <h2>1) Setup and Data Cleaning (Clear Step-by-Step for Mac + Google Sheets)</h2>
+      <p><strong>Use this section first.</strong> If you are on a MacBook and using Google Sheets, follow <strong>Path B</strong>.</p>
+
+      <h3>Path A (Excel on Mac)</h3>
+      <ol>
+        <li>Open <code>Medical-EDA.xlsx</code> in Excel.</li>
+        <li>Click any cell in the data range, then press <code>Cmd + T</code> to create a Table.</li>
+        <li>In the Table Design tab, rename table to <code>MedicalEDA</code>.</li>
+        <li>Data cleaning:
+          <ul>
+            <li>Trim text in <code>Region</code>, <code>TreatmentGroup</code>, <code>DiagnosisGroup</code>.</li>
+            <li>Normalize labels: <code>a/b</code> to <code>A/B</code>; uppercase diagnosis names to proper case.</li>
+            <li>Set data types: LDL and AdherenceScore as Number.</li>
+            <li>Remove blank rows and exact duplicates.</li>
+          </ul>
+        </li>
+      </ol>
+
+      <h3>Path B (Google Sheets on MacBook)</h3>
+      <ol>
+        <li>Open Google Sheets -> <strong>File -> Import</strong> -> Upload <code>Medical-EDA.csv</code> (recommended) or <code>Medical-EDA.xlsx</code>.</li>
+        <li>After import, confirm row 1 is headers, then turn on filters: <strong>Data -> Create a filter</strong>.</li>
+        <li>Add helper columns to clean text (example assumes <code>Region</code> is in column E):<br>
+          <code>=PROPER(TRIM(E2))</code><br>
+          Do the same pattern for <code>TreatmentGroup</code> and <code>DiagnosisGroup</code>:
+          <ul>
+            <li>Treatment normalize example: <code>=UPPER(TRIM(H2))</code></li>
+            <li>Diagnosis normalize example: <code>=PROPER(TRIM(G2))</code></li>
+          </ul>
+        </li>
+        <li>Convert numeric-text fields to numbers:
+          <ul>
+            <li>LDL: <code>=VALUE(TRIM(K2))</code></li>
+            <li>AdherenceScore: <code>=VALUE(TRIM(N2))</code></li>
+          </ul>
+        </li>
+        <li>Copy helper-column formulas down, then copy -> paste special -> <strong>Values only</strong> back to original columns.</li>
+        <li>Remove duplicates: <strong>Data -> Data cleanup -> Remove duplicates</strong>.</li>
+        <li>Remove blank rows: filter by <code>PatientID</code> blank, delete visible blank rows, then clear filter.</li>
+      </ol>
+
+      <h3>Quick quality checks (both tools)</h3>
+      <ul>
+        <li><code>TreatmentGroup</code> should only contain <code>A</code> or <code>B</code>.</li>
+        <li><code>Region</code> should only contain <code>North, South, East, West</code> (plus optional missing if kept).</li>
+        <li><code>LDL</code> and <code>AdherenceScore</code> must be numeric (right-aligned in Sheets by default).</li>
+      </ul>
+      <p><strong>Cleaned example used below:</strong> 233 records (after filtering segmentation to valid regions only).</p>
+    </section>
+
+    <section class="tutorial-card">
+      <h2>2) Descriptive Statistics (Detailed Step-by-Step)</h2>
+      <p><strong>Goal:</strong> Build a descriptive-statistics table for <code>BaselineSBP</code>, <code>FollowupSBP</code>, <code>LDL</code>, and <code>BMI</code>.</p>
+
+      <h3>Step A - Build the summary table layout</h3>
+      <ol>
+        <li>Create a new sheet named <code>Descriptive_Stats</code>.</li>
+        <li>In row 1, enter:
+          <ul>
+            <li><code>A1 = Metric</code></li>
+            <li><code>B1 = BaselineSBP</code></li>
+            <li><code>C1 = FollowupSBP</code></li>
+            <li><code>D1 = LDL</code></li>
+            <li><code>E1 = BMI</code></li>
+          </ul>
+        </li>
+        <li>In column A, enter:
+          <ul>
+            <li><code>A2 = Mean</code></li>
+            <li><code>A3 = Median</code></li>
+            <li><code>A4 = Std Dev</code></li>
+            <li><code>A5 = Min</code></li>
+            <li><code>A6 = Max</code></li>
+            <li><code>A7 = N</code></li>
+          </ul>
+        </li>
+      </ol>
+
+      <h3>Step B - Google Sheets formulas (MacBook)</h3>
+      <p>If your cleaned data is in sheet <code>Medical-EDA</code> and columns are <code>I=BaselineSBP</code>, <code>J=FollowupSBP</code>, <code>K=LDL</code>, <code>M=BMI</code>:</p>
+      <pre><code># BaselineSBP (column B in summary)
+B2: =AVERAGE('Medical-EDA'!I2:I)
+B3: =MEDIAN('Medical-EDA'!I2:I)
+B4: =STDEV.S('Medical-EDA'!I2:I)
+B5: =MIN('Medical-EDA'!I2:I)
+B6: =MAX('Medical-EDA'!I2:I)
+B7: =COUNT('Medical-EDA'!I2:I)
+
+# FollowupSBP (column C)
+C2: =AVERAGE('Medical-EDA'!J2:J)
+C3: =MEDIAN('Medical-EDA'!J2:J)
+C4: =STDEV.S('Medical-EDA'!J2:J)
+C5: =MIN('Medical-EDA'!J2:J)
+C6: =MAX('Medical-EDA'!J2:J)
+C7: =COUNT('Medical-EDA'!J2:J)
+
+# LDL (column D)
+D2: =AVERAGE('Medical-EDA'!K2:K)
+D3: =MEDIAN('Medical-EDA'!K2:K)
+D4: =STDEV.S('Medical-EDA'!K2:K)
+D5: =MIN('Medical-EDA'!K2:K)
+D6: =MAX('Medical-EDA'!K2:K)
+D7: =COUNT('Medical-EDA'!K2:K)
+
+# BMI (column E)
+E2: =AVERAGE('Medical-EDA'!M2:M)
+E3: =MEDIAN('Medical-EDA'!M2:M)
+E4: =STDEV.S('Medical-EDA'!M2:M)
+E5: =MIN('Medical-EDA'!M2:M)
+E6: =MAX('Medical-EDA'!M2:M)
+E7: =COUNT('Medical-EDA'!M2:M)</code></pre>
+
+      <h3>Step C - Excel (Table) formulas</h3>
+      <p>If your dataset is an Excel Table named <code>MedicalEDA</code>, use these equivalents:</p>
+      <pre><code># BaselineSBP
+=AVERAGE(MedicalEDA[BaselineSBP])
+=MEDIAN(MedicalEDA[BaselineSBP])
+=STDEV.S(MedicalEDA[BaselineSBP])
+=MIN(MedicalEDA[BaselineSBP])
+=MAX(MedicalEDA[BaselineSBP])
+=COUNT(MedicalEDA[BaselineSBP])
+
+# FollowupSBP
+=AVERAGE(MedicalEDA[FollowupSBP])
+=MEDIAN(MedicalEDA[FollowupSBP])
+=STDEV.S(MedicalEDA[FollowupSBP])
+=MIN(MedicalEDA[FollowupSBP])
+=MAX(MedicalEDA[FollowupSBP])
+=COUNT(MedicalEDA[FollowupSBP])
+
+# LDL
+=AVERAGE(MedicalEDA[LDL])
+=MEDIAN(MedicalEDA[LDL])
+=STDEV.S(MedicalEDA[LDL])
+=MIN(MedicalEDA[LDL])
+=MAX(MedicalEDA[LDL])
+=COUNT(MedicalEDA[LDL])
+
+# BMI
+=AVERAGE(MedicalEDA[BMI])
+=MEDIAN(MedicalEDA[BMI])
+=STDEV.S(MedicalEDA[BMI])
+=MIN(MedicalEDA[BMI])
+=MAX(MedicalEDA[BMI])
+=COUNT(MedicalEDA[BMI])</code></pre>
+
+      <h3>Step D - Format and interpret</h3>
+      <ol>
+        <li>Format <code>B2:E6</code> to 2 decimals, and <code>B7:E7</code> as whole numbers.</li>
+        <li>Add a short note below the table:
+          <ul>
+            <li>Compare baseline vs follow-up SBP means.</li>
+            <li>Comment on spread (Std Dev) and outliers (Min/Max).</li>
+          </ul>
+        </li>
+      </ol>
+
+      <h3>Expected outputs (from this dataset)</h3>
+      <div class="kpi-grid">
+        <div class="kpi"><div class="label">Mean BaselineSBP</div><div class="value">139.22</div></div>
+        <div class="kpi"><div class="label">Mean FollowupSBP</div><div class="value">127.48</div></div>
+        <div class="kpi"><div class="label">Mean LDL</div><div class="value">138.83</div></div>
+        <div class="kpi"><div class="label">Mean BMI</div><div class="value">27.81</div></div>
+      </div>
+
+      <table>
+        <thead>
+          <tr><th>Metric</th><th>BaselineSBP</th><th>FollowupSBP</th><th>LDL</th><th>BMI</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Mean</td><td>139.22</td><td>127.48</td><td>138.83</td><td>27.81</td></tr>
+          <tr><td>Median</td><td>139.15</td><td>128.15</td><td>141.55</td><td>27.85</td></tr>
+          <tr><td>Std Dev</td><td>15.20</td><td>16.20</td><td>25.76</td><td>4.84</td></tr>
+          <tr><td>Min</td><td>78.40</td><td>95.00</td><td>63.40</td><td>13.80</td></tr>
+          <tr><td>Max</td><td>187.90</td><td>175.80</td><td>212.60</td><td>52.50</td></tr>
+          <tr><td>N</td><td>240</td><td>240</td><td>240</td><td>240</td></tr>
+        </tbody>
+      </table>
+      <p><strong>Slide message:</strong> Follow-up SBP is lower than baseline on average, suggesting improvement after treatment exposure.</p>
+    </section>
+
+    <section class="tutorial-card">
+      <h2>3) Summary Tables (Detailed Step-by-Step)</h2>
+      <h3>Step A - Mean outcomes by TreatmentGroup</h3>
+      <ol>
+        <li>Create a sheet named <code>Summary_Tables</code>.</li>
+        <li>Create this small table:
+          <ul>
+            <li><code>A1 = TreatmentGroup</code>, <code>B1 = Mean FollowupSBP</code>, <code>C1 = Mean LengthOfStay</code></li>
+            <li><code>A2 = A</code>, <code>A3 = B</code></li>
+          </ul>
+        </li>
+        <li>Fill formulas for row A and copy down to row B.</li>
+      </ol>
+
+      <h4>Google Sheets (MacBook) formulas</h4>
+      <pre><code>B2: =AVERAGEIFS('Medical-EDA'!J2:J,'Medical-EDA'!H2:H,$A2)
+C2: =AVERAGEIFS('Medical-EDA'!O2:O,'Medical-EDA'!H2:H,$A2)</code></pre>
+      <p><em>Assumption:</em> <code>H=TreatmentGroup</code>, <code>J=FollowupSBP</code>, <code>O=LengthOfStay</code>.</p>
+
+      <h4>Excel Table formulas</h4>
+      <pre><code>B2: =AVERAGEIFS(MedicalEDA[FollowupSBP], MedicalEDA[TreatmentGroup], $A2)
+C2: =AVERAGEIFS(MedicalEDA[LengthOfStay], MedicalEDA[TreatmentGroup], $A2)</code></pre>
+
+      <p>Expected values:</p>
+
+      <table>
+        <thead><tr><th>TreatmentGroup</th><th>Mean FollowupSBP</th><th>Mean LengthOfStay</th></tr></thead>
+        <tbody>
+          <tr><td>A</td><td>124.92</td><td>4.96</td></tr>
+          <tr><td>B</td><td>135.99</td><td>6.05</td></tr>
+        </tbody>
+      </table>
+      <p><strong>Slide message:</strong> Group A has lower follow-up SBP and shorter average stay than Group B.</p>
+
+      <h3>Step B - Region x Diagnosis count matrix</h3>
+      <ol>
+        <li>Create matrix headers:
+          <ul>
+            <li>Rows (<code>A6:A9</code>): East, North, South, West</li>
+            <li>Columns (<code>B5:D5</code>): Diabetes, Hypertension, Respiratory</li>
+          </ul>
+        </li>
+        <li>In <code>B6</code>, use one formula and copy right/down for the full matrix.</li>
+      </ol>
+
+      <h4>Google Sheets formula</h4>
+      <pre><code>B6: =COUNTIFS('Medical-EDA'!E2:E,$A6,'Medical-EDA'!G2:G,B$5)</code></pre>
+      <p><em>Assumption:</em> <code>E=Region</code>, <code>G=DiagnosisGroup</code>.</p>
+
+      <h4>Excel Table formula</h4>
+      <pre><code>B6: =COUNTIFS(MedicalEDA[Region], $A6, MedicalEDA[DiagnosisGroup], B$5)</code></pre>
+      <p>Copy from <code>B6</code> across to <code>D6</code>, then down to row 9.</p>
+    </section>
+
+    <section class="tutorial-card">
+      <h2>4) Data Segmentation with PivotTables (Detailed Step-by-Step)</h2>
+      <h3>Path A - Excel (Mac) PivotTables</h3>
+      <ol>
+        <li>Click any cell in <code>MedicalEDA</code>.</li>
+        <li><code>Insert -> PivotTable</code> -> New Worksheet -> OK.</li>
+        <li>In PivotTable Fields, drag fields exactly as shown in each pivot recipe below.</li>
+        <li>For readmission: Value Field Settings -> Average, then Number Format -> Percentage.</li>
+        <li>Rename sheets: <code>Pivot1_Count</code>, <code>Pivot2_MeanSBP</code>, <code>Pivot3_Readmit</code>.</li>
+      </ol>
+
+      <h3>Path B - Google Sheets (Mac) Pivot tables</h3>
+      <ol>
+        <li>Select all cleaned data in <code>Medical-EDA</code>.</li>
+        <li><code>Insert -> Pivot table</code> -> New sheet.</li>
+        <li>Use Pivot table editor (right panel):
+          <ul>
+            <li>Add <strong>Rows</strong>, <strong>Columns</strong>, <strong>Values</strong> exactly as listed below.</li>
+            <li>For readmission, set <strong>Summarize by = AVERAGE</strong>, then format output as percent.</li>
+          </ul>
+        </li>
+      </ol>
+
+      <h3>Pivot 1: Region x Diagnosis (Counts)</h3>
+      <ul>
+        <li>Rows: <code>Region</code></li>
+        <li>Columns: <code>DiagnosisGroup</code></li>
+        <li>Values: Count of <code>PatientID</code></li>
+      </ul>
+      <table>
+        <thead><tr><th>Region</th><th>Diabetes</th><th>Hypertension</th><th>Respiratory</th></tr></thead>
+        <tbody>
+          <tr><td>East</td><td>19</td><td>20</td><td>19</td></tr>
+          <tr><td>North</td><td>20</td><td>20</td><td>19</td></tr>
+          <tr><td>South</td><td>20</td><td>20</td><td>19</td></tr>
+          <tr><td>West</td><td>20</td><td>18</td><td>19</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Pivot 2: Region x Diagnosis (Mean FollowupSBP)</h3>
+      <ul>
+        <li>Rows: <code>Region</code></li>
+        <li>Columns: <code>DiagnosisGroup</code></li>
+        <li>Values: Average of <code>FollowupSBP</code></li>
+      </ul>
+      <table>
+        <thead><tr><th>Region</th><th>Diabetes</th><th>Hypertension</th><th>Respiratory</th></tr></thead>
+        <tbody>
+          <tr><td>East</td><td>119.34</td><td>136.70</td><td>123.43</td></tr>
+          <tr><td>North</td><td>124.54</td><td>128.69</td><td>129.39</td></tr>
+          <tr><td>South</td><td>122.70</td><td>142.90</td><td>120.16</td></tr>
+          <tr><td>West</td><td>123.42</td><td>135.29</td><td>124.68</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Pivot 3: Readmission Rate by Treatment and Sex</h3>
+      <ul>
+        <li>Rows: <code>TreatmentGroup</code></li>
+        <li>Columns: <code>Sex</code></li>
+        <li>Values: Average of <code>Readmission30d</code> (format as %)</li>
+      </ul>
+      <table>
+        <thead><tr><th>TreatmentGroup</th><th>Female</th><th>Male</th></tr></thead>
+        <tbody>
+          <tr><td>A</td><td>14.3%</td><td>16.7%</td></tr>
+          <tr><td>B</td><td>21.1%</td><td>26.3%</td></tr>
+        </tbody>
+      </table>
+      <p><strong>Slide message:</strong> Readmission is higher in Group B for both sexes.</p>
+
+      <h3>Interpretation checklist (for slides)</h3>
+      <ol>
+        <li>State one count pattern from Pivot 1 (distribution by region/diagnosis).</li>
+        <li>State one clinical mean pattern from Pivot 2 (which subgroup has highest/lowest FollowupSBP).</li>
+        <li>State one risk pattern from Pivot 3 (which treatment has higher readmission).</li>
+      </ol>
+    </section>
+
+    <section class="tutorial-card">
+      <h2>5) Visualization Guide (Step-by-Step)</h2>
+      <h3>Chart A: Baseline vs Followup SBP (Descriptive)</h3>
+      <ol>
+        <li>From <code>Descriptive_Stats</code>, select Mean values for BaselineSBP and FollowupSBP.</li>
+        <li>Insert -> Column Chart -> Clustered Column.</li>
+        <li>Title: <code>Mean SBP: Baseline vs Follow-up</code>.</li>
+        <li>Add data labels and set y-axis title to <code>mmHg</code>.</li>
+      </ol>
+
+      <h3>Chart B: Mean Outcomes by Treatment (Summary Table)</h3>
+      <ol>
+        <li>From <code>Summary_Tables</code>, select TreatmentGroup with Mean FollowupSBP and Mean LengthOfStay.</li>
+        <li>Insert -> Combo Chart:
+          <ul>
+            <li>FollowupSBP = Clustered Column (primary axis)</li>
+            <li>LengthOfStay = Line (secondary axis)</li>
+          </ul>
+        </li>
+        <li>Title: <code>Treatment Comparison: SBP and Length of Stay</code>.</li>
+      </ol>
+
+      <h3>Chart C: Readmission Rate by Treatment and Sex (Segmentation)</h3>
+      <ol>
+        <li>Use Pivot 3 table.</li>
+        <li>Insert -> PivotChart -> Clustered Column.</li>
+        <li>Format y-axis as Percentage.</li>
+        <li>Title: <code>30-day Readmission Rate by Treatment and Sex</code>.</li>
+      </ol>
+
+      <h3>Slide design tips</h3>
+      <ul>
+        <li>One key message per chart title.</li>
+        <li>Use consistent colors: Treatment A (blue), Treatment B (orange).</li>
+        <li>Keep gridlines light and add data labels only where helpful.</li>
+      </ul>
+    </section>
+
+    <section class="tutorial-card">
+      <h2>6) Ready-to-Use Slide Narrative</h2>
+      <ol>
+        <li><strong>Descriptive:</strong> Baseline SBP mean is 139.22, follow-up is 127.48 (overall reduction).</li>
+        <li><strong>Summary table:</strong> Treatment A has better averages (FollowupSBP 124.92 vs 135.99; LOS 4.96 vs 6.05).</li>
+        <li><strong>Segmentation:</strong> By region-diagnosis, South-Hypertension has the highest mean FollowupSBP (142.90).</li>
+        <li><strong>Risk segmentation:</strong> Readmission rate is higher in Treatment B across sexes.</li>
+      </ol>
+    </section>
+
+    <section class="tutorial-card">
+      <h2>7) Optional Practice Tasks for Students</h2>
+      <ul>
+        <li>Reproduce all tables above using formulas/PivotTables.</li>
+        <li>Add one more segment: by <code>HospitalUnit</code> and <code>DiagnosisGroup</code>.</li>
+        <li>Create the 3 charts in Section 5 and write one evidence-based insight per chart.</li>
+      </ul>
+    </section>
+
+    <section class="tutorial-card">
+      <h2>8) Inferential Add-on (CI &amp; p-values)</h2>
+      <p><strong>Goal:</strong> Add one inferential block to support your descriptive findings.</p>
+
+      <h3>8.1 95% CI for mean FollowupSBP (overall)</h3>
+      <ol>
+        <li>Create a sheet <code>Inferential</code>.</li>
+        <li>Set labels in column A: Mean, SD, N, t*, Margin Error, CI Lower, CI Upper.</li>
+        <li>Compute values for <code>FollowupSBP</code> using formulas below.</li>
+      </ol>
+
+      <h4>Google Sheets (MacBook)</h4>
+      <pre><code>B2 (Mean): =AVERAGE('Medical-EDA'!J2:J)
+B3 (SD):   =STDEV.S('Medical-EDA'!J2:J)
+B4 (N):    =COUNT('Medical-EDA'!J2:J)
+B5 (t*):   =T.INV.2T(0.05,B4-1)
+B6 (ME):   =B5*B3/SQRT(B4)
+B7 (CI L): =B2-B6
+B8 (CI U): =B2+B6</code></pre>
+      <p><em>Assumption:</em> <code>J = FollowupSBP</code>.</p>
+
+      <h4>Excel Table version</h4>
+      <pre><code>B2: =AVERAGE(MedicalEDA[FollowupSBP])
+B3: =STDEV.S(MedicalEDA[FollowupSBP])
+B4: =COUNT(MedicalEDA[FollowupSBP])
+B5: =T.INV.2T(0.05,B4-1)
+B6: =B5*B3/SQRT(B4)
+B7: =B2-B6
+B8: =B2+B6</code></pre>
+
+      <h3>8.2 95% CI by Treatment Group (A vs B)</h3>
+      <ol>
+        <li>Create two filtered ranges for FollowupSBP: one for A and one for B.</li>
+        <li>Repeat 8.1 formulas separately for each group.</li>
+      </ol>
+      <p><strong>Slide use:</strong> compare the two CI centers and interval overlap.</p>
+
+      <h3>8.3 p-value for difference in means (A vs B)</h3>
+      <ol>
+        <li>Place Treatment A FollowupSBP values in one column and Treatment B in another.</li>
+        <li>Use a two-sample t-test (two-tailed, unequal variance).</li>
+      </ol>
+
+      <h4>Formula</h4>
+      <pre><code>=T.TEST(rangeA, rangeB, 2, 3)</code></pre>
+      <ul>
+        <li><code>2</code> = two-tailed test</li>
+        <li><code>3</code> = unequal variances (Welch test)</li>
+      </ul>
+
+      <h3>8.4 Optional categorical p-value (Readmission vs Treatment)</h3>
+      <ol>
+        <li>Create a 2x2 observed table: <code>TreatmentGroup</code> x <code>Readmission30d</code>.</li>
+        <li>Compute expected counts (or use analysis add-on/workflow).</li>
+        <li>Run chi-square test:</li>
+      </ol>
+      <pre><code>=CHISQ.TEST(observed_range, expected_range)</code></pre>
+
+      <h3>8.5 Decision and interpretation template (for slides)</h3>
+      <ul>
+        <li>If <code>p &lt; 0.05</code>: “There is statistical evidence of a difference between groups.”</li>
+        <li>If <code>p &gt;= 0.05</code>: “No statistically significant difference detected at alpha = 0.05.”</li>
+        <li>Always pair p-value with effect size direction and CI interpretation.</li>
+      </ul>
+
+      <p><strong>Ready-to-use sentence:</strong> “Treatment A showed lower mean FollowupSBP than Treatment B; the estimated mean difference was statistically significant (p &lt; 0.05), with 95% CI supporting lower follow-up pressure in Group A.”</p>
+    </section>
+  </div>
+</body>
+</html>
