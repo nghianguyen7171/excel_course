@@ -34,7 +34,7 @@ This lab uses a synthetic **Medical EDA** dataset (patient-level records) create
 
 ### Dataset Files
 
-1. **Google Drive (recommended):** [**Lab 2/3 Dataset Folder**](https://drive.google.com/drive/folders/1F92S9FEN5SWvUQsEXIs9c1J4q90uARCm?usp=sharing)
+1. **Google Drive (recommended):** [**Lab 2/3 Dataset Folder**](https://drive.google.com/drive/folders/1y-NlhblrVs3lUUQgfXCnbG2lBJWeRkBE?usp=sharing)
 2. **Course website (alternative):**
    - [**Medical-EDA.csv**]({{ site.baseurl }}/datasets/files/Medical-EDA.csv)
    - [**Medical-EDA.xlsx**]({{ site.baseurl }}/datasets/files/Medical-EDA.xlsx)
