@@ -1,6 +1,7 @@
 ---
 title: Lab 3 Instructions - Medical EDA, CI, and p-values
 layout: default
+permalink: /lab-3-instructions-withkeys.html
 ---
 
 <div class="lab-instructions-page">
