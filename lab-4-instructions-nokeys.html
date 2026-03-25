@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab-4-Instructions-NoKeys</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        h1, h2, h3 { color: #2c3e50; }
+        h1 { border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        h2 { border-bottom: 1px solid #eee; padding-bottom: 5px; margin-top: 2rem; }
+        code {
+            background-color: #f8f9fa;
+            padding: 0.2em 0.4em;
+            border-radius: 3px;
+            font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+            font-size: 85%;
+        }
+        pre code {
+            background-color: transparent;
+            padding: 0;
+            border-radius: 0;
+        }
+        pre {
+            background-color: #f8f9fa;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px 12px;
+            text-align: left;
+        }
+        th { background-color: #f8f9fa; }
+        blockquote {
+            border-left: 4px solid #3498db;
+            margin: 0;
+            padding-left: 1rem;
+            color: #666;
+            background-color: #f8f9fa;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lab 4: Survival Analysis with Excel</h1>
+<h2>Overview</h2>
+<p>In this lab you will apply the survival analysis concepts from the Week 7 lecture to a <strong>multivariate clinical dataset</strong> (<code>Lab4-Multivariate-Clinical.csv</code>, ~290 patients). You will work through the full analytical pipeline: importing and understanding the data, exploring covariates with PivotTables, building life tables, plotting survival curves, comparing treatment groups, and interpreting the results.</p>
+<p><strong>Estimated time:</strong> 120 minutes<br />
+<strong>Tools:</strong> Microsoft Excel (2016 or newer)</p>
+<hr />
+<h2>Dataset</h2>
+<p><strong>File:</strong> <code>Lab4-Multivariate-Clinical.csv</code></p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Patient_ID</code></td>
+<td>Text</td>
+<td>Unique patient identifier</td>
+</tr>
+<tr>
+<td><code>Age</code></td>
+<td>Number</td>
+<td>Age at enrollment (years)</td>
+</tr>
+<tr>
+<td><code>Gender</code></td>
+<td>Text</td>
+<td>Female / Male</td>
+</tr>
+<tr>
+<td><code>Treatment_Arm</code></td>
+<td>Text</td>
+<td>Standard / Intensive</td>
+</tr>
+<tr>
+<td><code>Severity_Score</code></td>
+<td>Number</td>
+<td>Disease severity at baseline (0–100; higher = more severe)</td>
+</tr>
+<tr>
+<td><code>Baseline_CRP</code></td>
+<td>Number</td>
+<td>C-Reactive Protein at baseline (mg/L; inflammatory biomarker)</td>
+</tr>
+<tr>
+<td><code>Region_Clinic</code></td>
+<td>Text</td>
+<td>North / Central / South</td>
+</tr>
+<tr>
+<td><code>Time_Months</code></td>
+<td>Number</td>
+<td>Follow-up time in months</td>
+</tr>
+<tr>
+<td><code>Event_Status</code></td>
+<td>Number</td>
+<td><strong>1</strong> = event occurred; <strong>0</strong> = censored (no event by end of follow-up)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Clinical context:</strong> Patients with a chronic condition were randomized to Standard or Intensive treatment. <code>Time_Months</code> records how long each patient was followed. <code>Event_Status = 1</code> means the outcome of interest was observed; <code>0</code> means the patient was still event-free when follow-up ended (right-censored).</p>
+<hr />
+<h2>Part 1: Import &amp; Prepare (10 min)</h2>
+<h3>Task 1.1 — Import the CSV</h3>
+<ol>
+<li>Open Excel. Go to <strong>Data &gt; Get Data &gt; From Text/CSV</strong> (or <strong>Data &gt; From Text</strong>).</li>
+<li>Select <code>Lab4-Multivariate-Clinical.csv</code>. Preview the data to confirm columns.</li>
+<li>Click <strong>Load</strong> to import into a new worksheet.</li>
+<li>Select any cell in the imported data. Press <strong>Ctrl+T</strong> (or <strong>Insert &gt; Table</strong>) to convert to an Excel Table. Name it <code>Tbl_Clinical</code> (<strong>Table Design &gt; Table Name</strong>).</li>
+</ol>
+<h3>Task 1.2 — Quick data inspection</h3>
+<p>On a new sheet named <strong>Summary</strong>, answer:</p>
+<ol>
+<li>How many patients are in the dataset? <code>=COUNTA(Tbl_Clinical[Patient_ID])</code></li>
+<li>How many experienced the event? <code>=COUNTIF(Tbl_Clinical[Event_Status], 1)</code></li>
+<li>How many were censored? <code>=COUNTIF(Tbl_Clinical[Event_Status], 0)</code></li>
+<li>What is the overall event rate (%)? <code>= Events / Total * 100</code></li>
+</ol>
+<hr />
+<h2>Part 2: Exploratory Covariate Analysis (20 min)</h2>
+<p><strong>Goal:</strong> Before building survival curves, understand who is in the study. Covariates can influence outcomes and are essential context.</p>
+<h3>Task 2.1 — Patient distribution by Treatment and Gender</h3>
+<ol>
+<li>Insert a <strong>PivotTable</strong> on a new sheet <strong>Exploration</strong>.</li>
+<li><strong>Rows:</strong> <code>Treatment_Arm</code>. <strong>Columns:</strong> <code>Gender</code>. <strong>Values:</strong> Count of <code>Patient_ID</code>.</li>
+<li><strong>Question:</strong> Are the treatment arms roughly balanced by gender?</li>
+</ol>
+<h3>Task 2.2 — Baseline characteristics by Treatment Arm</h3>
+<ol>
+<li>Insert another PivotTable (same sheet or new).</li>
+<li><strong>Rows:</strong> <code>Treatment_Arm</code>.</li>
+<li><strong>Values:</strong> Average of <code>Age</code>, Average of <code>Severity_Score</code>, Average of <code>Baseline_CRP</code>.</li>
+<li>Format the averages to 1 decimal place.</li>
+<li><strong>Question:</strong> Are the two treatment arms similar at baseline, or is one group older/sicker?</li>
+</ol>
+<h3>Task 2.3 — Regional CRP variation</h3>
+<ol>
+<li>PivotTable: <strong>Rows</strong> = <code>Region_Clinic</code>, <strong>Values</strong> = Average of <code>Baseline_CRP</code>.</li>
+<li>Insert a <strong>Bar Chart</strong> from this PivotTable (<strong>Insert &gt; Bar Chart</strong>).</li>
+<li>Apply clean formatting: remove gridlines, add a descriptive title, hide field buttons.</li>
+<li><strong>Question:</strong> Which region has the highest baseline inflammation?</li>
+</ol>
+<h3>Task 2.4 — Brief written interpretation</h3>
+<p>Write <strong>3–4 sentences</strong> summarizing what you learned from Tasks 2.1–2.3. Are the groups comparable? Any imbalances worth noting?</p>
+<hr />
+<h2>Part 3: Life Table — Overall Cohort (25 min)</h2>
+<p><strong>Goal:</strong> Build a grouped life table by hand in Excel and calculate cumulative survival.</p>
+<h3>Task 3.1 — Set up the life table</h3>
+<ol>
+<li>Create a new sheet named <strong>Survival</strong>.</li>
+<li>Build a table with the following column headers:</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Interval</th>
+<th>Start</th>
+<th>End</th>
+<th>N_at_Risk</th>
+<th>Events</th>
+<th>Censored</th>
+<th>Interval_Survival</th>
+<th>Cumulative_Survival</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>Define <strong>5 intervals</strong>: 0–12, 12–24, 24–36, 36–48, 48–60 months.</li>
+</ol>
+<h3>Task 3.2 — Count Events and Censored per interval</h3>
+<p>For each interval, use <code>COUNTIFS</code> to count:</p>
+<ul>
+<li>
+<p><strong>Events</strong> in interval [Start, End]:<br />
+<code>=COUNTIFS(Tbl_Clinical[Time_Months], "&gt;"&amp;Start, Tbl_Clinical[Time_Months], "&lt;="&amp;End, Tbl_Clinical[Event_Status], 1)</code></p>
+</li>
+<li>
+<p><strong>Censored</strong> in interval [Start, End]:<br />
+<code>=COUNTIFS(Tbl_Clinical[Time_Months], "&gt;"&amp;Start, Tbl_Clinical[Time_Months], "&lt;="&amp;End, Tbl_Clinical[Event_Status], 0)</code></p>
+</li>
+</ul>
+<p><em>For the first interval (0–12), use <code>"&gt;="&amp;0</code> or <code>"&gt;=0"</code> for the lower bound.</em></p>
+<h3>Task 3.3 — Calculate N at Risk</h3>
+<ul>
+<li><strong>First interval:</strong> <code>N_at_Risk</code> = total number of patients.</li>
+<li><strong>Each subsequent interval:</strong> <code>= Previous N_at_Risk − Previous Events − Previous Censored</code>.</li>
+</ul>
+<h3>Task 3.4 — Calculate survival probabilities</h3>
+<ul>
+<li><strong>Interval Survival</strong> = <code>1 − (Events / N_at_Risk)</code></li>
+<li><strong>Cumulative Survival:</strong></li>
+<li>First interval: same as Interval Survival.</li>
+<li>Each subsequent interval: <code>= Previous Cumulative_Survival × Current Interval_Survival</code></li>
+</ul>
+<h3>Task 3.5 — Verify your table</h3>
+<ul>
+<li>Cumulative Survival should <strong>start near 1.0</strong> and <strong>decrease or stay flat</strong> — it should <strong>never increase</strong>.</li>
+<li>The sum of all Events + Censored across all intervals should equal the total patient count.</li>
+</ul>
+<hr />
+<h2>Part 4: Survival Curve — Overall (10 min)</h2>
+<h3>Task 4.1 — Plot the overall survival curve</h3>
+<ol>
+<li>Select the <strong>End</strong> (or midpoint) column as X and <strong>Cumulative_Survival</strong> as Y.</li>
+<li><strong>Insert &gt; Scatter &gt; Scatter with Straight Lines and Markers</strong>.</li>
+<li>Format:</li>
+<li>Y-axis: set maximum to <strong>1.0</strong> (or 100%). Minimum to <strong>0</strong>.</li>
+<li>Title: <strong>"Overall Survival Curve (Life Table Method)"</strong>.</li>
+<li>X-axis label: <strong>"Time (Months)"</strong>.</li>
+<li>Y-axis label: <strong>"Cumulative Survival Probability"</strong>.</li>
+<li>Remove unnecessary gridlines for a cleaner look.</li>
+</ol>
+<hr />
+<h2>Part 5: Stratified Survival — Treatment Comparison (30 min)</h2>
+<p><strong>Goal:</strong> Compare survival between Standard and Intensive treatment arms.</p>
+<h3>Task 5.1 — Build two stratified life tables</h3>
+<p>On the <strong>Survival</strong> sheet (or a new sheet <strong>Stratified</strong>), create <strong>two</strong> life tables side by side:</p>
+<ul>
+<li><strong>Life Table A:</strong> Standard arm only.</li>
+<li><strong>Life Table B:</strong> Intensive arm only.</li>
+</ul>
+<p>Use the same intervals (0–12, 12–24, 24–36, 36–48, 48–60).</p>
+<p>For the COUNTIFS formulas, add one more criterion:<br />
+<code>Tbl_Clinical[Treatment_Arm], "Standard"</code> (or <code>"Intensive"</code>).</p>
+<p>Calculate <code>N_at_Risk</code>, <code>Events</code>, <code>Censored</code>, <code>Interval_Survival</code>, and <code>Cumulative_Survival</code> for each arm separately.</p>
+<h3>Task 5.2 — Plot both curves on one chart</h3>
+<ol>
+<li>Create a chart with <strong>two series</strong>:</li>
+<li>Series 1: Standard arm Cumulative_Survival (use one color, e.g., blue).</li>
+<li>Series 2: Intensive arm Cumulative_Survival (use another color, e.g., orange).</li>
+<li><strong>Insert &gt; Scatter &gt; Scatter with Straight Lines and Markers</strong>.</li>
+<li>Format:</li>
+<li>Add a <strong>legend</strong> identifying each arm.</li>
+<li>Title: <strong>"Survival by Treatment Arm"</strong>.</li>
+<li>Same axis formatting as Part 4.</li>
+</ol>
+<h3>Task 5.3 — Interpret the comparison</h3>
+<p>Write <strong>2–3 sentences</strong> answering:
+1. Which treatment arm appears to have better survival?
+2. At what time point does the difference become most visible?
+3. Can we conclude one treatment is statistically better from this visual alone? Why or why not?</p>
+<hr />
+<h2>Part 6: Multivariate Scatter — Severity vs. Time (15 min)</h2>
+<p><strong>Goal:</strong> Visualize the relationship between disease severity and follow-up time, distinguishing events from censored observations.</p>
+<h3>Task 6.1 — Prepare data for two-series scatter</h3>
+<ol>
+<li>On the <strong>Tbl_Clinical</strong> table, add a helper column: <strong>Is_Event</strong> = <code>=IF([@Event_Status]=1, "Event", "Censored")</code>.</li>
+<li>Alternatively, work with two filtered ranges.</li>
+</ol>
+<h3>Task 6.2 — Create the scatter plot</h3>
+<ol>
+<li><strong>X-axis:</strong> <code>Severity_Score</code>. <strong>Y-axis:</strong> <code>Time_Months</code>.</li>
+<li>Plot <strong>two series</strong> with different markers/colors:</li>
+<li><strong>Events</strong> (Event_Status = 1): solid markers.</li>
+<li><strong>Censored</strong> (Event_Status = 0): open or lighter markers.</li>
+<li>Title: <strong>"Severity Score vs. Follow-up Time by Event Status"</strong>.</li>
+</ol>
+<h3>Task 6.3 — Interpret</h3>
+<p>Write <strong>2–3 sentences</strong>:
+1. Is there a visible relationship between severity and time?
+2. Where do the censored observations tend to cluster? What does this tell you?</p>
+<hr />
+<h2>Part 7: Summary &amp; Reflection (10 min)</h2>
+<p>Write a <strong>short memo</strong> (half a page to one page) covering:</p>
+<ol>
+<li><strong>Cohort summary:</strong> How many patients, event rate, key baseline differences between arms.</li>
+<li><strong>Overall survival:</strong> What does the overall curve show? At what time point does survival drop below 50%?</li>
+<li><strong>Treatment comparison:</strong> Which arm looks better visually? How large is the gap?</li>
+<li><strong>Limitations:</strong> Why can't we draw a firm statistical conclusion from life tables alone? (Hint: no formal test like log-rank or Cox regression — that comes in Week 11.)</li>
+<li><strong>Censoring awareness:</strong> How does censoring affect interpretation?</li>
+</ol>
+<hr />
+<h2>Deliverables</h2>
+<p>Submit <strong>one workbook</strong> <code>StudentName_ID_Lab4.xlsx</code> containing:</p>
+<table>
+<thead>
+<tr>
+<th>Sheet</th>
+<th>Content</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Tbl_Clinical</code> (or <code>Data</code>)</td>
+<td>Imported dataset as Excel Table</td>
+</tr>
+<tr>
+<td><code>Summary</code></td>
+<td>Quick counts (total, events, censored, event rate)</td>
+</tr>
+<tr>
+<td><code>Exploration</code></td>
+<td>PivotTables (Tasks 2.1–2.3) + bar chart + written interpretation</td>
+</tr>
+<tr>
+<td><code>Survival</code></td>
+<td>Overall life table + overall survival curve</td>
+</tr>
+<tr>
+<td><code>Stratified</code></td>
+<td>Two stratified life tables + comparison chart + interpretation</td>
+</tr>
+<tr>
+<td><code>Scatter</code></td>
+<td>Severity vs. Time scatter + interpretation</td>
+</tr>
+</tbody>
+</table>
+<p>Plus the <strong>short memo</strong> (in a text box on a sheet, or as a separate Word/PDF upload).</p>
+<p>Submit via the LMS.</p>
+<hr />
+<h2>Academic integrity</h2>
+<p>Use your own Excel file; course datasets are for learning only.</p>
+</body>
+</html>
