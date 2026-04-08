@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab-4-Instructions-WithKeys</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        h1, h2, h3 { color: #2c3e50; }
+        h1 { border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        h2 { border-bottom: 1px solid #eee; padding-bottom: 5px; margin-top: 2rem; }
+        code {
+            background-color: #f8f9fa;
+            padding: 0.2em 0.4em;
+            border-radius: 3px;
+            font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+            font-size: 85%;
+        }
+        pre code {
+            background-color: transparent;
+            padding: 0;
+            border-radius: 0;
+        }
+        pre {
+            background-color: #f8f9fa;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px 12px;
+            text-align: left;
+        }
+        th { background-color: #f8f9fa; }
+        blockquote {
+            border-left: 4px solid #3498db;
+            margin: 0;
+            padding-left: 1rem;
+            color: #666;
+            background-color: #f8f9fa;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lab 4: Survival Analysis with Excel (INSTRUCTOR ANSWER KEY)</h1>
+<h2>Overview</h2>
+<p>This lab focuses entirely on <strong>survival analysis</strong> using <code>Lab4-Multivariate-Clinical.csv</code> (~290 patients, multivariate clinical trial data). Students import data, explore covariates, build life tables, plot survival curves, compare treatment arms, and interpret results.</p>
+<p><strong>Estimated time:</strong> 120 minutes</p>
+<hr />
+<h2>Part 1: Import &amp; Prepare — Notes</h2>
+<h3>Task 1.1 — Import</h3>
+<ul>
+<li>Students should use <strong>Data &gt; Get Data &gt; From Text/CSV</strong>. Older Excel may use <strong>Data &gt; From Text</strong> wizard.</li>
+<li><strong>Common error:</strong> Not converting to Table. Remind them: <code>Ctrl+T</code> → name it <code>Tbl_Clinical</code>.</li>
+</ul>
+<h3>Task 1.2 — Quick inspection</h3>
+<blockquote>
+<p><strong>Instructor Key:</strong></p>
+<p>The dataset has ~290 rows (exact count depends on generator seed; current version = 290 patients).</p>
+<ul>
+<li>Total patients: <code>=COUNTA(Tbl_Clinical[Patient_ID])</code> → <strong>290</strong></li>
+<li>Events: <code>=COUNTIF(Tbl_Clinical[Event_Status], 1)</code> → approximately <strong>192–198</strong> (varies with seed)</li>
+<li>Censored: <code>=COUNTIF(Tbl_Clinical[Event_Status], 0)</code> → approximately <strong>92–98</strong></li>
+<li>Event rate: ~67%</li>
+</ul>
+<p><strong>Grading:</strong> Full credit if formulas are correct and numbers are consistent with the data. Exact counts may differ slightly if students imported differently or have header row issues.</p>
+</blockquote>
+<hr />
+<h2>Part 2: Exploratory Covariate Analysis — Keys</h2>
+<h3>Task 2.1 — Treatment × Gender</h3>
+<blockquote>
+<p><strong>Instructor Key:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Treatment_Arm</th>
+<th>Female</th>
+<th>Male</th>
+<th>Grand Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Standard</td>
+<td>~70–75</td>
+<td>~65–75</td>
+<td>~140–145</td>
+</tr>
+<tr>
+<td>Intensive</td>
+<td>~65–75</td>
+<td>~70–75</td>
+<td>~140–150</td>
+</tr>
+<tr>
+<td>Grand Total</td>
+<td>~140</td>
+<td>~150</td>
+<td>290</td>
+</tr>
+</tbody>
+</table>
+<p>Arms should be roughly balanced. Minor imbalances are expected from randomization.</p>
+</blockquote>
+<h3>Task 2.2 — Baseline characteristics</h3>
+<blockquote>
+<p><strong>Instructor Key:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Treatment_Arm</th>
+<th>Avg Age</th>
+<th>Avg Severity_Score</th>
+<th>Avg Baseline_CRP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Standard</td>
+<td>~59–61</td>
+<td>~50–54</td>
+<td>~11–14</td>
+</tr>
+<tr>
+<td>Intensive</td>
+<td>~59–61</td>
+<td>~50–54</td>
+<td>~11–14</td>
+</tr>
+</tbody>
+</table>
+<p>Both arms should be similar at baseline (randomized trial). If large differences appear, students should note them as potential confounders.</p>
+</blockquote>
+<h3>Task 2.3 — Regional CRP</h3>
+<blockquote>
+<p><strong>Instructor Key:</strong></p>
+<p>Expect small differences across North/Central/South. CRP averages typically range 11–15 mg/L.</p>
+<p><strong>Grading the bar chart:</strong>
+- Chart type appropriate (bar or column).
+- Title present and descriptive.
+- Field buttons hidden.
+- One-sentence interpretation.</p>
+</blockquote>
+<h3>Task 2.4 — Written interpretation</h3>
+<blockquote>
+<p><strong>Instructor Note:</strong> Look for:
+- Statement that arms are roughly balanced (good randomization).
+- Noting any regional variation in CRP.
+- No need for formal hypothesis testing at this stage.</p>
+</blockquote>
+<p><strong>Grading Part 2:</strong> /15 total — Pivots correct (5), chart clean (5), interpretation reasonable (5).</p>
+<hr />
+<h2>Part 3: Life Table — Overall Cohort — Keys</h2>
+<h3>Task 3.1–3.4 — Life table construction</h3>
+<blockquote>
+<p><strong>Instructor Key (approximate values — verify against current dataset):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Interval</th>
+<th>Start</th>
+<th>End</th>
+<th>N_at_Risk</th>
+<th>Events</th>
+<th>Censored</th>
+<th>Interval_Surv</th>
+<th>Cumul_Surv</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0–12</td>
+<td>0</td>
+<td>12</td>
+<td>290</td>
+<td>~38–42</td>
+<td>~17–20</td>
+<td>~0.86</td>
+<td>~0.86</td>
+</tr>
+<tr>
+<td>12–24</td>
+<td>12</td>
+<td>24</td>
+<td>~230</td>
+<td>~37–42</td>
+<td>~15–20</td>
+<td>~0.82</td>
+<td>~0.71</td>
+</tr>
+<tr>
+<td>24–36</td>
+<td>24</td>
+<td>36</td>
+<td>~175</td>
+<td>~37–42</td>
+<td>~15–20</td>
+<td>~0.77</td>
+<td>~0.55</td>
+</tr>
+<tr>
+<td>36–48</td>
+<td>36</td>
+<td>48</td>
+<td>~120</td>
+<td>~35–40</td>
+<td>~18–22</td>
+<td>~0.70</td>
+<td>~0.38</td>
+</tr>
+<tr>
+<td>48–60</td>
+<td>48</td>
+<td>60</td>
+<td>~65</td>
+<td>~35–40</td>
+<td>~18–22</td>
+<td>~0.45</td>
+<td>~0.17</td>
+</tr>
+</tbody>
+</table>
+<p><em>Values above are illustrative. Run the dataset through the formulas to get exact numbers for your seed.</em></p>
+<p><strong>Instructor Note — Common errors:</strong></p>
+<ol>
+<li><strong>First interval lower bound:</strong> Students may use <code>"&gt;0"</code> and miss patients at exactly Time_Months = 0 (if any exist). Using <code>"&gt;=0"</code> is safer for the first interval.</li>
+<li><strong>Double-counting at boundaries:</strong> If a patient has Time_Months = 12.0, which interval does it fall in? Ensure consistency: <code>(Start, End]</code> means <code>"&gt;"&amp;Start, "&lt;="&amp;End</code>.</li>
+<li><strong>N_at_Risk not decrementing:</strong> The recursion <code>N_next = N_current - Events_current - Censored_current</code> is the most critical formula. If it's wrong, all subsequent rows break.</li>
+<li><strong>Cumulative Survival increasing:</strong> This is impossible. If it happens, check the Events count (should not be negative) or the Interval_Survival formula.</li>
+</ol>
+</blockquote>
+<h3>Task 3.5 — Verification</h3>
+<blockquote>
+<p><strong>Instructor Key:</strong>
+- Sum of all Events + Censored = Total patients (290). If not, there's a boundary or formula error.
+- Cumulative Survival is monotonically non-increasing.</p>
+</blockquote>
+<p><strong>Grading Part 3:</strong> /25 total — Correct intervals and COUNTIFS (10), N_at_Risk recursion correct (5), Interval &amp; Cumulative Survival formulas correct (5), verification checks pass (5).</p>
+<hr />
+<h2>Part 4: Survival Curve — Keys</h2>
+<h3>Task 4.1 — Overall curve</h3>
+<blockquote>
+<p><strong>Instructor Key:</strong></p>
+<ul>
+<li><strong>Chart type:</strong> Scatter with Straight Lines and Markers is acceptable. True KM is a step function — mention in class that the scatter approximation is adequate for this course.</li>
+<li>Y-axis must go from 0 to 1.0 (or 0% to 100%).</li>
+<li>The curve should show a steady decline. Median survival (where curve crosses 0.5) is roughly around 30–36 months for this dataset.</li>
+</ul>
+<p><strong>Instructor Note:</strong> If students use a line chart instead of scatter, the X-axis spacing may be wrong (treating intervals as categories rather than numeric). Deduct partially.</p>
+</blockquote>
+<p><strong>Grading Part 4:</strong> /10 total — Correct chart type (3), proper axis formatting (3), title and labels present (2), clean design (2).</p>
+<hr />
+<h2>Part 5: Stratified Survival — Keys</h2>
+<h3>Task 5.1 — Two stratified life tables</h3>
+<blockquote>
+<p><strong>Instructor Key:</strong></p>
+<p>The COUNTIFS formulas add one criterion:
+<code>=COUNTIFS(Tbl_Clinical[Time_Months], "&gt;"&amp;Start,
+          Tbl_Clinical[Time_Months], "&lt;="&amp;End,
+          Tbl_Clinical[Event_Status], 1,
+          Tbl_Clinical[Treatment_Arm], "Standard")</code></p>
+<p><strong>N_at_Risk for Standard arm first interval:</strong>
+<code>=COUNTIF(Tbl_Clinical[Treatment_Arm], "Standard")</code> → ~140–145</p>
+<p><strong>N_at_Risk for Intensive arm first interval:</strong>
+<code>=COUNTIF(Tbl_Clinical[Treatment_Arm], "Intensive")</code> → ~140–150</p>
+<p>The Intensive arm should show <strong>higher</strong> cumulative survival at most time points (the data was generated with lower event probability for Intensive: p_event = 0.62 vs 0.72).</p>
+<p><strong>Instructor Note — Common errors:</strong></p>
+<ol>
+<li>Students forget to add the <code>Treatment_Arm</code> criterion to <strong>both</strong> Events and Censored formulas.</li>
+<li>Students use the overall N_at_Risk instead of arm-specific N_at_Risk.</li>
+<li>The two series are plotted on separate charts instead of overlaid.</li>
+</ol>
+</blockquote>
+<h3>Task 5.2 — Comparison chart</h3>
+<blockquote>
+<p><strong>Instructor Key:</strong></p>
+<ul>
+<li>Two series on one chart, clearly labeled with legend.</li>
+<li>The Intensive arm curve should be <strong>above</strong> the Standard arm curve (better survival).</li>
+<li>The separation should be visible from ~12 months onward.</li>
+</ul>
+<p><strong>Alternative acceptable approach:</strong> Some students may filter the data using Slicers on a copy, then build separate life tables. This is valid as long as the formulas are correct.</p>
+</blockquote>
+<h3>Task 5.3 — Interpretation</h3>
+<blockquote>
+<p><strong>Instructor Key — expected answers:</strong></p>
+<ol>
+<li>Intensive arm has better survival (curve stays higher).</li>
+<li>Difference becomes visible around 12–24 months and widens over time.</li>
+<li><strong>No formal statistical conclusion</strong> — a visual comparison alone cannot determine significance. Log-rank test or Cox regression (Week 11) is needed.</li>
+</ol>
+<p><strong>Grading:</strong> Full credit requires acknowledging the limitation in point 3.</p>
+</blockquote>
+<p><strong>Grading Part 5:</strong> /25 total — Two correct stratified life tables (10), comparison chart with both series (8), interpretation with limitation acknowledged (7).</p>
+<hr />
+<h2>Part 6: Scatter — Keys</h2>
+<h3>Task 6.1–6.2 — Severity vs. Time scatter</h3>
+<blockquote>
+<p><strong>Instructor Key:</strong></p>
+<ul>
+<li>X = <code>Severity_Score</code>, Y = <code>Time_Months</code>, two series by <code>Event_Status</code>.</li>
+<li><strong>Approach 1:</strong> Helper column <code>=IF([@Event_Status]=1, "Event", "Censored")</code>, then manually select ranges for each series.</li>
+<li><strong>Approach 2:</strong> Sort by <code>Event_Status</code>, select Event rows as Series 1, Censored rows as Series 2.</li>
+</ul>
+<p><strong>Expected pattern:</strong> Higher severity patients tend to have slightly shorter times (subtle — the synthetic data includes a 0.85 multiplier for Severity &gt; 65). Censored observations should be spread across the severity range but tend to appear at various time points (they didn't experience the event during follow-up).</p>
+</blockquote>
+<h3>Task 6.3 — Interpretation</h3>
+<blockquote>
+<p><strong>Instructor Key:</strong></p>
+<ul>
+<li>Mild negative relationship between severity and time (sicker patients may have earlier events).</li>
+<li>Censored observations appear throughout — they are <strong>not</strong> clustered only at long times, which is realistic (patients may be censored at any time for administrative reasons).</li>
+<li>This scatter helps visualize <strong>informative vs. non-informative censoring</strong> concepts.</li>
+</ul>
+</blockquote>
+<p><strong>Grading Part 6:</strong> /15 total — Two-series scatter correct (8), formatting and labels (3), interpretation (4).</p>
+<hr />
+<h2>Part 7: Summary &amp; Reflection — Grading</h2>
+<blockquote>
+<p><strong>Instructor Note:</strong> Look for five elements:</p>
+<ol>
+<li><strong>Cohort summary</strong> — correct numbers.</li>
+<li><strong>Overall survival</strong> — references the curve and approximate median.</li>
+<li><strong>Treatment comparison</strong> — identifies which arm is better visually.</li>
+<li><strong>Limitations</strong> — explicitly states that visual comparison is not a statistical test; mentions log-rank or Cox for formal inference.</li>
+<li><strong>Censoring</strong> — explains that censored patients are not "failures" and that ignoring censoring would bias results.</li>
+</ol>
+</blockquote>
+<p><strong>Grading Part 7:</strong> /10 total — All 5 elements present and coherent.</p>
+<hr />
+<h2>Grading Rubric Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Part 1: Import &amp; data inspection</td>
+<td>/5</td>
+</tr>
+<tr>
+<td>Part 2: Exploratory covariate analysis (pivots + chart + interpretation)</td>
+<td>/15</td>
+</tr>
+<tr>
+<td>Part 3: Overall life table (formulas + verification)</td>
+<td>/25</td>
+</tr>
+<tr>
+<td>Part 4: Overall survival curve</td>
+<td>/10</td>
+</tr>
+<tr>
+<td>Part 5: Stratified survival (two life tables + comparison chart + interpretation)</td>
+<td>/25</td>
+</tr>
+<tr>
+<td>Part 6: Severity vs Time scatter (two-series + interpretation)</td>
+<td>/15</td>
+</tr>
+<tr>
+<td>Part 7: Summary memo</td>
+<td>/5</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>/100</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Dataset generation</h2>
+<p>Regenerate clinical data with:</p>
+<pre><code>python3 generate_lab4_multivariate_data.py
+</code></pre>
+<p>→ produces <code>Lab4-Multivariate-Clinical.csv</code></p>
+</body>
+</html>
