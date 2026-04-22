@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab-5-Instructions-NoKeys</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        h1, h2, h3 { color: #2c3e50; }
+        h1 { border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        h2 { border-bottom: 1px solid #eee; padding-bottom: 5px; margin-top: 2rem; }
+        code {
+            background-color: #f8f9fa;
+            padding: 0.2em 0.4em;
+            border-radius: 3px;
+            font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+            font-size: 85%;
+        }
+        pre code {
+            background-color: transparent;
+            padding: 0;
+            border-radius: 0;
+        }
+        pre {
+            background-color: #f8f9fa;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px 12px;
+            text-align: left;
+        }
+        th { background-color: #f8f9fa; }
+        blockquote {
+            border-left: 4px solid #3498db;
+            margin: 0;
+            padding-left: 1rem;
+            color: #666;
+            background-color: #f8f9fa;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lab 5: Professional Reporting with LaTeX</h1>
+<h2>Overview</h2>
+<p>In this lab you will take the results of a completed data analysis (provided as tables and figures) and produce a <strong>professionally formatted report</strong> using LaTeX. You will work with an Overleaf template that also compiles locally in VS Code.</p>
+<p>By the end of this lab you will be able to:</p>
+<ul>
+<li>Structure an academic/professional report in LaTeX.</li>
+<li>Insert tables, figures, cross-references, and citations.</li>
+<li>Compile a PDF on Overleaf (cloud) or VS Code + LaTeX Workshop (local).</li>
+</ul>
+<p><strong>Estimated time:</strong> 90–120 minutes<br />
+<strong>Tools:</strong> Overleaf (free account) and/or VS Code + MiKTeX + LaTeX Workshop</p>
+<hr />
+<h2>What you receive</h2>
+<p>All files are in the <code>Lab-5-Report/</code> folder:</p>
+<table>
+<thead>
+<tr>
+<th>Folder / File</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sample-report/Sample-Report.md</code></td>
+<td>The full report in Markdown — your <strong>content source</strong>.</td>
+</tr>
+<tr>
+<td><code>sample-report/tables/*.csv</code></td>
+<td>Four result tables (descriptive stats, GPA by faculty, regression, t-test).</td>
+</tr>
+<tr>
+<td><code>sample-report/images/*.png</code></td>
+<td>Four publication-quality figures generated from the tables.</td>
+</tr>
+<tr>
+<td><code>latex-template/main.tex</code></td>
+<td>A <strong>complete LaTeX template</strong> that already incorporates all content.</td>
+</tr>
+<tr>
+<td><code>latex-template/references.bib</code></td>
+<td>BibTeX file with 3 course references.</td>
+</tr>
+<tr>
+<td><code>latex-template/images/</code></td>
+<td>Copies of the figures (ready for <code>\includegraphics</code>).</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Part 1: Explore the Sample Report (15 min)</h2>
+<h3>Task 1.1 — Read the Markdown report</h3>
+<p>Open <code>sample-report/Sample-Report.md</code> and read through the six sections. Notice:</p>
+<ul>
+<li><strong>Abstract:</strong> A single paragraph summarizing the entire study.</li>
+<li><strong>Introduction:</strong> The problem, context, and three numbered research questions.</li>
+<li><strong>Methodology:</strong> Data cleaning steps + a table of analytical methods.</li>
+<li><strong>Results:</strong> Four subsections, each with a table and/or figure, and explicit cross-references (<em>"As shown in Figure 1..."</em>).</li>
+<li><strong>Discussion:</strong> Numbered, actionable recommendations derived from the data.</li>
+<li><strong>Limitations &amp; Conclusion:</strong> Honest assessment + concise wrap-up.</li>
+</ul>
+<h3>Task 1.2 — Inspect the data files</h3>
+<p>Open the four CSV files in <code>tables/</code> and the four PNG files in <code>images/</code>. Confirm you understand what each one shows and which section of the report it belongs to.</p>
+<hr />
+<h2>Part 2: Set Up Your LaTeX Environment (15 min)</h2>
+<p>Choose <strong>one</strong> of the two paths below.</p>
+<h3>Option A — Overleaf (recommended for first-time users)</h3>
+<ol>
+<li>Go to <a href="https://www.overleaf.com">overleaf.com</a> and sign in (or create a free account).</li>
+<li>Click <strong>New Project &gt; Upload Project</strong>.</li>
+<li>Zip the entire <code>latex-template/</code> folder and upload it.</li>
+<li>Overleaf will detect <code>main.tex</code> automatically. Click <strong>Recompile</strong> to generate the PDF.</li>
+</ol>
+<h3>Option B — VS Code (local)</h3>
+<ol>
+<li>Ensure you have installed <strong>MiKTeX</strong>, <strong>Strawberry Perl</strong>, and the <strong>LaTeX Workshop</strong> VS Code extension (see the course <a href="https://nghianguyen7171.github.io/excel_course/materials/install-guide.html">Install Guide</a>).</li>
+<li>Open the <code>latex-template/</code> folder in VS Code.</li>
+<li>Open <code>main.tex</code>. Press <strong>Ctrl+Alt+B</strong> (or run <strong>LaTeX Workshop: Build with recipe &gt; latexmk</strong>).</li>
+<li>View the PDF preview in the side panel.</li>
+</ol>
+<p><strong>Checkpoint:</strong> You should see a multi-page PDF with title, abstract, table of contents, tables, and figures.</p>
+<hr />
+<h2>Part 3: Understand the LaTeX Structure (20 min)</h2>
+<p>Open <code>main.tex</code> and study each element listed below. For each one, <strong>find the corresponding line(s)</strong> in the <code>.tex</code> file and write down the line number(s) on your worksheet.</p>
+<h3>Task 3.1 — Document setup</h3>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>What to find</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Document class</td>
+<td><code>\documentclass[12pt, a4paper]{article}</code></td>
+</tr>
+<tr>
+<td>Page margins</td>
+<td><code>\geometry{margin=2.5cm}</code></td>
+</tr>
+<tr>
+<td>Line spacing</td>
+<td><code>\onehalfspacing</code></td>
+</tr>
+<tr>
+<td>Image path</td>
+<td><code>\graphicspath{{images/}}</code></td>
+</tr>
+</tbody>
+</table>
+<h3>Task 3.2 — Title and abstract</h3>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>LaTeX command</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Title</td>
+<td><code>\title{...}</code></td>
+</tr>
+<tr>
+<td>Author block</td>
+<td><code>\author{...}</code></td>
+</tr>
+<tr>
+<td>Date</td>
+<td><code>\date{April 2026}</code></td>
+</tr>
+<tr>
+<td>Abstract</td>
+<td><code>\begin{abstract} ... \end{abstract}</code></td>
+</tr>
+<tr>
+<td>Table of contents</td>
+<td><code>\tableofcontents</code></td>
+</tr>
+</tbody>
+</table>
+<h3>Task 3.3 — Sections and subsections</h3>
+<p>Find the six <code>\section{}</code> commands and the four <code>\subsection{}</code> commands in the Results section. Note how the table of contents is generated automatically from these.</p>
+<h3>Task 3.4 — Tables</h3>
+<p>Find a table environment. Note the structure:</p>
+<pre><code class="language-latex">\begin{table}[h]
+\centering
+\caption{Your caption here.}
+\label{tab:yourlabel}
+\begin{tabular}{@{}lrr@{}}
+\toprule
+...
+\bottomrule
+\end{tabular}
+\end{table}
+</code></pre>
+<p>Identify which package provides <code>\toprule</code>, <code>\midrule</code>, <code>\bottomrule</code> (hint: check the preamble).</p>
+<h3>Task 3.5 — Figures</h3>
+<p>Find a figure environment:</p>
+<pre><code class="language-latex">\begin{figure}[h]
+\centering
+\includegraphics[width=0.85\textwidth]{filename.png}
+\caption{Your caption here.}
+\label{fig:yourlabel}
+\end{figure}
+</code></pre>
+<h3>Task 3.6 — Cross-references and citations</h3>
+<p>Find examples of:</p>
+<ul>
+<li><code>Table~\ref{tab:descriptive}</code> — referencing a table.</li>
+<li><code>Figure~\ref{fig:faculty_gpa}</code> — referencing a figure.</li>
+<li><code>\bibliography{references}</code> — linking the <code>.bib</code> file.</li>
+</ul>
+<hr />
+<h2>Part 4: Make Your Own Modifications (30 min)</h2>
+<h3>Task 4.1 — Change the title and authors</h3>
+<p>Replace the title, author names, and date with your group's information. Recompile and verify the title page updates.</p>
+<h3>Task 4.2 — Add a new table</h3>
+<p>Create a new table anywhere in the Results section that presents the following data (you may invent a label and caption):</p>
+<table>
+<thead>
+<tr>
+<th>Program</th>
+<th>Count</th>
+<th>Mean Study Hours</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Undergraduate</td>
+<td>85</td>
+<td>15.2</td>
+</tr>
+<tr>
+<td>Graduate</td>
+<td>75</td>
+<td>21.8</td>
+</tr>
+</tbody>
+</table>
+<p>Use the <code>booktabs</code> style (<code>\toprule</code>, <code>\midrule</code>, <code>\bottomrule</code>).</p>
+<h3>Task 4.3 — Add a new figure</h3>
+<p>Copy one of the existing PNG files, rename it (e.g., <code>fig5_custom.png</code>), place it in <code>images/</code>, and insert it into the document using <code>\begin{figure}...\end{figure}</code>. Write a declarative caption.</p>
+<h3>Task 4.4 — Add a citation</h3>
+<p>Open <code>references.bib</code> and add a new entry (you may use any real or fictional source). Then cite it in the Introduction using <code>\cite{yourkey}</code>. Recompile <strong>twice</strong> (once for the <code>.bib</code>, once to resolve references).</p>
+<h3>Task 4.5 — Cross-reference check</h3>
+<p>Add a sentence in the Discussion section that references your new table and your new figure by their labels (e.g., <em>"As shown in Table~\ref{tab:yourlabel} and Figure~\ref{fig:yourlabel}..."</em>). Verify the numbers auto-update after recompiling.</p>
+<hr />
+<h2>Part 5: Export and Submit (10 min)</h2>
+<h3>Task 5.1 — Generate the final PDF</h3>
+<p>Recompile one last time. Download or locate the PDF output.</p>
+<h3>Task 5.2 — Check your PDF</h3>
+<p>Verify:</p>
+<ul>
+<li>[ ] Title page shows your group name and date.</li>
+<li>[ ] Table of contents lists all sections with correct page numbers.</li>
+<li>[ ] All tables render with professional formatting (no vertical lines).</li>
+<li>[ ] All figures display correctly.</li>
+<li>[ ] Cross-references show numbers (not <code>??</code>).</li>
+<li>[ ] The bibliography appears at the end with your added reference.</li>
+</ul>
+<hr />
+<h2>Deliverables</h2>
+<p>Submit via the LMS:</p>
+<ol>
+<li><strong>Your modified <code>main.tex</code></strong> file.</li>
+<li><strong>Your modified <code>references.bib</code></strong> file.</li>
+<li><strong>The compiled PDF</strong> output.</li>
+<li><strong>Any new image</strong> you added in Task 4.3.</li>
+</ol>
+<hr />
+<h2>Academic integrity</h2>
+<p>Use the provided template and data. Your modifications should be your own work.</p>
+</body>
+</html>
