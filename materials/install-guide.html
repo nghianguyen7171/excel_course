@@ -1,36 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>LaTeX Setup Guide (Windows) - VS Code + Overleaf</title>
   <style>
-    body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; background: #eef2ff; color: #1f2937; }
-    .page { max-width: 920px; margin: auto; padding: 24px; }
-    h1 { color: #1d4ed8; margin-bottom: 8px; }
-    .card { background: #fff; border-radius: 14px; padding: 22px 26px; box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08); margin-bottom: 18px; }
-    h2 { color: #334155; margin-top: 0; }
-    a { color: #2563eb; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .code { display: block; background: #f8fafc; padding: 14px 16px; border-radius: 10px; font-family: Consolas, "Courier New", monospace; overflow-x: auto; border: 1px solid #cbd5e1; }
-    .note { background: #f0fdf4; border-left: 4px solid #22c55e; color: #166534; padding: 12px 14px; border-radius: 10px; margin-top: 12px; }
-    .step { margin-bottom: 14px; }
-    .step strong { color: #1e40af; }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      background: #eef2ff;
+      color: #1f2937;
+    }
+
+    .page {
+      max-width: 920px;
+      margin: auto;
+      padding: 24px;
+    }
+
+    h1 {
+      color: #1d4ed8;
+      margin-bottom: 8px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 22px 26px;
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+      margin-bottom: 18px;
+    }
+
+    h2 {
+      color: #334155;
+      margin-top: 0;
+    }
+
+    a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .code {
+      display: block;
+      background: #f8fafc;
+      padding: 14px 16px;
+      border-radius: 10px;
+      font-family: Consolas, "Courier New", monospace;
+      overflow-x: auto;
+      border: 1px solid #cbd5e1;
+    }
+
+    .note {
+      background: #f0fdf4;
+      border-left: 4px solid #22c55e;
+      color: #166534;
+      padding: 12px 14px;
+      border-radius: 10px;
+      margin-top: 12px;
+    }
+
+    .step {
+      margin-bottom: 14px;
+    }
+
+    .step strong {
+      color: #1e40af;
+    }
   </style>
 </head>
+
 <body>
   <div class="page">
     <div class="card">
       <h1>Windows Local LaTeX Setup</h1>
-      <p>Use this guide for Week 12+ to write reports/papers in Overleaf and compile locally with VS Code + LaTeX Workshop.</p>
+      <p>Use this guide for Week 12+ to write reports/papers in Overleaf and
+        compile locally with VS Code + LaTeX Workshop.</p>
     </div>
 
     <div class="card">
       <h2>1) Install Required Tools</h2>
-      <div class="step"><strong>VS Code:</strong> <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer">code.visualstudio.com</a></div>
-      <div class="step"><strong>MiKTeX:</strong> <a href="https://miktex.org/download" target="_blank" rel="noopener noreferrer">miktex.org/download</a> (enable install missing packages on-the-fly)</div>
-      <div class="step"><strong>Strawberry Perl:</strong> <a href="https://strawberryperl.com/" target="_blank" rel="noopener noreferrer">strawberryperl.com</a> (add Perl to PATH)</div>
-      <div class="step"><strong>VS Code Extension:</strong> Install <em>LaTeX Workshop</em> by James Yu.</div>
+      <div class="step"><strong>VS Code:</strong> <a
+          href="https://code.visualstudio.com/" target="_blank"
+          rel="noopener noreferrer">code.visualstudio.com</a></div>
+      <div class="step"><strong>VS Code Extension:</strong> Install <em>LaTeX
+          Workshop</em> by James Yu.</div>
+      <div class="step"><strong>MiKTeX:</strong> <a
+          href="https://miktex.org/download" target="_blank"
+          rel="noopener noreferrer">miktex.org/download</a> (enable install
+        missing packages on-the-fly)</div>
+      <div class="step"><strong>Strawberry Perl (Windows only):</strong> <a
+          href="https://strawberryperl.com/" target="_blank"
+          rel="noopener noreferrer">strawberryperl.com</a> (add Perl to PATH).
+        On macOS, Perl is already included by default.</div>
+      <div class="step"><strong>Homebrew (macOS if needed):</strong> Install
+        Homebrew first if your Mac does not have it:<br /><span
+          class="code">/bin/bash -c "$(curl -fsSL
+          https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</span>
+      </div>
+      <div>After Homebrew was installed. Paste and run this command in terminal:
+        <span class="code">
+          brew install --cask basictex
+        </span>
+      </div>
+
     </div>
 
     <div class="card">
@@ -38,30 +117,37 @@
       <p>In PowerShell, run:</p>
       <span class="code">pdflatex --version</span>
       <span class="code">perl --version</span>
-      <div class="note">If both commands return version info, your local LaTeX environment is ready.</div>
+      <div class="note">If both commands return version info, your local LaTeX
+        environment is ready.</div>
     </div>
 
     <div class="card">
       <h2>3) Configure LaTeX Workshop (Workspace)</h2>
-      <p>Open your LaTeX project folder in VS Code, then open <strong>Workspace Settings (JSON)</strong> and paste:</p>
+      <p>Open your LaTeX project folder in VS Code, then open <strong>Workspace
+          Settings (JSON)</strong> and paste:</p>
       <span class="code">{
-  "latex-workshop.latex.tools": [
-    { "name": "pdflatex", "command": "pdflatex", "args": ["-interaction=nonstopmode", "-synctex=1", "%DOC%"] },
-    { "name": "latexmk", "command": "latexmk", "args": ["-synctex=1", "-interaction=nonstopmode", "-file-line-error", "-pdf", "%DOC%"] }
-  ],
-  "latex-workshop.latex.recipes": [
-    { "name": "pdflatex", "tools": ["pdflatex"] },
-    { "name": "latexmk", "tools": ["latexmk"] }
-  ]
-}</span>
+        "latex-workshop.latex.tools": [
+        { "name": "pdflatex", "command": "pdflatex", "args":
+        ["-interaction=nonstopmode", "-synctex=1", "%DOC%"] },
+        { "name": "latexmk", "command": "latexmk", "args": ["-synctex=1",
+        "-interaction=nonstopmode", "-file-line-error", "-pdf", "%DOC%"] }
+        ],
+        "latex-workshop.latex.recipes": [
+        { "name": "pdflatex", "tools": ["pdflatex"] },
+        { "name": "latexmk", "tools": ["latexmk"] }
+        ]
+        }
+      </span>
     </div>
 
     <div class="card">
       <h2>4) Compile</h2>
-      <p>Open your main <code>.tex</code> file, run <strong>LaTeX Workshop: Build with recipe</strong>, then choose:</p>
+      <p>Open your main <code>.tex</code> file, run <strong>LaTeX Workshop:
+          Build with recipe</strong>, then choose:</p>
       <ul>
         <li><strong>latexmk</strong> (recommended for full paper projects)</li>
-        <li><strong>pdflatex</strong> (simple fallback, useful for poster templates)</li>
+        <li><strong>pdflatex</strong> (simple fallback, useful for poster
+          templates)</li>
       </ul>
     </div>
 
@@ -70,18 +156,22 @@
       <ul>
         <li>Draft collaboratively on Overleaf.</li>
         <li>Sync/export source and compile locally in VS Code.</li>
-        <li>Fix references, citations, and package issues locally before submission.</li>
+        <li>Fix references, citations, and package issues locally before
+          submission.</li>
       </ul>
     </div>
 
     <div class="card">
       <h2>Troubleshooting</h2>
       <ul>
-        <li><strong>spawn pdflatex ENOENT</strong>: restart VS Code and verify MiKTeX installation.</li>
-        <li><strong>Perl not found</strong>: verify Strawberry Perl and PATH.</li>
+        <li><strong>spawn pdflatex ENOENT</strong>: restart VS Code and verify
+          MiKTeX installation.</li>
+        <li><strong>Perl not found</strong>: verify Strawberry Perl and PATH.
+        </li>
         <li><strong>Missing package</strong>: install via MiKTeX Console.</li>
       </ul>
     </div>
   </div>
 </body>
+
 </html>
