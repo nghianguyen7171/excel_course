@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Final Project Report & Presentation Guide - Excel Course</title>
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #475569;
+      --accent: #2563eb;
+      --border: #dbe3ef;
+    }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .wrap {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 24px 20px 40px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px 22px;
+      margin-bottom: 16px;
+    }
+    h1, h2, h3 { margin-top: 0; color: #0f172a; }
+    h1 { font-size: 1.8rem; margin-bottom: 8px; }
+    h2 { font-size: 1.25rem; margin-bottom: 10px; }
+    h3 { font-size: 1.05rem; margin-bottom: 8px; }
+    p, li { color: var(--muted); }
+    .eyebrow {
+      display: inline-block;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .rubric {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+    }
+    .rubric th, .rubric td {
+      border: 1px solid var(--border);
+      padding: 8px 10px;
+      vertical-align: top;
+    }
+    .rubric thead th {
+      background: #eaf1ff;
+      color: #0f172a;
+      font-weight: 700;
+    }
+    .score-col { white-space: nowrap; text-align: center; font-weight: 700; }
+    .check {
+      background: #eff6ff;
+      border-left: 4px solid var(--accent);
+      border-radius: 0 8px 8px 0;
+      padding: 10px 12px;
+      margin-top: 10px;
+      color: #1e3a8a;
+      font-size: 0.93rem;
+    }
+    code {
+      background: #f1f5f9;
+      padding: 2px 5px;
+      border-radius: 4px;
+      color: #0f172a;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="card">
+      <span class="eyebrow">Weeks 13-15 · Final Project (50%)</span>
+      <h1>Final Project Report & Presentation Guide</h1>
+      <p>
+        This guide defines the expected structure, quality standards, and grading rubric for the
+        final deliverables in <strong>Data Analysis with Spreadsheet Program</strong>.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>1) Deliverables (Required)</h2>
+      <ul>
+        <li><strong>Final report (PDF)</strong>: 2,000-2,500 words, professional structure.</li>
+        <li><strong>Excel workbook</strong>: cleaned data, analysis sheets, PivotTables, and final dashboard.</li>
+        <li><strong>Presentation slides</strong>: used for Week 15 presentation.</li>
+        <li><strong>15-minute group presentation</strong> + 5-minute Q&amp;A.</li>
+      </ul>
+      <div class="check">
+        <strong>Scientific standard target:</strong> your report should meet approximately
+        <strong>70% of scientific-paper requirements</strong>:
+        IMRAD-like structure, labeled figures/tables, reproducible methods, and honest discussion of limitations.
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>2) Recommended Report Organization</h2>
+
+      <h3>1. Introduction: Background -> Challenges -> Motivation</h3>
+      <ul>
+        <li><strong>Background:</strong> State the problem clearly and explain why this project/research is needed in this field.</li>
+        <li><strong>Challenges:</strong> Explain why related/comparison methods are not fully sufficient (or have limitations) for this specific problem context.</li>
+        <li><strong>Motivation for Proposed Methodology:</strong> Show how those gaps motivate your proposed analytical workflow/methodology.</li>
+        <li>End the section with 3-5 research questions aligned with your proposed approach.</li>
+      </ul>
+
+      <h3>2. Related Work (with citations)</h3>
+      <ul>
+        <li>Introduce key related/comparison methods used in the same or similar problem domain.</li>
+        <li>Cite sources properly and summarize their strengths and limitations in your context.</li>
+        <li>Explain which baseline/comparison methods you will use in your report and why.</li>
+      </ul>
+      <div class="check">
+        If your report does not include a standalone <strong>Related Work</strong> section, you must integrate related/comparison methods (with citations) into the <strong>Introduction</strong>.
+      </div>
+
+      <h3>3. Methodology (Dataset/Cohort + Proposed Method)</h3>
+      <ul>
+        <li><strong>Dataset / cohort population and characteristics:</strong> data source, sample size, unit of analysis, key variables, and inclusion/exclusion assumptions.</li>
+        <li><strong>Data preparation protocol:</strong> data quality issues found and cleaning decisions (Power Query / Excel steps), including rationale.</li>
+        <li><strong>Proposed method:</strong> clearly describe the analytical pipeline you propose (descriptive statistics, segmentation, PivotTables/visualization, and inferential/statistical analysis).</li>
+        <li><strong>Comparison design:</strong> specify baseline/comparison methods and explain why your proposed methodology is expected to perform better or be more suitable.</li>
+        <li><strong>Reproducibility requirements:</strong> formulas, filter criteria, sheet logic, and assumptions must be documented so another analyst can replicate the workflow.</li>
+      </ul>
+
+      <h3>4. Results and Visual Evidence</h3>
+      <ul>
+        <li>Present key findings with numbered tables/figures and clear captions.</li>
+        <li>Report both descriptive and inferential outputs where relevant (e.g., means, gaps, CI, p-values, regression coefficients).</li>
+        <li>Include direct comparison against baseline/related methods and interpret why differences occur.</li>
+        <li>Demonstrate dashboard evidence: which question each visual answers and what decision it supports.</li>
+      </ul>
+
+      <h3>5. Discussion and Recommendations</h3>
+      <ul>
+        <li>Interpret findings in context of the original problem and stakeholder needs.</li>
+        <li>Translate results into actionable recommendations with priority (short-term vs long-term).</li>
+        <li>Discuss trade-offs and implementation feasibility (data availability, policy/process constraints).</li>
+      </ul>
+
+      <h3>6. Limitations and Conclusion</h3>
+      <ul>
+        <li>State explicitly what the analysis can and cannot conclude.</li>
+        <li>Describe data and method limitations honestly (bias, missing variables, assumptions, scope).</li>
+        <li>Conclude with the main takeaway and concrete future improvements.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>3) Title Writing Guide (Adapted for Excel Analytics)</h2>
+      <p>Use this title pattern:</p>
+      <p><strong>&lt;Method&gt; + &lt;Task&gt; + &lt;Objective or Dataset/Target Entity&gt;</strong></p>
+      <ul>
+        <li><strong>Question 1:</strong> What is the main method?</li>
+        <li><strong>Question 2:</strong> What task does it serve (descriptive analysis, segmentation, hypothesis testing, regression, dashboarding)?</li>
+        <li><strong>Question 3:</strong> Who is the target entity or audience receiving value from the analysis (e.g., faculty board, scholarship committee, program manager)?</li>
+      </ul>
+      <h3>Excel-course examples</h3>
+      <ul>
+        <li><strong>PivotTable-Based Segmentation for Identifying GPA Gaps Across Faculties in University Student Records</strong><br />
+          (Method = PivotTable segmentation, Task = gap analysis, Objective/Target Entity = faculty managers)</li>
+        <li><strong>Regression and Dashboard Analysis for Explaining Academic Performance in the StudentRecords Dataset</strong><br />
+          (Method = regression + dashboard, Task = explanatory analytics, Objective/Target Entity = academic advising team)</li>
+        <li><strong>Confidence-Interval and T-Test Evaluation of Program-Level GPA Differences for Curriculum Decision Support</strong><br />
+          (Method = CI + t-test, Task = inferential comparison, Objective/Target Entity = curriculum committee)</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>4) Contribution-Driven Writing (Most Important)</h2>
+      <p>
+        Your <strong>contribution</strong> is the most important part of the report.
+        It should appear in the Introduction and be reinforced in every major section.
+      </p>
+
+      <h3>How to state contribution from related-method limitations</h3>
+      <p>Use this logic:</p>
+      <p><strong>Limitation in related/comparison methods -> Gap -> Your contribution -> Evidence</strong></p>
+      <ul>
+        <li><strong>Limitation:</strong> What existing methods fail to handle well in your context?</li>
+        <li><strong>Gap:</strong> What specific analytical need is still unmet?</li>
+        <li><strong>Contribution:</strong> What do you introduce (workflow, model, dashboard logic, evaluation design) to address that gap?</li>
+        <li><strong>Evidence:</strong> What result proves the contribution (better metric, clearer segmentation, more actionable insight)?</li>
+      </ul>
+
+      <h3>Contribution statement template</h3>
+      <p>
+        “Existing approaches <em>[limitation]</em>. To address this gap, we propose <em>[your method/workflow]</em>,
+        which enables <em>[practical objective]</em>. Compared with <em>[baseline]</em>, our approach achieves
+        <em>[evidence: metric/insight/actionability]</em>.”
+      </p>
+
+      <h3>How to repeat contribution in each section</h3>
+      <ul>
+        <li><strong>Introduction:</strong> State the contribution claim explicitly after motivation.</li>
+        <li><strong>Related Work:</strong> Position contribution against limitations of prior methods.</li>
+        <li><strong>Methodology:</strong> Show where contribution appears in your pipeline/design decisions.</li>
+        <li><strong>Results:</strong> Provide quantitative/visual evidence for each contribution claim.</li>
+        <li><strong>Discussion:</strong> Explain why the contribution matters for stakeholders and decisions.</li>
+        <li><strong>Conclusion:</strong> Restate contribution succinctly as the main takeaway.</li>
+      </ul>
+      <div class="check">
+        If a reader cannot identify your contribution in 2-3 sentences after each major section,
+        the report is still too descriptive and not sufficiently research-oriented.
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>5) Sample Papers (Read Before Writing)</h2>
+      <p>
+        Use the following papers as structural and writing references. You are not required to replicate
+        their methods exactly; instead, learn how they formulate problem, gap, contribution, methodology,
+        and evidence-based discussion.
+      </p>
+      <ul>
+        <li>
+          <strong>Machine learning approach to student performance prediction of online learning</strong> (PLOS ONE)<br />
+          <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0299018" target="_blank" rel="noopener noreferrer">
+            https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0299018
+          </a>
+        </li>
+        <li>
+          <strong>Bayesian multiple membership multiple classification logistic regression model on student performance with random effects in university instructors and majors</strong> (PLOS ONE)<br />
+          <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0227343" target="_blank" rel="noopener noreferrer">
+            https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0227343
+          </a>
+        </li>
+        <li>
+          <strong>Performance prediction using educational data mining techniques: a comparative study</strong> (Discover Education, Springer)<br />
+          <a href="https://link.springer.com/article/10.1007/s44217-025-00502-w" target="_blank" rel="noopener noreferrer">
+            https://link.springer.com/article/10.1007/s44217-025-00502-w
+          </a>
+        </li>
+        <li>
+          <strong>Predicting GPA of University Students with Supervised Regression Machine Learning Models</strong> (Applied Sciences, MDPI)<br />
+          <a href="https://www.mdpi.com/2076-3417/12/17/8403" target="_blank" rel="noopener noreferrer">
+            https://www.mdpi.com/2076-3417/12/17/8403
+          </a>
+        </li>
+      </ul>
+      <div class="check">
+        When reading these papers, extract: (1) contribution statement, (2) comparison baseline,
+        (3) evidence table/figure design, and (4) limitation discussion style — then adapt to Excel-course context.
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>6) Writing and Visualization Standards</h2>
+      <ul>
+        <li>Use declarative chart titles (state insight, not just variable names).</li>
+        <li>Label all axes and include units.</li>
+        <li>Reference every figure/table in text (e.g., "Figure 2 shows...").</li>
+        <li>Avoid chartjunk: unnecessary 3D effects, clutter, weak color contrast.</li>
+        <li>Keep dashboard filters consistent and functional (slicers/timelines).</li>
+        <li>Write methods clearly enough that another student can reproduce the workflow in Excel.</li>
+        <li>In discussion, include at least one limitation and one risk of misinterpretation.</li>
+        <li>Use contribution-led topic sentences: each subsection should begin with the claim it contributes.</li>
+      </ul>
+      <div class="check">
+        A strong report is not a screenshot dump. Each visual must answer a question and support a claim.
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>7) Presentation Structure (15 minutes)</h2>
+      <ul>
+        <li><strong>2 min:</strong> Problem context and research questions</li>
+        <li><strong>3 min:</strong> Data and methods</li>
+        <li><strong>7 min:</strong> Key findings + dashboard walkthrough</li>
+        <li><strong>3 min:</strong> Recommendations, limitations, conclusion</li>
+      </ul>
+      <p>
+        Every team member should contribute. Focus on interpretation and decisions, not only tool steps.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>8) Evaluation Rubric (10-point scale)</h2>
+      <table class="rubric">
+        <thead>
+          <tr>
+            <th style="width: 25%">Criterion</th>
+            <th>Description</th>
+            <th style="width: 11%">Max</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Problem, Gap & Contribution</strong></td>
+            <td>Clarity of problem framing, limitation/gap identification, and explicit contribution claim.</td>
+            <td class="score-col">/2</td>
+          </tr>
+          <tr>
+            <td><strong>Methodology Quality</strong></td>
+            <td>Appropriate Excel/statistical methods, justified choices, reproducible workflow, and clear linkage to contribution.</td>
+            <td class="score-col">/2</td>
+          </tr>
+          <tr>
+            <td><strong>Results & Analysis</strong></td>
+            <td>Strength of evidence, baseline comparison, interpretation depth, and proof of contribution.</td>
+            <td class="score-col">/2</td>
+          </tr>
+          <tr>
+            <td><strong>Report & Visualization Quality</strong></td>
+            <td>Structure, writing clarity, figure/table quality, dashboard professionalism.</td>
+            <td class="score-col">/2</td>
+          </tr>
+          <tr>
+            <td><strong>Presentation & Communication</strong></td>
+            <td>Delivery, logic flow, ability to answer Q&amp;A, actionable recommendations.</td>
+            <td class="score-col">/2</td>
+          </tr>
+          <tr>
+            <td colspan="2"><strong>Total</strong></td>
+            <td class="score-col"><strong>/10</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2>9) Final Checklist Before Submission</h2>
+      <ul>
+        <li>Report is complete (2,000-2,500 words) and logically structured.</li>
+        <li>Report follows an IMRAD-like flow (Introduction, Methods, Results, Discussion/Conclusion).</li>
+        <li>A clear contribution statement is present in Introduction and reinforced in Results/Conclusion.</li>
+        <li>Contribution is derived from limitations of related/comparison methods (not only from intuition).</li>
+        <li>All major claims are supported by charts/tables/statistical outputs.</li>
+        <li>All figures and tables are numbered, captioned, and referenced in text.</li>
+        <li>Methods are reproducible (clear Excel steps, formulas, filters, and assumptions).</li>
+        <li>Discussion is honest about limitations and practical constraints.</li>
+        <li>Dashboard is polished, interactive, and aligned with report findings.</li>
+        <li>Excel workbook is organized and readable (sheet names, formulas, notes).</li>
+        <li>Slides are concise and presentation-ready.</li>
+      </ul>
+      <p>
+        Back to schedule: <a href="{{ site.baseurl }}/#schedule">Course Schedule</a>
+      </p>
+    </section>
+  </main>
+</body>
+</html>
