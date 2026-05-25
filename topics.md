@@ -448,7 +448,7 @@ Clinical data from patients with **Rheumatoid Arthritis (RA)**, including baseli
 - Apply all course skills learned throughout the semester to your chosen topic
 - Deliver a complete analysis from data cleaning to final reporting
 - Create professional visualizations and dashboards
-- Write a comprehensive report (2,000-2,500 words)
+- Write a comprehensive report in a concise, clear format (no fixed word count)
 - Present findings effectively (15-minute group presentation in Week 15)
 
 **Support Resources:**

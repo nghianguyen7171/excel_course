@@ -296,7 +296,7 @@ Students work in groups (3-4 members) and select **one of 11 available topics** 
 
 - **Data Analysis (40%):** Clean, explore, analyze data using Excel tools (Power Query, PivotTables, formulas, statistical analysis)
 - **Visualizations & Dashboard (30%):** Create effective charts and interactive dashboard using Excel visualization tools
-- **Report (20%):** 2,000-2,500 words with findings, insights, recommendations, properly structured and cited
+- **Report (20%):** Concise, clear writing with findings, insights, recommendations, properly structured and cited (no fixed word count)
 - **Presentation (10%):** 15-minute group presentation + 5-minute Q&A
 
 ### Timeline & Group Reporting:
@@ -365,7 +365,7 @@ Students work in groups (3-4 members) and select **one of 11 available topics** 
 **Deliverables:**
 - Complete analysis addressing all research questions
 - Comprehensive interactive dashboard with all key visualizations
-- Draft written report (minimum 1500 words) including:
+- Draft written report in a concise, clear format including:
   - Introduction and problem statement
   - Methodology section
   - Findings and results section
@@ -378,7 +378,7 @@ Students work in groups (3-4 members) and select **one of 11 available topics** 
 
 #### **Week 14 (Lab) - Project Refinement: Final Report & Peer Review**
 **Deliverables:**
-- Finalized written report (2,000-2,500 words) with:
+- Finalized written report in a concise, clear format with:
   - Complete methodology and analysis sections
   - Comprehensive findings and interpretations
   - Recommendations based on research findings
