@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midterm Practical Lab Exam | Data Analysis with Spreadsheet Program</title>
+    <link rel="stylesheet" href="https://nghianguyen7171.github.io/excel_course/assets/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page-wrapper">
+        <main class="main-content">
+            <div class="content-wrapper">
+                <div class="lab-instructions-page">
+<section id="lab-header" class="lab-hero"><h1>Midterm Practical Lab Exam — Instructor Version (With Answer Key)</h1></section>
+<p><strong>Course:</strong> Data Analysis with Spreadsheet Program
+<strong>Scope:</strong> Weeks 1-5 (Excel Basics, Data Import &amp; Cleaning, EDA &amp; PivotTables)
+<strong>Duration:</strong> 60 minutes | <strong>Total Points:</strong> 100</p>
+<hr />
+<section class="lab-section"><h2>Exam Rules</h2>
+<ul>
+<li>You may use Microsoft Excel or Google Sheets.</li>
+<li>You may NOT use the internet, AI tools, or communicate with other students.</li>
+<li>Submit <strong>two deliverables</strong> at the end of the exam:</li>
+<li>Your Excel workbook (<code>.xlsx</code>) — saved as <code>StudentID_Midterm.xlsx</code></li>
+<li>Your printed Response Form (filled in by hand or typed)</li>
+</ul>
+<hr />
+<section class="lab-section"><h2>Dataset Overview</h2>
+<p>You are given a <strong>Student Academic Records</strong> dataset (<code>StudentRecords.csv</code> or <code>StudentRecords.xlsx</code>) containing student enrollment and academic data. The Excel file has two sheets:</p>
+<ol>
+<li><strong>StudentRecords</strong> — Main data table (~165 rows, before cleaning)</li>
+<li><strong>FacultyInfo</strong> — Faculty lookup table (4 rows)</li>
+</ol>
+<h3>Main Table Columns</h3>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>StudentID</td>
+<td>Text</td>
+<td>Unique student identifier (e.g., SV-1001)</td>
+</tr>
+<tr>
+<td>EnrollDate</td>
+<td>Date/Text</td>
+<td>Enrollment date (some rows have inconsistent format)</td>
+</tr>
+<tr>
+<td>Faculty</td>
+<td>Text</td>
+<td>Faculty name (some inconsistent spacing/case)</td>
+</tr>
+<tr>
+<td>Program</td>
+<td>Text</td>
+<td>Undergraduate or Graduate</td>
+</tr>
+<tr>
+<td>Gender</td>
+<td>Text</td>
+<td>Female or Male</td>
+</tr>
+<tr>
+<td>Province</td>
+<td>Text</td>
+<td>Home province (some missing)</td>
+</tr>
+<tr>
+<td>GPA</td>
+<td>Number</td>
+<td>Grade point average (0-4.0 scale; outliers exist)</td>
+</tr>
+<tr>
+<td>Credits</td>
+<td>Number</td>
+<td>Total credits earned</td>
+</tr>
+<tr>
+<td>MathScore</td>
+<td>Number/Text</td>
+<td>Math exam score (mixed type in some rows)</td>
+</tr>
+<tr>
+<td>EnglishScore</td>
+<td>Number</td>
+<td>English exam score (some missing)</td>
+</tr>
+<tr>
+<td>Scholarship</td>
+<td>Text</td>
+<td>Yes/No (some lowercase inconsistencies)</td>
+</tr>
+<tr>
+<td>TuitionFee</td>
+<td>Number</td>
+<td>Annual tuition in millions VND</td>
+</tr>
+<tr>
+<td>GraduationStatus</td>
+<td>Binary (0/1)</td>
+<td>1 = graduated on time</td>
+</tr>
+</tbody>
+</table>
+<h3>FacultyInfo Lookup Table</h3>
+<table>
+<thead>
+<tr>
+<th>FacultyCode</th>
+<th>FacultyFullName</th>
+<th>Dean</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Business</td>
+<td>Business Administration</td>
+<td>Dr. Tran Van A</td>
+</tr>
+<tr>
+<td>IT</td>
+<td>Information Technology</td>
+<td>Dr. Le Thi B</td>
+</tr>
+<tr>
+<td>Economics</td>
+<td>Economics</td>
+<td>Dr. Nguyen Van C</td>
+</tr>
+<tr>
+<td>Law</td>
+<td>Law</td>
+<td>Dr. Pham Thi D</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<section class="lab-section"><h2>Part A: Import &amp; Clean (20 pts, ~10 min)</h2>
+<h3>Exercise A1: Import and Identify Issues (8 pts)</h3>
+<p><strong>Question:</strong> Import <code>StudentRecords.csv</code> using Power Query and identify data quality issues.</p>
+<p><strong>Instructions:</strong>
+1. Open Excel. Go to <code>Data → Get Data → From Text/CSV</code>.
+2. Select <code>StudentRecords.csv</code> and click <strong>Transform Data</strong> to open Power Query Editor.
+3. Inspect the data preview: check column types, scan for blanks, duplicates, and inconsistencies.</p>
+<p><strong>Response Form:</strong>
+- <strong>Q-A1a:</strong> Record the total number of rows in the raw dataset.
+- <strong>Q-A1b:</strong> List at least 3 specific data quality issues (column name + issue type).</p>
+<p><strong>Answer:</strong>
+- Q-A1a: <strong>165 rows</strong> (including header, the data has 165 data rows).
+- Q-A1b: Typical issues include:
+  1. <strong>Faculty</strong> — Inconsistent spacing/capitalization (e.g., "  business  ", "BUSINESS", "Business")
+  2. <strong>MathScore</strong> — Mixed text/number type (some values stored as text with spaces like " 70.3 ")
+  3. <strong>EnrollDate</strong> — Inconsistent date format (most are YYYY-MM-DD, some are DD/MM/YYYY)
+  4. <strong>Province</strong> — Missing values in ~5 rows
+  5. <strong>EnglishScore</strong> — Missing values in ~5 rows
+  6. <strong>GPA</strong> — Outlier values above 4.0 (e.g., 4.6, 4.82)
+  7. <strong>Blank rows</strong> — 2 fully blank rows
+  8. <strong>Duplicate rows</strong> — 3 exact duplicate records
+  9. <strong>Scholarship</strong> — Some "yes"/"no" instead of "Yes"/"No"</p>
+<hr />
+<h3>Exercise A2: Clean the Data (12 pts)</h3>
+<p><strong>Question:</strong> Clean the dataset in Power Query so it is analysis-ready.</p>
+<p><strong>Instructions:</strong>
+1. Remove fully blank rows (select all columns → Remove Rows → Remove Blank Rows).
+2. Remove duplicate rows (Home → Remove Rows → Remove Duplicates).
+3. Select the <code>Faculty</code> column → Transform → Trim → Capitalize Each Word.
+4. Select <code>MathScore</code> → Change Type → Decimal Number (errors become null).
+5. Select <code>EnrollDate</code> → Change Type → Date (use locale if prompted).
+6. Close &amp; Load to a new worksheet.</p>
+<p><strong>Response Form:</strong>
+- <strong>Q-A2a:</strong> How many rows remain after removing blank rows and duplicates?
+- <strong>Q-A2b:</strong> How many distinct Faculty values after standardization?
+- <strong>Q-A2c:</strong> How many errors appeared when converting MathScore to Number?
+- <strong>Q-A2d:</strong> Screenshot of Applied Steps panel.</p>
+<p><strong>Answer:</strong>
+- Q-A2a: <strong>160 rows</strong> (165 − 2 blank − 3 duplicates = 160).
+- Q-A2b: <strong>4</strong> distinct faculties (Business, Economics, IT, Law). Note: "IT" may appear as "It" if using Capitalize Each Word — this is acceptable.
+- Q-A2c: <strong>0 errors</strong> if spaces are trimmed first; the text-as-number values (e.g., " 70.3 ") convert successfully once leading/trailing spaces are removed. If not trimmed, approximately 10 errors.
+- Q-A2d: Should show steps like: Source, Changed Type, Removed Blank Rows, Removed Duplicates, Trimmed Text (Faculty), Capitalized Each Word (Faculty), Changed Type (MathScore), Changed Type (EnrollDate).</p>
+<hr />
+<section class="lab-section"><h2>Part B: Formulas &amp; Lookup (20 pts, ~10 min)</h2>
+<h3>Exercise B1: Basic Summary (6 pts)</h3>
+<p><strong>Question:</strong> Calculate basic summary statistics on a new "Analysis" sheet.</p>
+<p><strong>Instructions:</strong>
+1. Create a new sheet named "Analysis".
+2. Calculate:
+   - Total number of students: <code>=COUNTA(StudentRecords[StudentID])</code> (or reference the loaded table range)
+   - Average GPA: <code>=AVERAGE(StudentRecords[GPA])</code>
+   - Highest TuitionFee: <code>=MAX(StudentRecords[TuitionFee])</code>
+   - Lowest TuitionFee: <code>=MIN(StudentRecords[TuitionFee])</code></p>
+<p><strong>Response Form:</strong>
+- <strong>Q-B1a:</strong> Total number of students.
+- <strong>Q-B1b:</strong> Average GPA (round to 2 decimals).
+- <strong>Q-B1c:</strong> Highest and Lowest TuitionFee.</p>
+<p><strong>Answer:</strong>
+- Q-B1a: <strong>160</strong>
+- Q-B1b: <strong>3.08</strong>
+- Q-B1c: Highest = <strong>47.5</strong>, Lowest = <strong>15.0</strong></p>
+<hr />
+<h3>Exercise B2: Conditional Logic (7 pts)</h3>
+<p><strong>Question:</strong> Classify students by academic standing using nested IF, then count each category.</p>
+<p><strong>Instructions:</strong>
+1. Add a new column <code>AcademicStanding</code> in the cleaned data (or on the Analysis sheet).
+2. Formula: <code>=IF([@GPA]&gt;=3.5, "Excellent", IF([@GPA]&gt;=2.5, "Good", "Needs Improvement"))</code>
+3. Copy the formula down for all rows.
+4. Use <code>COUNTIF</code> to count each category on the Analysis sheet.</p>
+<p><strong>Response Form:</strong>
+- <strong>Q-B2a:</strong> Write the exact IF formula used.
+- <strong>Q-B2b:</strong> Fill in the count for each standing.</p>
+<p><strong>Answer:</strong>
+- Q-B2a: <code>=IF([@GPA]&gt;=3.5,"Excellent",IF([@GPA]&gt;=2.5,"Good","Needs Improvement"))</code> (accept equivalent formulations)
+- Q-B2b:</p>
+<table>
+<thead>
+<tr>
+<th>Academic Standing</th>
+<th>Count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Excellent</td>
+<td>~37</td>
+</tr>
+<tr>
+<td>Good</td>
+<td>~97</td>
+</tr>
+<tr>
+<td>Needs Improvement</td>
+<td>~26</td>
+</tr>
+</tbody>
+</table>
+<p>(Values may vary slightly depending on how outlier GPAs above 4.0 are handled.)</p>
+<hr />
+<h3>Exercise B3: VLOOKUP (7 pts)</h3>
+<p><strong>Question:</strong> Use VLOOKUP to add the Dean name from the FacultyInfo lookup sheet.</p>
+<p><strong>Instructions:</strong>
+1. Add a new column <code>Dean</code> in the cleaned data sheet.
+2. Formula: <code>=VLOOKUP([@Faculty], FacultyInfo!A:C, 3, FALSE)</code>
+   - Lookup value: Faculty name in the current row
+   - Table array: FacultyInfo sheet columns A to C
+   - Column index: 3 (Dean is the 3rd column)
+   - Exact match: FALSE
+3. Copy the formula down for all rows.</p>
+<p><strong>Response Form:</strong>
+- <strong>Q-B3a:</strong> Write the exact VLOOKUP formula used.
+- <strong>Q-B3b:</strong> Which Faculty appears most frequently, and who is its Dean?
+- <strong>Q-B3c:</strong> What error does VLOOKUP return for a non-existent FacultyCode?</p>
+<p><strong>Answer:</strong>
+- Q-B3a: <code>=VLOOKUP([@Faculty], FacultyInfo!A:C, 3, FALSE)</code> (accept variants with explicit ranges)
+- Q-B3b: Depends on the random distribution. Check <code>COUNTIF</code> for each faculty. The Dean corresponds to the lookup table above.
+- Q-B3c: <strong>#N/A</strong></p>
+<hr />
+<section class="lab-section"><h2>Part C: Descriptive Statistics &amp; Summary Tables (20 pts, ~12 min)</h2>
+<h3>Exercise C1: Descriptive Statistics Table (10 pts)</h3>
+<p><strong>Question:</strong> Build a descriptive statistics table for GPA and MathScore.</p>
+<p><strong>Instructions:</strong>
+1. On the Analysis sheet, create a table with these metrics for both GPA and MathScore:
+   - Mean: <code>=AVERAGE(range)</code>
+   - Median: <code>=MEDIAN(range)</code>
+   - Std Dev: <code>=STDEV.S(range)</code>
+   - Min: <code>=MIN(range)</code>
+   - Max: <code>=MAX(range)</code>
+   - Count: <code>=COUNT(range)</code></p>
+<p><strong>Response Form:</strong>
+- <strong>Q-C1a:</strong> Fill in the descriptive statistics table.
+- <strong>Q-C1b:</strong> Is the Mean GPA higher or lower than the Median? What does this suggest?</p>
+<p><strong>Answer:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>GPA</th>
+<th>MathScore</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mean</td>
+<td>3.08</td>
+<td>69.00</td>
+</tr>
+<tr>
+<td>Median</td>
+<td>3.09</td>
+<td>70.50</td>
+</tr>
+<tr>
+<td>Std Dev</td>
+<td>0.56</td>
+<td>14.24</td>
+</tr>
+<tr>
+<td>Min</td>
+<td>1.74</td>
+<td>27.4</td>
+</tr>
+<tr>
+<td>Max</td>
+<td>4.60</td>
+<td>99.6</td>
+</tr>
+<tr>
+<td>Count</td>
+<td>160</td>
+<td>160</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Q-C1b: Mean (3.08) is slightly lower than Median (3.09), suggesting the distribution is approximately symmetric or very slightly left-skewed. The two outlier GPAs above 4.0 pull the mean slightly upward but are not enough to make it exceed the median significantly.</li>
+</ul>
+<hr />
+<h3>Exercise C2: Segmented Summary (10 pts)</h3>
+<p><strong>Question:</strong> Create segmented summaries using AVERAGEIFS and COUNTIFS.</p>
+<p><strong>Instructions:</strong>
+1. Average GPA by Faculty:
+   - <code>=AVERAGEIFS(GPA_range, Faculty_range, "Business")</code> — repeat for each faculty.
+2. Count of scholarship students ("Yes") by Program:
+   - <code>=COUNTIFS(Scholarship_range, "Yes", Program_range, "Undergraduate")</code>
+   - <code>=COUNTIFS(Scholarship_range, "Yes", Program_range, "Graduate")</code></p>
+<p><strong>Response Form:</strong>
+- <strong>Q-C2a:</strong> Average GPA by Faculty table + which Faculty has the highest average.
+- <strong>Q-C2b:</strong> Scholarship count by Program table + the COUNTIFS formula used.</p>
+<p><strong>Answer:</strong></p>
+<p>Average GPA by Faculty:</p>
+<table>
+<thead>
+<tr>
+<th>Faculty</th>
+<th>Average GPA</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Business</td>
+<td>3.10</td>
+</tr>
+<tr>
+<td>Economics</td>
+<td>2.97</td>
+</tr>
+<tr>
+<td>IT</td>
+<td>3.03</td>
+</tr>
+<tr>
+<td>Law</td>
+<td>3.20</td>
+</tr>
+</tbody>
+</table>
+<p>Highest average: <strong>Law (3.20)</strong></p>
+<p>Scholarship count by Program:</p>
+<table>
+<thead>
+<tr>
+<th>Program</th>
+<th>Scholarship Count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Undergraduate</td>
+<td>~5</td>
+</tr>
+<tr>
+<td>Graduate</td>
+<td>~21</td>
+</tr>
+</tbody>
+</table>
+<p>Formula: <code>=COUNTIFS(Scholarship_range, "Yes", Program_range, "Graduate")</code></p>
+<hr />
+<section class="lab-section"><h2>Part D: PivotTables (25 pts, ~15 min)</h2>
+<h3>Exercise D1: PivotTable — GPA by Faculty and Program (10 pts)</h3>
+<p><strong>Question:</strong> Create a PivotTable showing average GPA by Faculty and Program.</p>
+<p><strong>Instructions:</strong>
+1. Select the cleaned data range. Go to <code>Insert → PivotTable</code> → place on a new sheet.
+2. Drag <code>Faculty</code> to <strong>Rows</strong>.
+3. Drag <code>Program</code> to <strong>Columns</strong>.
+4. Drag <code>GPA</code> to <strong>Values</strong> → Summarize by <strong>Average</strong>.
+5. Go to PivotTable Design tab → Report Layout → <strong>Show in Tabular Form</strong>.
+6. Enable <strong>Grand Totals</strong> for both rows and columns.</p>
+<p><strong>Response Form:</strong>
+- <strong>Q-D1a:</strong> Copy the PivotTable results into the provided table.
+- <strong>Q-D1b:</strong> Which Faculty+Program combination has the highest average GPA? Is the Graduate-Undergraduate gap consistent across faculties?</p>
+<p><strong>Answer:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Faculty</th>
+<th>Graduate</th>
+<th>Undergraduate</th>
+<th>Grand Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Business</td>
+<td>3.41</td>
+<td>2.69</td>
+<td>3.10</td>
+</tr>
+<tr>
+<td>Economics</td>
+<td>3.18</td>
+<td>2.75</td>
+<td>2.97</td>
+</tr>
+<tr>
+<td>IT</td>
+<td>3.26</td>
+<td>2.75</td>
+<td>3.03</td>
+</tr>
+<tr>
+<td>Law</td>
+<td>3.30</td>
+<td>3.05</td>
+<td>3.20</td>
+</tr>
+<tr>
+<td><strong>Grand Total</strong></td>
+<td><strong>3.30</strong></td>
+<td><strong>2.80</strong></td>
+<td><strong>3.08</strong></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Q-D1b: <strong>Business Graduate (3.41)</strong> has the highest average GPA. The Graduate-Undergraduate gap varies: it is largest for Business (~0.72) and smallest for Law (~0.25).</li>
+</ul>
+<hr />
+<h3>Exercise D2: PivotTable — Enrollment by Year (8 pts)</h3>
+<p><strong>Question:</strong> Create a PivotTable showing enrollment count and average tuition by year.</p>
+<p><strong>Instructions:</strong>
+1. Create a new PivotTable from the cleaned data.
+2. Drag <code>EnrollDate</code> to <strong>Rows</strong> → right-click any date → <strong>Group</strong> → select <strong>Years</strong>.
+3. Drag <code>StudentID</code> to <strong>Values</strong> → Summarize by <strong>Count</strong>.
+4. Drag <code>TuitionFee</code> to <strong>Values</strong> → Summarize by <strong>Average</strong>.
+5. Add <code>Gender</code> to <strong>Report Filter</strong> (or Filters area).</p>
+<p><strong>Response Form:</strong>
+- <strong>Q-D2a:</strong> Number of distinct years and which year had the most enrollments.
+- <strong>Q-D2b:</strong> Average TuitionFee for Female students in the most recent year, and for Male students.</p>
+<p><strong>Answer:</strong>
+- Q-D2a: <strong>3 years</strong> (2022, 2023, 2024). Most enrollments: <strong>2023 (60 students)</strong>.
+- Q-D2b: Values depend on the Gender filter. Students should filter the PivotTable by Gender and read the value for 2024.</p>
+<hr />
+<h3>Exercise D3: Slicer &amp; Observation (7 pts)</h3>
+<p><strong>Question:</strong> Add a Slicer and draw an insight from interactive filtering.</p>
+<p><strong>Instructions:</strong>
+1. Click on PivotTable 1 (from D1).
+2. Go to <code>PivotTable Analyze → Insert Slicer</code> → select <code>Scholarship</code>.
+3. Click "Yes" in the Slicer to filter to scholarship students only.
+4. Observe how the GPA averages change.</p>
+<p><strong>Response Form:</strong>
+- <strong>Q-D3a:</strong> Screenshot of PivotTable 1 with Slicer set to "Yes".
+- <strong>Q-D3b:</strong> One specific observation comparing scholarship students' GPA to the overall average.</p>
+<p><strong>Answer:</strong>
+- Q-D3a: Screenshot should show the Slicer connected to the PivotTable with "Yes" highlighted.
+- Q-D3b: Scholarship students have higher average GPA across all faculties (typically above 3.5), which is expected since the scholarship criterion in the dataset is linked to GPA &gt;= 3.5.</p>
+<hr />
+<section class="lab-section"><h2>Part E: Confidence Interval, p-value &amp; Interpretation (15 pts, ~13 min)</h2>
+<h3>Exercise E1: 95% CI for Mean GPA (6 pts)</h3>
+<p><strong>Question:</strong> Calculate the 95% confidence interval for the overall mean GPA.</p>
+<p><strong>Instructions:</strong>
+1. On the Analysis sheet, compute:
+   - <code>mean = AVERAGE(GPA_range)</code>
+   - <code>sd = STDEV.S(GPA_range)</code>
+   - <code>n = COUNT(GPA_range)</code>
+   - <code>t_star = T.INV.2T(0.05, n-1)</code>
+   - <code>ME = t_star * sd / SQRT(n)</code>
+   - <code>Lower = mean - ME</code>
+   - <code>Upper = mean + ME</code></p>
+<p><strong>Response Form:</strong>
+- <strong>Q-E1:</strong> Fill in the CI calculation table and write the interpretation sentence.</p>
+<p><strong>Answer:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mean</td>
+<td>3.08</td>
+</tr>
+<tr>
+<td>Std Dev</td>
+<td>0.56</td>
+</tr>
+<tr>
+<td>N</td>
+<td>160</td>
+</tr>
+<tr>
+<td>t*</td>
+<td>1.9750</td>
+</tr>
+<tr>
+<td>Margin of Error</td>
+<td>0.087</td>
+</tr>
+<tr>
+<td><strong>Lower Bound</strong></td>
+<td><strong>2.99</strong></td>
+</tr>
+<tr>
+<td><strong>Upper Bound</strong></td>
+<td><strong>3.17</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Interpretation: "We are 95% confident that the true population mean GPA lies between 2.99 and 3.17."</p>
+<hr />
+<h3>Exercise E2: Two-Group Comparison (5 pts)</h3>
+<p><strong>Question:</strong> Test whether mean GPA differs between Undergraduate and Graduate students.</p>
+<p><strong>Instructions:</strong>
+1. Identify the GPA values for Undergraduate students (one range) and Graduate students (another range). You can filter, sort, or use helper columns to separate the two groups.
+2. Use: <code>=T.TEST(range_undergrad, range_grad, 2, 3)</code>
+   - <code>2</code> = two-tailed test
+   - <code>3</code> = unequal variances (Welch's t-test)
+3. Compare the p-value to 0.05.</p>
+<p><strong>Response Form:</strong>
+- <strong>Q-E2a:</strong> The exact T.TEST formula.
+- <strong>Q-E2b:</strong> The p-value result.
+- <strong>Q-E2c:</strong> Is p &lt; 0.05? Conclusion statement.</p>
+<p><strong>Answer:</strong>
+- Q-E2a: <code>=T.TEST(undergrad_GPA_range, grad_GPA_range, 2, 3)</code>
+- Q-E2b: p ≈ <strong>0.0000</strong> (very small, essentially zero to 4 decimal places)
+- Q-E2c: <strong>Yes</strong>, p &lt; 0.05. Conclusion: "The difference in mean GPA between Undergraduate (2.80) and Graduate (3.30) students is <strong>statistically significant</strong> at the 5% level."</p>
+<hr />
+<h3>Exercise E3: Mini Summary (4 pts)</h3>
+<p><strong>Question:</strong> Write 3-4 sentences summarizing your key findings.</p>
+<p><strong>Instructions:</strong>
+Your summary must include:
+1. One finding from descriptive statistics (Part C)
+2. One pattern or insight from PivotTable analysis (Part D)
+3. One inferential conclusion referencing your CI or p-value (Part E)</p>
+<p><strong>Response Form:</strong>
+- <strong>Q-E3:</strong> Write your summary paragraph.</p>
+<p><strong>Answer:</strong>
+Example: "The average GPA across all 160 students is 3.08 with a standard deviation of 0.56, indicating moderate variation in academic performance. PivotTable analysis reveals that Graduate students consistently outperform Undergraduate students across all four faculties, with the largest gap in Business (3.41 vs 2.69). A two-sample t-test confirms this difference is statistically significant (p &lt; 0.001), and the 95% confidence interval for overall mean GPA [2.99, 3.17] suggests the population average is solidly above 3.0."</p>
+<hr />
+<section class="lab-section"><h2>Verification Checklist</h2>
+<ul>
+<li>[ ] Cleaned dataset loaded (160 rows, consistent types)</li>
+<li>[ ] Analysis sheet with basic formulas (B1)</li>
+<li>[ ] AcademicStanding column with IF formula (B2)</li>
+<li>[ ] Dean column with VLOOKUP (B3)</li>
+<li>[ ] Descriptive statistics table completed (C1)</li>
+<li>[ ] Segmented summary tables completed (C2)</li>
+<li>[ ] PivotTable 1: GPA by Faculty × Program with Tabular layout (D1)</li>
+<li>[ ] PivotTable 2: Enrollment by Year with Gender filter (D2)</li>
+<li>[ ] Slicer for Scholarship on PivotTable 1 (D3)</li>
+<li>[ ] 95% CI computed correctly (E1)</li>
+<li>[ ] T.TEST completed and interpreted (E2)</li>
+<li>[ ] Summary paragraph written (E3)</li>
+<li>[ ] Response Form completed and submitted</li>
+</ul></section></section></section></section></section></section></section></section>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
